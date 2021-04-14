@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://18279493170/18279493170.github.io</id>
+    <id>https://18279493170.github.io</id>
     <title>徐某人博客</title>
-    <updated>2021-04-14T09:53:15.683Z</updated>
+    <updated>2021-04-14T09:54:29.245Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://18279493170/18279493170.github.io"/>
-    <link rel="self" href="https://18279493170/18279493170.github.io/atom.xml"/>
+    <link rel="alternate" href="https://18279493170.github.io"/>
+    <link rel="self" href="https://18279493170.github.io/atom.xml"/>
     <subtitle>打不死的平头哈</subtitle>
-    <logo>https://18279493170/18279493170.github.io/images/avatar.png</logo>
-    <icon>https://18279493170/18279493170.github.io/favicon.ico</icon>
+    <logo>https://18279493170.github.io/images/avatar.png</logo>
+    <icon>https://18279493170.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 徐某人博客</rights>
     <entry>
         <title type="html"><![CDATA[vue全家桶]]></title>
-        <id>https://18279493170/18279493170.github.io/OIu1BMWPq/</id>
-        <link href="https://18279493170/18279493170.github.io/OIu1BMWPq/">
+        <id>https://18279493170.github.io/OIu1BMWPq/</id>
+        <link href="https://18279493170.github.io/OIu1BMWPq/">
         </link>
         <updated>2021-04-14T09:12:48.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://18279493170/18279493170.github.io/hello-gridea/</id>
-        <link href="https://18279493170/18279493170.github.io/hello-gridea/">
+        <id>https://18279493170.github.io/hello-gridea/</id>
+        <link href="https://18279493170.github.io/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
