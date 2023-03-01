@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://18279493170.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="搞钱！搞钱！搞钱！"><meta charset="UTF-8"><title>css之元素可见性，元素显示类型与元素堆叠 | 徐某人</title>
+<link href="https://18279493170.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://18279493170.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://18279493170.github.io/iswsKEydE/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://18279493170.github.io"><img alt="logo" style="display:inline-block;" src="https://18279493170.github.io/images/avatar.png"/></a><h1 title="徐某人" class="weaklink"><a  href="/">徐某人</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1677698765253" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>css之元素可见性，元素显示类型与元素堆叠</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2017-10-09</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://18279493170.github.io/kxtMGy4k1U/" class="tag">css</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">1839字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">8 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<h1 id="visibility元素可见性">visibility（元素可见性）</h1>
+<p>CSS 中的 visibility 属性用来设置元素是否可见，您可以将该属性与 JavaScript 一起使用，来创建非常复杂的菜单或网页布局，比如在网页中做一些测试题时您可以使用 visibility 属性将题目的答案或解析隐藏起来，需要时再将其展示出来。</p>
+<pre><code>visible	默认值，表示元素是可见的
+hidden	隐藏元素
+collapse	主要用来隐藏表格的行和列，隐藏的行或列所占的空间可以被其他表格内容使用；如果在其他元素上使用，其效果等同于“hidden”
+inherit	从父元素继承 visibility 属性的值
+</code></pre>
+<blockquote>
+<p>提示：visibility 属性虽然会隐藏元素，但会保留元素在页面中所占的空间。如果您希望元素隐藏的同时又不占用页面空间的话，请使用 display 属性。</p>
+</blockquote>
+<p><code>visibility: visible;</code></p>
+<blockquote>
+<p>注意：对于隐藏的元素，虽然我们在页面中看不到了，但是源代码中仍然包含这些隐藏的内容，因此您尽量不要使用它来隐藏敏感信息，例如用户信息、密码等等。</p>
+</blockquote>
+<h1 id="display元素显示类型">display（元素显示类型）</h1>
+<p>display 属性是 CSS 中最重要的属性之一，主要用来控制元素的布局，通过 display 属性您可以设置元素是否显示以及如何显示。</p>
+<p>根据元素类型的不同，每个元素都有一个默认的 display 属性值，例如<code>&lt;div&gt;</code>默认的 display 属性值为 block（块级元素），而<code>&lt;span&gt;</code>默认的 display 属性值为 inline（行内元素），您也可以手动将元素的 display 属性转换为其它值。</p>
+<pre><code>none	隐藏元素
+block	将元素设置为块级元素
+inline	将元素设置为内联元素
+list-item	将元素设置为列表项目
+inline-block	将元素设置为行内块元素
+table	将元素设置为块元素级的表格（类似&lt;table&gt;）
+inline-table	将元素设置为内联元素级的表格（类似&lt;table&gt;）
+table-caption	将元素设置为表格的标题（类似&lt;caption&gt;）
+table-cell	将元素设置为表格的单元格（类似&lt;td&gt;和&lt;th&gt;）
+table-row	将元素设置为表格的行（类似&lt;tr&gt;）
+table-row-group	将元素设置为表格的内容部分（类似&lt;tbody&gt;）
+table-column	将元素设置为表格的列（类似&lt;col&gt;）
+table-column-group	将元素设置为表格中一个或多个列的分组（类似&lt;colgroup&gt;）
+table-header-group	将元素设置为表格的头部（类似&lt;thead&gt;）
+table-footer-group	将元素设置为表格的脚（类似&lt;tfoot&gt;）
+box	CSS3 中新增的属性值，表示将对象设置为弹性伸缩盒（伸缩盒的最老版本）
+inline-box	CSS3 中新增的属性值，表示将对象设置为内联元素级的弹性伸缩盒（伸缩盒的最老版本）
+flexbox	CSS3 中新增的属性值，表示将对象设置为弹性伸缩盒（伸缩盒的过渡版本）
+inline-flexbox	CSS3 中新增的属性值，表示将对象设置为内联元素级的弹性伸缩盒（伸缩盒的过渡版本）
+flex	CSS3 中新增的属性值，表示将对象设置为弹性伸缩盒（伸缩盒的最新版本）
+inline-flex	CSS3 中新增的属性值，表示将对象设置为内联元素级的弹性伸缩盒（伸缩盒的最新版本）
+run-in	根据上下文来决定将元素设置为块级元素或内联元素
+inherit	从父元素继承 display 属性的值
+</code></pre>
+<blockquote>
+<p>伸缩盒子（弹性盒子）是 CSS3 中一种新的布局模式，引入伸缩盒子的目的是提供一种更加有效的方式来对页面中的元素进行排列、对齐和分配空间，当页面需要适应不同的屏幕大小以及设备类型时这种布局方式能够确保元素拥有恰当尺寸和位置。</p>
+</blockquote>
+<h2 id="display-none">display: none</h2>
+<p>display 的属性值 none 可以用来隐藏元素，与visibility: hidden;功能相似，不同的是display: none;在隐藏元素的同时，它还会将元素所占的位置一并隐藏。display: none;通常会与 JavaScript 结合使用来隐藏或显示某个元素</p>
+<pre><code class="language-js"> function change_box(obj){
+            var box = document.getElementById('box');
+            if(box.style.display == 'none'){
+                box.style.display = &quot;&quot;;
+                obj.innerHTML = &quot;隐藏&quot;;
+            }else{
+                box.style.display = &quot;none&quot;;
+                obj.innerHTML = &quot;显示&quot;;
+            }
+        }
+</code></pre>
+<h2 id="display-block">display: block</h2>
+<p>display 属性的属性值 block 可以将元素强制转换为块级元素</p>
+<p><code> display: block;</code></p>
+<h2 id="display-inline">display: inline</h2>
+<p>display 属性的属性值 inline 可以将元素强制转换为行内元素，让元素拥有行内元素的特性，例如可以与其他行内元素共享一行等</p>
+<p><code> display: inline;</code></p>
+<h2 id="display-inline-block">display: inline-block</h2>
+<p>display 属性的属性值 inline-block 可以将元素强制转换为行内块元素，inline-block 既具有 block 能够设置宽高的特性又具有 inline 不独占一行的特性</p>
+<p><code>isplay: inline-block;</code></p>
+<h1 id="z-index元素堆叠">z-index：元素堆叠</h1>
+<p>通常我们可能会认为 HTML 网页是个二维的平面，因为页面中的文本、图像或者其它元素都是按照一定顺序排列在页面上的，每个元素之间都有一定的间隙，不会重叠。然而，实际的网页其实是三维的，元素之间可能会发生堆叠（重叠），您可以通过 CSS 中的 z-index 属性来设置元素的堆叠顺序</p>
+<figure data-type="image" tabindex="1"><img src="https://18279493170.github.io/post-images/1653638730986.png" alt="" loading="lazy"></figure>
+<p>每个元素都有一个默认的 z-index 属性，将 z-index 属性与 position 属性相结合可以创建出类似 PhotoShop 中的图层效果。z-index 属性可以设置元素的层叠级别（当元素出现重叠时，该元素在其它元素之上还是之下），拥有更高层叠级别的元素会处于层叠级别较低的元素的前面（或者说上面）</p>
+<p>通过 z-index 属性您可以创建更加复杂的网页布局</p>
+<pre><code>auto	默认值，堆叠顺序与父元素相等
+number	使用具体数值（整数）设置元素的堆叠顺序
+inherit	从父元素继承 z-index 属性的值
+</code></pre>
+<blockquote>
+<p>对于未设置 position 属性的元素或者 position 属性的值为 static 时，后定义的元素会覆盖前面的元素；<br>
+对于设置有 position 属性且属性值不为 static 的元素，这些元素会覆盖没有设置 position 属性或者 position 属性值为 static 的元素；<br>
+对于 position 属性值不为 static 且定义了 z-index 属性的元素，z-index 属性值大的元素会覆盖 z-index 属性值小的元素，即 z-index 属性值越大优先级越高，若 z-index 属性值相同，则后定义的元素会覆盖前面定义的元素；<br>
+z-index 属性仅在元素定义了 position 属性且属性值不为 static 时才有效。</p>
+</blockquote>
+<pre><code class="language-css"> .box-x {
+            width: 150px;
+            height: 350px;
+            border: 1px dashed red;
+            background-color: rgba(255, 153, 153, 0.7);
+            float: left;
+        }
+        .box-y {
+            width: 300px;
+            height: 120px;
+            border: 1px dashed green;
+            background-color: rgba(179, 255, 153, 0.7);
+        }
+        .one {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 4;
+        }
+        .two {
+            position: relative;
+            top: 30px;
+            left: 80px;
+            z-index: 3;
+        }
+        .three {
+            position: relative;
+            top: -10px;
+            left: 120px;
+            z-index: 2;
+        }
+        .four {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            z-index: 1;
+        }
+        .five {
+            margin-left: 100px;
+            margin-top: -50px;
+            background-color: rgba(255, 255, 153, 0.7);
+            z-index: 5;
+        }
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://18279493170.github.io/post-images/1653638760823.png" alt="" loading="lazy"></figure>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#visibility%E5%85%83%E7%B4%A0%E5%8F%AF%E8%A7%81%E6%80%A7">visibility（元素可见性）</a></li>
+<li><a href="#display%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E7%B1%BB%E5%9E%8B">display（元素显示类型）</a>
+<ul>
+<li><a href="#display-none">display: none</a></li>
+<li><a href="#display-block">display: block</a></li>
+<li><a href="#display-inline">display: inline</a></li>
+<li><a href="#display-inline-block">display: inline-block</a></li>
+</ul>
+</li>
+<li><a href="#z-index%E5%85%83%E7%B4%A0%E5%A0%86%E5%8F%A0">z-index：元素堆叠</a></li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">打不死的平头哈Copyright © 2018-2020 <a href="https://18279493170.github.io" style="margin:0;">徐某人</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>47</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://18279493170.github.io/media/js/prism.js"></script>
+</body>
+</html>

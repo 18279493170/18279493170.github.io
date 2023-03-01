@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://18279493170.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="搞钱！搞钱！搞钱！"><meta charset="UTF-8"><title>css之2D，32D转换，动画与过度 | 徐某人</title>
+<link href="https://18279493170.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://18279493170.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://18279493170.github.io/de0x4i9pU/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://18279493170.github.io"><img alt="logo" style="display:inline-block;" src="https://18279493170.github.io/images/avatar.png"/></a><h1 title="徐某人" class="weaklink"><a  href="/">徐某人</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1677698765253" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>css之2D，32D转换，动画与过度</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2017-11-16</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://18279493170.github.io/kxtMGy4k1U/" class="tag">css</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">3691字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">15 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<h1 id="2d转换">2D转换</h1>
+<p>CSS 中的 2D 转换允许我们在二维空间中执行一些基本的变换操作，例如移动、旋转、缩放或扭曲等，变换后的元素与绝对定位的元素类似，不会影响周围的元素，但可以和周围的元素重叠，不同的是，转换后的元素在页面中任然会占用为转换之前的空间。</p>
+<p>借助 CSS 中的 transform 属性以及下列转换函数就可以实现 2D 转换：</p>
+<pre><code>matrix()：以一个包含六个值（a, b, c, d, e, f）的变换矩阵的形式指定一个 2D 变换，相当于直接应用一个 [a,b,c,d,e,f] 的变换矩阵；
+translate()：将对象沿 X 轴和 Y 轴平移，该函数需要提供 1~2 个参数，第一个参数对应 X 轴，第二个参数对应 Y 轴，如果未提供第二个参数，则默认值为 0；
+translatex()：将对象沿 X 轴（水平方向）的平移；
+translatey()：将对象沿 Y 轴（垂直方向）的平移；
+rotate()：旋转指定对象，在函数的参数中可以指定旋转的角度；
+scale()：将对象进行缩放，该函数需要提供 1~2 个参数，第一个参数对应 X 轴，第二个参数对应 Y 轴，如果未提供第二个参数，则默认取第一个参数的值；
+scalex()：将对象进行缩放（改变元素的宽度）；
+scaley()：将对象进行缩放（改变元素的高度）；
+skew()：将对象沿 X 轴和 Y 轴方向进行倾斜扭曲，该函数需要提供 1~2 个参数，第一个参数对应 X 轴，第二个参数对应 Y 轴。如果未提供第二个参数，则默认值为 0；
+skewx()：将对象沿 X 轴的（水平方向）扭曲；
+skewy()：将对象沿 Y 轴的（垂直方向）扭曲。
+</code></pre>
+<h2 id="translate">translate()</h2>
+<p>translate() 函数用来根据指定的参数将元素沿水平（X轴）或垂直（Y轴）方向移动，函数的语法格式如下：<br>
+<code>translate(tx, ty)</code></p>
+<p>其中 tx 对应元素在水平（X轴）方向的移动距离，ty 对应元素在垂直（Y轴）方向的移动距离，参数 ty 可以忽略（默认为 0），两个参数均可以为负值。</p>
+<p><code>transform: translate(100px, 10px);</code></p>
+<p>如果只是将元素水平移动或者只是将元素垂直移动，也可以使用 translateX()（将元素水平移动）或 translateY()（将元素垂直移动），translateX() 和 translateY() 函数均只需要提供一个参数即可，例如：</p>
+<blockquote>
+<p>translateX(100px);      /* 等同于 translate(100px, 0px); <em>/<br>
+translateY(10px);        /</em> 等同于 translate(0px, 10px); */</p>
+</blockquote>
+<h2 id="rotate">rotate()</h2>
+<p>rotate() 函数用来按照给定的角度来旋转元素，函数的语法格式如下：</p>
+<p><code>rotate(a)</code></p>
+<p>其中参数 a 表示元素要旋转的角度，若 a 为正值则表示顺时针旋转，若 a 为负值则表示逆时针旋转。</p>
+<p><code> transform: rotate(45deg);</code></p>
+<h2 id="scale">scale()</h2>
+<p>scale() 函数用来缩放（放大或缩小）指定的元素，函数的语法格式如下：</p>
+<p><code>scale(sx, sy)</code></p>
+<p>其中 sx 表示水平方向的缩放比例，sy 表示垂直方向的缩放比例。另外，参数 sy 可以省略，它的默认值等于 sx。</p>
+<p><code>transform: scale(0.7);</code></p>
+<blockquote>
+<p>提示：当 scale() 中，给定的参数值在 -1~1 范围之外时，元素将被放大；当在参数值在 -1~1 范围之内时，元素将被缩小。</p>
+</blockquote>
+<p>与 translate() 函数类似，如果是仅在水平方向或者仅在垂直方向上缩放元素大小，也可以使用 scaleX()（在水平方向缩放元素）和 scaleY()（在垂直方向缩放元素）函数。scaleX() 和 scaleY() 函数仅需要提供一个参数即可，例如：</p>
+<blockquote>
+<p>scaleX(0.5);    /* 等同于 scale(0.5, 1); <em>/<br>
+scaleY(0.5);    /</em> 等同于 scale(1, 0.5); */</p>
+</blockquote>
+<h2 id="skew">skew()</h2>
+<p>skew() 函数用来将元素沿水平方向（X轴）和垂直方向（Y轴）倾斜扭曲，函数的语法格式如下：<br>
+<code>skew(ax, ay)</code></p>
+<p>其中，参数 ax 表示元素水平方向的扭曲角度，参数 ay 表示元素垂直方向的扭曲角度。另外，参数 ay 可以省略，若省略参数 ay，则其默认值为 0。</p>
+<p><code>  transform: skew(-15deg, 20deg);</code></p>
+<p>另外，如果是仅在水平方向或者仅在垂直方向上对元素进行扭曲，也可以使用 skewX()（在水平方向缩放元素）和 skewY()（在垂直方向缩放元素）函数来完成。skewX() 和 skewY() 函数仅需要提供一个参数即可，例如：</p>
+<blockquote>
+<p>skewX(15deg);    /* 等同于 skew(15deg, 0deg); <em>/<br>
+skewY(15deg);    /</em> 等同于 skew(0deg, 15deg); */</p>
+</blockquote>
+<h2 id="matrix">matrix()</h2>
+<p>matrix() 函数可以看作是 skew()、scale()、rotate() 和 translate() 几个函数的缩写形式，通过 matrix() 函数可以同时定义所有 2D转换操作，函数的语法格式如下：<br>
+<code>matrix(a, b, c, d, tx, ty)</code></p>
+<p>matrix() 函数中的 6 个参数分别对应 scaleX()、skewY()、skewX()、scaleY()、translateX()、translateY() 几个函数，您可以使用 matrix() 来实现各种 2D转换操作，例如：</p>
+<blockquote>
+<p>translate(tx, ty) = matrix(1, 0, 0, 1, tx, ty);：其中 tx 和 ty 是水平和垂直平移值；<br>
+rotate(a) = matrix(cos(a), sin(a), -sin(a), cos(a), 0, 0);：其中，a 是度数的值。您可以交换 sin(a) 和 -sin(a) 值来进行反向旋转；<br>
+scale(sx, sy) = matrix(sx, 0, 0, sy, 0 ,0);：其中 sx 和 sy 是水平和垂直缩放比例值；<br>
+skew(ax, ay) = matrix(1, tan(ay), tan(ay), 1, 0 ,0);：其中 ax 和 ay 是以 deg 为单位的水平和垂直值。</p>
+</blockquote>
+<p><code> transform: matrix(0.866, 0.5, -0.5, 0.866, 0, 0);</code></p>
+<h1 id="3d转换">3D转换</h1>
+<p>在 CSS 中，除了可以对页面中的元素进行 2D 转换外，您也可以对象元素进行 3D转换（将页面看作是一个三维空间来对页面中的元素进行移动、旋转、缩放和倾斜等操作）。与 2D 转换相同，3D 转换同样不会影响周围的元素，而且可以与其它元素重叠。但是，变换后的元素任然会占用其默认位置（未变换前）的空间。</p>
+<p>3D 转换同样需要使用 transform 属性以及一些函数来实现，例如：</p>
+<pre><code>matrix3d()：以一个 4x4 矩阵的形式指定一个 3D 转换；
+translate3d()：指定对象的 3D 位移，第 1 个参数对应 X 轴，第 2 个参数对应 Y 轴，第 3 个参数对应 Z 轴，参数不允许省略；
+translateZ()：指定对象在 Z 轴的平移；
+rotate3d()：指定对象的 3D 旋转角度，其中前 3 个参数分别表示旋转的方向 X、Y、Z，第 4 个参数表示旋转的角度，参数不允许省略；
+rotateX()：指定对象在 X 轴上的旋转角度；
+rotateY()：指定对象在 Y 轴上的旋转角度；
+rotateZ()：指定对象在 Z 轴上的旋转角度；
+scale3d()：指定对象的 3D 缩放，第 1 个参数对应 X 轴，第 2 个参数对应 Y 轴，第 3 个参数对应 Z 轴，参数不允许省略；
+scaleZ()：指定对象的 Z 轴缩放；
+perspective()：指定透视距离。
+</code></pre>
+<h2 id="translate3d">translate3d()</h2>
+<p>translate3d() 函数用于移动元素在 3D 空间中的位置，这种变换的特点是通过三维矢量坐标来定义元素在每个方向上（X轴、Y轴、Z轴）的偏移量。函数的语法格式如下：<br>
+<code>translate3d(tx, ty, tz)</code></p>
+<p>参数说明如下：</p>
+<blockquote>
+<p>tx：表示元素在水平方向（X 轴）移动的距离；<br>
+ty：表示元素的垂直方向（Z 轴）移动的距离；<br>
+tz：表示元素在 Z 轴移动的距离，该参数不能使用百分比值。</p>
+</blockquote>
+<p><code> transform: translate3d(25px, 25px, 50px);</code></p>
+<p>3D 转换使用的是三维坐标系，但是沿 Z轴方向的移动并不能很明显的显现出来，因为我们往往会将网页看作是一个二维的平面，并没有深度。您可以使用 perspective 和 perspective-origin 属性来为元素添加深度感，即 Z 轴越高的元素显示的越大，反之则越小。</p>
+<h2 id="translatez">translateZ()</h2>
+<p>函数 translateZ() 用来沿三维坐标系的 Z 轴来移动元素，函数的语法格式如下：<br>
+<code>translateZ(tz);</code></p>
+<p>其中参数 tz 用来设置元素在 Z轴上移动的距离。</p>
+<blockquote>
+<p>提示：translateZ(tz); 相当于 translate3d(0, 0, tz); 的简写形式。</p>
+</blockquote>
+<p><code> transform: translateZ(30px);</code></p>
+<h2 id="rotate3d">rotate3d()</h2>
+<p>rotate3d() 函数用来设置元素沿 X轴、Y轴或 Z轴方向旋转的角度，该函数只会使元素按照固定的轴旋转，不会使元素变形。rotate3d() 函数的语法格式如下：<br>
+<code>rotate3d(x, y, z, a)</code></p>
+<p>参数说明如下：</p>
+<blockquote>
+<p>x：设置旋转轴的 X轴坐标；<br>
+y：设置旋转轴的 Y轴坐标；<br>
+z：设置旋转轴的 Z轴坐标；<br>
+a：设置元素旋转的角度，正角度表示顺时针旋转，负角度表示逆时针旋转。</p>
+</blockquote>
+<p><code> transform: rotate3d(0, 1, 2, 40deg);</code></p>
+<p>除了 rotate3d() 函数外，CSS 中还提供了 rotateX()（沿 X 轴旋转元素）、rotateY() （沿 Y 轴旋转元素）和 rotateZ()（沿 Z 轴旋转元素）三个函数来按照不同的坐标轴旋转元素。rotateX()、rotateY()、rotateZ() 函数的语法格式如下：</p>
+<blockquote>
+<p>rotateX(a) /* 等同于 rotate3D(1, 0, 0, a); <em>/<br>
+rotateY(a) /</em> 等同于 rotate3D(0, 1, 0, a); <em>/<br>
+rotateZ(a) /</em> 等同于 rotate3D(0, 0, 1, a); */</p>
+</blockquote>
+<h2 id="scale3d">scale3d()</h2>
+<p>scale3d() 函数可以改变元素的大小（缩放），函数的语法格式如下：<br>
+<code>scale3d(sx, sy, sz)</code></p>
+<p>参数说明如下：</p>
+<blockquote>
+<p>sx：表示元素在 X 轴方向的缩放比例；<br>
+sy：表示元素在 Y 轴方向的缩放比例；<br>
+sz：表示元素在 Z 轴方向的缩放比例。</p>
+</blockquote>
+<blockquote>
+<p>提示：当 scale3d() 函数的参数数值超出 [-1，1] 范围时，将在对应的方向上放大元素；当参数值在 [-1，1] 范围内时，将在当前方向上缩小元素；当参数值等于 1 时，则不会改变元素的大小。</p>
+</blockquote>
+<p>除了 scale3d() 函数外，CSS 中还提供了 scaleX()（沿 X 轴缩放元素）、scaleY() （沿 Y 轴缩放元素）和 scaleZ()（沿 Z 轴缩放元素）三个函数来按照不同的坐标轴缩放元素。scaleX()、scaleY()、scaleZ() 函数的语法格式如下：</p>
+<blockquote>
+<p>scaleX(sx) /* 等同于 scale(sx, 1); 和 scale3d(sx, 1, 1); <em>/<br>
+scaleY(sy) /</em> 等同于 scale(1, sy); 和 scale3d(1, sy, 1); <em>/<br>
+scaleZ(sz) /</em> 等同于 scale3d(1, 1, sz); */</p>
+</blockquote>
+<h2 id="matrix3d">matrix3d()</h2>
+<p>matrix3d() 函数与前面我们学习的 matrix() 函数非常相似，不过 matrix3d() 函数可以使用一个 4 × 4 的矩阵来描述一个三维（3D）转换。通过 matrix3d() 函数可以一次执行所有的 3D转换操作，函数的语法格式如下：<br>
+<code>matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)</code></p>
+<p>参数说明如下：</p>
+<blockquote>
+<p>a1、b1、c1、d1、a2、b2、c2、d2、a3、b3、c3、d3、d4：用来描述各种 3D 转换；<br>
+a4、b4、c4：表示元素变换的量。</p>
+</blockquote>
+<p><code>transform: matrix3d(0.359127, -0.469472, 0.806613, 0, 0.190951, 0.882948, 0.428884, 0, -0.913545, 0, 0.406737, 0, 0, 0, 0, 1);</code></p>
+<h1 id="transition过渡效果">transition（过渡效果)</h1>
+<p>通常当 CSS 的属性值更改后，浏览器会立即更新相应的样式，例如当鼠标悬停在元素上时，通过 :hover 选择器定义的样式会立即应用在元素上。在 CSS3 中加入了一项过渡功能，通过该功能您可以将元素从一种样式在指定时间内平滑的过渡到另一种样式，类似于简单的动画，但无需借助 flash 或 JavaScript。</p>
+<p>CSS 中提供了 5 个有关过渡的属性，如下所示：</p>
+<pre><code>transition-property：设置元素中参与过渡的属性；
+transition-duration：设置元素过渡的持续时间；
+transition-timing-function：设置元素过渡的动画类型；
+transition-delay：设置过渡效果延迟的时间，默认为 0；
+transition：简写属性，用于同时设置上面的四个过渡属性。
+</code></pre>
+<p>要成功实现过渡效果，必须定义以下两项内容：</p>
+<ul>
+<li>元素中参数与过渡效果的属性；</li>
+<li>过渡效果持续的时间。</li>
+</ul>
+<blockquote>
+<p>提示：过渡效果通常会在鼠标悬停在元素上时发生，如果未设置过渡持续的时间，则过渡效果不会生效，因为过渡时间的默认值为 0。</p>
+</blockquote>
+<h2 id="transition-property">transition-property</h2>
+<p>transition-property 属性用来设置元素中参与过渡的属性名称，语法格式如下：<br>
+<code>transition-property: none | all | property;</code></p>
+<p>参数说明如下：</p>
+<ul>
+<li>none：表示没有属性参与过渡效果；</li>
+<li>all：表示所有属性都参与过渡效果；</li>
+<li>property：定义应用过渡效果的 CSS 属性名称列表，多个属性名称之间使用逗号,进行分隔。</li>
+</ul>
+<p><code> transition-property: width, background;</code></p>
+<h2 id="transition-duration">transition-duration</h2>
+<p>transition-duration 属性用来设置过渡需要花费的时间（单位为秒或者毫秒），语法格式如下：<br>
+<code>transition-duration: time;</code></p>
+<p>其中，time 为完成过渡效果需要花费的时间（单位为秒或毫秒），默认值为 0，意味着不会有效果。</p>
+<p>如果有多个参与过渡的属性，也可以依次为这些属性设置过渡需要的时间，多个属性之间使用逗号进行分隔，例如transition-duration: 1s, 2s, 3s;。除此之外，也可以使用一个时间来为所有参与过渡的属性设置过渡所需的时间。</p>
+<p><code>transition-property: width, background;             transition-duration: .25s, 1s;</code></p>
+<h2 id="transition-timing-function">transition-timing-function</h2>
+<p>transition-timing-function 属性用来设置过渡动画的类型，属性的可选值如下：</p>
+<pre><code>linear	以始终相同的速度完成整个过渡过程，等同于 cubic-bezier(0,0,1,1)
+ease	以慢速开始，然后变快，然后慢速结束的顺序来完成过渡过程，等同于 cubic-bezier(0.25,0.1,0.25,1)
+ease-in	以慢速开始过渡的过程，等同于 cubic-bezier(0.42,0,1,1)
+ease-out	以慢速结束过渡的过程，等同于 cubic-bezier(0,0,0.58,1)
+ease-in-out	以慢速开始，并以慢速结束的过渡效果，等同于 cubic-bezier(0.42,0,0.58,1)
+cubic-bezier(n, n, n, n)	使用 cubic-bezier() 函数来定义自己的值，每个参数的取值范围在 0 到 1 之间
+
+</code></pre>
+<pre><code class="language-css">transition-property: width, background;
+transition-duration: .25s, 1s;
+transition-timing-function: ease;
+</code></pre>
+<h2 id="transition-delay">transition-delay</h2>
+<p>transition-delay 属性用来设置过渡效果何时开始，属性的语法格式如下：<br>
+<code>transition-delay: time;</code></p>
+<p>其中，参数 time 用来设置在过渡效果开始之前需要等待的时间，单位为秒或毫秒。</p>
+<pre><code class="language-css">transition-property: width, background;
+transition-duration: .25s, 1s;
+transition-delay: 3s;
+</code></pre>
+<h2 id="transition">transition</h2>
+<p>transition 属性是上面四个属性的简写形式，通过该属性可以同时设置上面的四个属性，属性的语法格式如下：<br>
+<code>transition: transition-property transition-duration transition-timing-function transition-delay;</code></p>
+<blockquote>
+<p>transition 属性中，transition-property 和 transition-duration 为必填参数，transition-timing-function 和 transition-delay 为选填参数，如非必要可以省略不写。另外，通过 transition 属性也可以设置多组过渡效果，每组之间使用逗号进行分隔</p>
+</blockquote>
+<pre><code class="language-css">transition: width .25s linear 1.9s, background 1s 2s, transform 2s;
+
+transition-property: width, background, transform;
+transition-duration: .25s, 1s, 2s;
+transition-timing-function: linear, ease, ease;
+transition-delay: 1.9s, 2s, 0s;
+</code></pre>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#2d%E8%BD%AC%E6%8D%A2">2D转换</a>
+<ul>
+<li><a href="#translate">translate()</a></li>
+<li><a href="#rotate">rotate()</a></li>
+<li><a href="#scale">scale()</a></li>
+<li><a href="#skew">skew()</a></li>
+<li><a href="#matrix">matrix()</a></li>
+</ul>
+</li>
+<li><a href="#3d%E8%BD%AC%E6%8D%A2">3D转换</a>
+<ul>
+<li><a href="#translate3d">translate3d()</a></li>
+<li><a href="#translatez">translateZ()</a></li>
+<li><a href="#rotate3d">rotate3d()</a></li>
+<li><a href="#scale3d">scale3d()</a></li>
+<li><a href="#matrix3d">matrix3d()</a></li>
+</ul>
+</li>
+<li><a href="#transition%E8%BF%87%E6%B8%A1%E6%95%88%E6%9E%9C">transition（过渡效果)</a>
+<ul>
+<li><a href="#transition-property">transition-property</a></li>
+<li><a href="#transition-duration">transition-duration</a></li>
+<li><a href="#transition-timing-function">transition-timing-function</a></li>
+<li><a href="#transition-delay">transition-delay</a></li>
+<li><a href="#transition">transition</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">打不死的平头哈Copyright © 2018-2020 <a href="https://18279493170.github.io" style="margin:0;">徐某人</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>47</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://18279493170.github.io/media/js/prism.js"></script>
+</body>
+</html>

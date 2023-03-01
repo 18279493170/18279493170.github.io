@@ -1,0 +1,2439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://18279493170.github.io</id>
+    <title>徐某人</title>
+    <updated>2023-03-01T19:26:11.840Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://18279493170.github.io"/>
+    <link rel="self" href="https://18279493170.github.io/atom.xml"/>
+    <subtitle>搞钱！搞钱！搞钱！</subtitle>
+    <logo>https://18279493170.github.io/images/avatar.png</logo>
+    <icon>https://18279493170.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2023, 徐某人</rights>
+    <entry>
+        <title type="html"><![CDATA[js之引用数据类型]]></title>
+        <id>https://18279493170.github.io/kc79gbHFn/</id>
+        <link href="https://18279493170.github.io/kc79gbHFn/">
+        </link>
+        <updated>2022-08-30T06:41:08.000Z</updated>
+        <content type="html"><![CDATA[<p>ja</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[websocket]]></title>
+        <id>https://18279493170.github.io/websocket/</id>
+        <link href="https://18279493170.github.io/websocket/">
+        </link>
+        <updated>2022-08-11T09:41:38.000Z</updated>
+        <content type="html"><![CDATA[<p>websocket</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[css速览]]></title>
+        <id>https://18279493170.github.io/css-su-lan/</id>
+        <link href="https://18279493170.github.io/css-su-lan/">
+        </link>
+        <updated>2022-07-24T02:32:35.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="定义">定义</h1>
+<p>CSS：Cascading Style Sheet（层叠样式表）</p>
+<pre><code class="language-css">// 写法
+选择器 {
+    属性名: 属性值;
+}
+</code></pre>
+<h1 id="样式表">样式表</h1>
+<p>三种样式表使用</p>
+<pre><code class="language-css">// 内联样式
+&lt;div style=&quot;width: 100px; height: 100px;&quot;&gt;&lt;/div&gt;
+
+// 内部样式表
+&lt;style type=&quot;text/css&quot;&gt;
+    div {
+        width: 100px;
+        height: 100px;
+    }
+&lt;/style&gt;
+
+// 外部样式表
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&quot;&gt;
+</code></pre>
+<p>三种样式表的权重和优先级</p>
+<p><code>内联样式 &gt; 内部样式表 &gt; 外部样式表</code></p>
+<h1 id="选择器">选择器</h1>
+<p>6大基础选择器</p>
+<pre><code class="language-css">// 1、id选择器：唯一对应
+&lt;div id=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    #box {
+        color: red;
+    }
+&lt;/style&gt;
+
+// 2、类class选择器：统一类
+&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    .box {
+        color: red;
+    }
+&lt;/style&gt;
+
+// 3、标签选择器：初始化标签使用
+&lt;div&gt;&lt;/div&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    div {
+        color: red;
+    }
+&lt;/style&gt;
+
+// 4、*通配符标签
+&lt;style type=&quot;text/css&quot;&gt;
+    * {
+        margin: 0;
+    }
+&lt;/style&gt;
+
+// 5、属性选择器：表单中input常用
+&lt;div id=&quot;box1&quot;&gt;&lt;/div&gt;
+&lt;a href=&quot;http://www.baidu.com&quot;&gt;&lt;/a&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    [id=&quot;box&quot;] {
+        color: red;
+    }
+    [href] {
+        text-decoration: none;
+    }
+&lt;/style&gt;
+
+// 6、最高优先权
+&lt;style type=&quot;text/css&quot;&gt;
+    div {
+        background: red !important;
+    }
+&lt;/style&gt;
+</code></pre>
+<p>6大基础选择器优先级</p>
+<p><code>!important &gt; id &gt; class | 属性 &gt; 标签 &gt; *</code></p>
+<p>复合选择器</p>
+<pre><code class="language-html">// 1、派生选择器（父子选择器），从右到左匹配。包含两种：包含选择器和子选择器
+&lt;header&gt;
+    &lt;p&gt;
+        &lt;em&gt;你好&lt;/em&gt;
+    &lt;/p&gt;
+&lt;/header&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    /*包含选择器*/
+    header p em {
+        color: red;
+    }
+
+    /*子选择器：必须层层父子级*/
+    header &gt; p &gt; em {
+            color: red;
+        }
+    /*直接父子选择器*/
+        p &gt; em {
+            color: red;
+        }
+&lt;/style&gt;
+
+// 2、相邻兄弟选择器：1、同父级；2、相邻；3、在其之后
+&lt;p&gt;这里是第一个P标签&lt;/p&gt;
+&lt;h2 class = 'h2'&gt;标题H2&lt;/h2&gt;
+&lt;p&gt;这里是第一个P标签（变色）&lt;/p&gt;
+&lt;p&gt;这里是第二个P标签&lt;/p&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    .h2 + p{
+        color: red;
+    }
+&lt;/style&gt;
+
+// 3、兄弟选择器~（匹配选择器）
+&lt;p&gt;这里是第一个P标签&lt;/p&gt;
+&lt;h2 class = 'h2'&gt;标题H2&lt;/h2&gt;
+&lt;p&gt;这里是第一个P标签（变色）&lt;/p&gt;
+&lt;p&gt;这里是第二个P标签（变色）&lt;/p&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    .h2 ~ p{
+        color: red;
+    }
+&lt;/style&gt;
+
+// 4、并列选择器
+&lt;h1 class=&quot;title&quot;&gt;你好！&lt;/h1&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    h1.class { 
+        color: pink;
+    }
+&lt;/style&gt;
+
+// 5、分组选择器
+&lt;input type=&quot;text&quot; /&gt;
+&lt;br /&gt;
+&lt;textarea cols=&quot;3&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    input,
+    textarea {
+        outline: none;
+    }
+&lt;/style&gt;
+</code></pre>
+<h1 id="css权重256进制计算规则">CSS权重(256进制)计算规则</h1>
+<p>分类权重</p>
+<blockquote>
+<p>*：0<br>
+标签、伪元素：1<br>
+class、属性、伪类 ：10<br>
+id：100<br>
+内联样式：1000<br>
+!important：正无穷</p>
+</blockquote>
+<pre><code class="language-css">// 基础选择器优先级
+正无穷 &gt; 100 &gt;10 &gt;1 &gt;0
+!important &gt; id &gt; class | 属性 &gt; 标签 &gt; *
+
+// 权重计算
+&lt;div id=&quot;div_id&quot; class=&quot;div_class&quot;&gt;
+    &lt;h1 id=&quot;h1_id&quot; class=&quot;h1_class&quot;&gt;
+        你好！
+    &lt;/h1&gt;
+&lt;/div&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    #div_id h1 { 
+        color: pink; // 100 + 1
+    }
+    .div_class .h1_class {
+        color: purple; // 10 + 10
+    }
+    .div_class #h1_id.h1_class { // 10 + 100 + 10
+        color: red;
+    }
+&lt;/style&gt;
+</code></pre>
+<h1 id="伪类和伪元素">伪类和伪元素</h1>
+<p><a href="https://www.runoob.com/css/css-pseudo-classes.html">伪类</a></p>
+<blockquote>
+<p>用来选择那些不能够被普通选择器选择的文档之外的元素，比如:hover。</p>
+</blockquote>
+<pre><code>:active 选择正在被激活的元素（匹配指定状态）
+
+:hover 选择被鼠标悬浮着的元素（匹配指定状态）
+
+:link 选择未被访问的元素 （匹配指定状态）
+
+:visited 选择已被访问的元素（匹配指定状态）
+
+:first-child 选择满足是其父元素的第一个子元素的元素
+
+:lang(value) 选择带有指定 lang 属性的元素
+
+:focus 选择拥有键盘输入焦点的元素
+
+:enable 选择每个已启动的元素
+
+:disable 选择每个已禁止的元素
+
+:checked 选择每个被选中的元素
+
+:target 选择当前的锚点元素
+
+:first-of-type 选择满足是其父元素的第一个某类型子元素的元素
+
+:last-of-type 选择满足是其父元素的最后一个某类型子元素的元素
+
+:only-of-type 选择满足是其父元素的唯一一个某类型子元素的元素
+
+:nth-of-type(n) 选择满足是其父元素的第n个某类型子元素的元素
+
+:nth-last-of-type(n) 选择满足是其父元素的倒数第n个某类型的元素
+
+:only-child 选择满足是其父元素的唯一一个子元素的元素
+
+:last-child 选择满足是其父元素的最后一个元素的元素
+
+:nth-child(n) 选择满足是其父元素的第n个子元素的元素
+
+:nth-last-child(n) 选择满足是其父元素的倒数第n个子元素的元素
+
+:empty 选择满足没有子元素的元素
+
+:in-range 选择满足值在指定范围内的元素
+
+:out-of-range 选择值不在指定范围内的元素
+
+:invalid 选择满足值为无效值的元素
+
+:valid 选择满足值为有效值的元素
+
+:not(selector) 选择不满足selector的元素
+
+:optional 选择为可选项的表单元素，即没有“required”属性
+
+:read-only 选择有&quot;readonly&quot;的表单元素
+
+:read-write 选择没有&quot;readonly&quot;的表单元素
+
+:root 选择根元素
+
+
+</code></pre>
+<p><a href="https://www.runoob.com/css/css-pseudo-elements.html">伪元素</a></p>
+<blockquote>
+<p>需要创建通常不存在于文档中的元素，比如::before。</p>
+</blockquote>
+<pre><code>::after     	p::after	在每个 &lt;p&gt; 元素之后插入内容
+::before	p::before	在每个 &lt;p&gt; 元素之前插入内容
+::first-letter	p::first-letter	匹配每个 &lt;p&gt; 元素中内容的首字母
+::first-line	p::first-line	匹配每个 &lt;p&gt; 元素中内容的首行
+::selection	p::selection	匹配用户选择的元素部分
+::placeholder	input::placeholder	匹配每个表单输入框（例如 &lt;input&gt;）的 placeholder 属性
+</code></pre>
+<p><code>CSS2中伪类和伪元素都是要单冒号（:） CSS3中伪类使用单冒号（:），伪元素使用双冒号（::）</code></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python爬虫]]></title>
+        <id>https://18279493170.github.io/VZL9By2eH/</id>
+        <link href="https://18279493170.github.io/VZL9By2eH/">
+        </link>
+        <updated>2022-06-07T08:20:15.000Z</updated>
+        <content type="html"><![CDATA[<p>1、通用爬虫与聚焦爬虫<br>
+通用网络爬虫 是 捜索引擎抓取系统（Baidu、Google、Yahoo等）的重要组成部分。主要目的是将互联网上的网页下载到本地，形成一个互联网内容的镜像备份。<br>
+聚焦爬虫<br>
+聚焦爬虫，是&quot;面向特定主题需求&quot;的一种网络爬虫程序，它与通用搜索引擎爬虫的区别在于： 聚焦爬虫在实施网页抓取时会对内容进行处理筛选，尽量保证只抓取与需求相关的网页信息。</p>
+<p>2、浏览器发送HTTP请求的过程：<br>
+当用户在浏览器的地址栏中输入一个URL地址并按回车键之后，浏览器会向HTTP服务器发送HTTP请求。</p>
+<pre><code>HTTP请求主要分为 Get 和 Post 两种方法。
+
+当我们在浏览器输入URL http://www.baidu.com 的时候，浏览器发送一个Request请求去获取 http://www.baidu.com 的html文件，服务器把Response文件对象发送回给浏览器。
+
+浏览器分析Response中的 HTML，发现其中引用了很多其他文件，比如Images文件，CSS文件，JS文件。 浏览器会自动再次发送Request去获取图片，CSS文件，或者JS文件等。
+
+当所有的文件都下载成功后，网页会根据HTML语法结构，完整的显示出来了
+</code></pre>
+<p>3、URL基本格式<br>
+基本格式：scheme://host[:port]/path/…/[?query-string][#anchor]<br>
+#锚点</p>
+<pre><code>scheme：协议(例如：http, https, ftp)
+host：服务器的IP地址或者域名
+port：服务器的端口（如果是走协议默认端口，缺省端口80）
+path：访问资源的路径
+query-string：参数，发送给http服务器的数据
+anchor：锚（跳转到网页的指定锚点位置）
+</code></pre>
+<p>4、URL只是标识资源的位置，而HTTP是用来提交和获取资源。客户端发送一个HTTP请求到服务器的请求消息，包括以下格式：</p>
+<pre><code>4、1请求行、请求头部、空行、请求数据
+图标见同级文件夹
+
+例子：
+GET https://www.baidu.com/ HTTP/1.1
+Host: www.baidu.com
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Referer: http://www.baidu.com/
+Accept-Encoding: gzip, deflate, sdch, br
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6
+Cookie: BAIDUID=04E4001F34EA74AD4601512DD3C41A7B:FG=1; BIDUPSID=04E4001F34EA74AD4601512DD3C41A7B; PSTM=1470329258; MCITY=-343%3A340%3A; H_PS_PSSID=1447_18240_21105_21386_21454_21409_21554; BD_UPN=12314753; sug=3; sugstore=0; ORIGIN=0; bdime=0; H_PS_645EC=7e2ad3QHl181NSPbFbd7PRUCE1LlufzxrcFmwYin0E6b%2BW8bbTMKHZbDP0g; BDSVRTM=0
+
+4、2常用的请求报头
+
+    1. Host (主机和端口号)
+    Host：对应网址URL中的Web名称和端口号，用于指定被请求资源的Internet主机和端口号，通常属于URL的Host部分。
+
+    2. Connection (连接类型)
+    Connection：表示客户端与服务连接类型，通常情况下：
+
+    Client 发起一个包含 Connection:keep-alive 的请求（HTTP/1.1使用 keep-alive 为默认值）
+
+    Server收到请求后：
+
+    如果 Server 支持 keep-alive，回复一个包含 Connection:keep-alive 的响应，不关闭连接；
+    如果 Server 不支持 keep-alive，回复一个包含 Connection:close 的响应，关闭连接。
+    如果client收到包含 Connection:keep-alive 的响应，向同一个连接发送下一个请求，直到一方主动关闭连接。
+
+    Connection : keep-alive 在很多情况下能够重用连接，减少资源消耗，缩短响应时间。比如当浏览器需要多个文件时(比如一个HTML文件和多个Image文件)，不需要每次都去请求建立连接。
+
+    3. Upgrade-Insecure-Requests (升级为HTTPS请求)
+    Upgrade-Insecure-Requests：升级不安全的请求，意思是会在加载 http 资源时自动替换成 https 请求，让浏览器不再显示https页面中的http请求警报。
+
+    HTTPS 是以安全为目标的 HTTP 通道，所以在 HTTPS 承载的页面上不允许出现 HTTP 请求，一旦出现就是提示或报错。
+
+    4. User-Agent (浏览器名称)
+    User-Agent：标识客户端身份的名称，通常页面会根据不同的User-Agent信息自动做出适配，甚至返回不同的响应内容。
+
+    5. Accept (传输文件类型)
+    Accept：指浏览器或其他客户端可以接受的MIME（Multipurpose Internet Mail Extensions（多用途互联网邮件扩展））文件类型，服务器可以根据它判断并返回适当的文件格式。
+
+    举例：
+    Accept: */*：表示什么都可以接收。
+
+    Accept：image/gif：表明客户端希望接受GIF图像格式的资源；
+
+    Accept：text/html：表明客户端希望接受html文本。
+
+    Accept: text/html, application/xhtml+xml;q=0.9, image/*;q=0.8：表示浏览器支持的 MIME 类型分别是 html文本、xhtml和xml文档、所有的图像格式资源。
+
+    q是权重系数，范围 0 =&lt; q &lt;= 1，q 值越大，请求越倾向于获得其“;”之前的类型表示的内容。若没有指定q值，则默认为1，按从左到右排序顺序；若被赋值为0，则用于表示浏览器不接受此内容类型。
+
+    Text：用于标准化地表示的文本信息，文本消息可以是多种字符集和或者多种格式的；Application用于传输应用程序数据或者二进制数据。详细请点击
+
+    6. Referer (页面跳转来源)
+    Referer：表明产生请求的网页来自于哪个URL，用户是从该 Referer页面访问到当前请求的页面。这个属性可以用来跟踪Web请求来自哪个页面，是从什么网站来的等。
+
+    防盗链：有时候遇到下载某网站图片，需要对应的referer，否则无法下载图片，那是因为人家做了防盗链，原理就是根据referer去判断是否是本网站的地址，如果不是，则拒绝，如果是，就可以下载。
+
+    7. Accept-Encoding（文件编解码格式）
+    Accept-Encoding：指出浏览器可以接受的编码方式。编码方式不同于文件格式，它是为了压缩文件并加速文件传递速度。浏览器在接收到Web响应之后先解码，然后再检查文件格式，许多情形下这可以减少大量的下载时间。
+
+    举例：Accept-Encoding:gzip;q=1.0, identity; q=0.5, *;q=0
+    如果有多个Encoding同时匹配, 按照q值顺序排列，本例中按顺序支持 gzip, identity压缩编码，支持gzip的浏览器会返回经过gzip编码的HTML页面。
+
+    如果请求消息中没有设置这个报头，通常服务器假定客户端不支持压缩，直接返回文本。
+
+    8. Accept-Language（语言种类）
+    Accept-Langeuage：指出浏览器可以接受的语言种类，如en或en-us指英语，zh或者zh-cn指中文，当服务器能够提供一种以上的语言版本时要用到。
+
+    如果目标网站支持多个语种的话，可以使用这个信息来决定返回什么语言的网页。
+
+    9. Accept-Charset（字符编码）
+    Accept-Charset：指出浏览器可以接受的字符编码。
+
+    举例：Accept-Charset:iso-8859-1,gb2312,utf-8
+    ISO8859-1：通常叫做Latin-1。Latin-1包括了书写所有西方欧洲语言不可缺少的附加字符，英文浏览器的默认值是ISO-8859-1.
+    gb2312：标准简体中文字符集;
+    utf-8：UNICODE 的一种变长字符编码，可以解决多种语言文本显示问题，从而实现应用国际化和本地化。
+    如果在请求消息中没有设置这个域，默认客户端是任何字符集都可以接受，则返回网页charset指定的编码。
+
+    10. Cookie （Cookie）
+    Cookie：浏览器用这个属性向服务器发送Cookie。Cookie是在浏览器中寄存的小型数据体，它可以记载和服务器相关的用户信息，也可以用来实现模拟登陆，之后会详细讲。
+
+    11. Content-Type (POST数据类型)
+    Content-Type：POST请求里用来表示的内容类型。
+
+    举例：Content-Type = Text/XML; charset=gb2312：
+    指明该请求的消息体中包含的是纯文本的XML类型的数据，字符编码采用“gb2312”。
+
+
+4.3 常用的响应报头
+
+    1. Cache-Control：must-revalidate, no-cache, private。
+    这个值告诉客户端，服务端不希望客户端缓存资源，在下次请求资源时，必须要从新请求服务器，不能从缓存副本中获取资源。
+
+    Cache-Control是响应头中很重要的信息，当客户端请求头中包含Cache-Control:max-age=0请求，明确表示不会缓存服务器资源时,Cache-Control作为作为回应信息，通常会返回no-cache，意思就是说，&quot;那就不缓存呗&quot;。
+
+    当客户端在请求头中没有包含Cache-Control时，服务端往往会定,不同的资源不同的缓存策略，比如说oschina在缓存图片资源的策略就是Cache-Control：max-age=86400,这个意思是，从当前时间开始，在86400秒的时间内，客户端可以直接从缓存副本中读取资源，而不需要向服务器请求。
+
+    2. Connection：keep-alive
+    这个字段作为回应客户端的Connection：keep-alive，告诉客户端服务器的tcp连接也是一个长连接，客户端可以继续使用这个tcp连接发送http请求。
+
+    3. Content-Encoding:gzip
+    告诉客户端，服务端发送的资源是采用gzip编码的，客户端看到这个信息后，应该采用gzip对资源进行解码。
+
+    4. Content-Type：text/html;charset=UTF-8
+    告诉客户端，资源文件的类型，还有字符编码，客户端通过utf-8对资源进行解码，然后对资源进行html解析。通常我们会看到有些网站是乱码的，往往就是服务器端没有返回正确的编码。
+
+    5. Date：Sun, 21 Sep 2016 06:18:21 GMT
+    这个是服务端发送资源时的服务器时间，GMT是格林尼治所在地的标准时间。http协议中发送的时间都是GMT的，这主要是解决在互联网上，不同时区在相互请求资源的时候，时间混乱问题。
+
+    6. Expires:Sun, 1 Jan 2000 01:00:00 GMT
+    这个响应头也是跟缓存有关的，告诉客户端在这个时间前，可以直接访问缓存副本，很显然这个值会存在问题，因为客户端和服务器的时间不一定会都是相同的，如果时间不同就会导致问题。所以这个响应头是没有Cache-Control：max-age=*这个响应头准确的，因为max-age=date中的date是个相对时间，不仅更好理解，也更准确。
+
+    7. Pragma:no-cache
+    这个含义与Cache-Control等同。
+
+    8.Server：Tengine/1.4.6
+    这个是服务器和相对应的版本，只是告诉客户端服务器的信息。
+
+    9. Transfer-Encoding：chunked
+    这个响应头告诉客户端，服务器发送的资源的方式是分块发送的。一般分块发送的资源都是服务器动态生成的，在发送时还不知道发送资源的大小，所以采用分块发送，每一块都是独立的，独立的块都能标示自己的长度，最后一块是0长度的，当客户端读到这个0长度的块时，就可以确定资源已经传输完了。
+
+    10. Vary: Accept-Encoding
+    告诉缓存服务器，缓存压缩文件和非压缩文件两个版本，现在这个字段用处并不大，因为现在的浏览器都是支持压缩的。
+</code></pre>
+<p>5、请求方式<br>
+1    GET	请求指定的页面信息，并返回实体主体。<br>
+2	POST	向指定资源提交数据进行处理请求（例如提交表单或者上传文件），数据被包含在请求体中。POST请求可能会导致新的资源的建立和/或已有资源的修改。<br>
+3	HEAD	类似于get请求，只不过返回的响应中没有具体的内容，用于获取报头<br>
+4	PUT	从客户端向服务器传送的数据取代指定的文档的内容。<br>
+5	DELETE	请求服务器删除指定的页面。<br>
+6	CONNECT	HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。<br>
+7	OPTIONS	允许客户端查看服务器的性能。<br>
+8	TRACE	回显服务器收到的请求，主要用于测试或诊断。</p>
+<p>6、主要的请求方式以及对比，特别重要<br>
+HTTP请求主要分为Get和Post两类：<br>
+GET是从服务器上获取指定页面信息，POST是向服务器提交数据并获取页面信息。</p>
+<pre><code>GET请求参数都显示在URL上，服务器根据该请求所包含URL中的参数来产生响应内容。 &quot;Get&quot; 请求的参数 是URL的一部分。
+
+POST请求参数在请求体当中，消息长度没有限制而且以隐式的方式进行发送，通常用来向HTTP服务器提交量比较大的数据（比如请求中包含许多参数或者文件上传操作等）。 &quot;POST&quot;请求的参数 不在URL中，而在请求体中。
+
+页面的form表单一般都有method属性，默认值是&quot;get&quot;。 举个栗子，登录时提交用户名和密码：
+
+如果用&quot;get&quot;方式，提交表单后，则用户输入的用户名和密码将在地址栏中暴露无遗；
+
+如果设置为&quot;post，则提交表单后，地址栏不会有用户名和密码的显示。
+
+所以处理登录页面的form表单时，发送的请求都是&quot;POST&quot;方式。
+</code></pre>
+<p>7、常见的响应状态码<br>
+100~199：表示服务器成功接收部分请求，要求客户端继续提交其余请求才能完成整个处理过程。</p>
+<pre><code>200~299：表示服务器成功接收请求并已完成整个处理过程。常用200（OK 请求成功）。
+
+300~399：为完成请求，客户需进一步细化请求。例如：请求的资源已经移动一个新地址、常用302（所请求的页面已经临时转移至新的url）、307和304（使用缓存资源）。
+400~499：客户端的请求有错误，常用404（服务器无法找到被请求的页面）、403（服务器拒绝访问，权限不够）。
+500~599：服务器端出现错误，常用500（请求未完成。服务器遇到不可预知的情况）。
+</code></pre>
+<p>8、HTTP代理器FIDDLER</p>
+<pre><code>https://blog.csdn.net/qq_32252917/article/details/79074180
+
+Headers —— 显示客户端发送到服务器的 HTTP 请求的 header，显示为一个分级视图，包含了 Web 客户端信息、Cookie、传输状态等。
+Textview —— 显示 POST 请求的 body 部分为文本。
+WebForms —— 显示请求的 GET 参数 和 POST body 内容。
+HexView —— 用十六进制数据显示请求。
+Auth —— 显示响应 header 中的 Proxy-Authorization(代理身份验证) 和 Authorization(授权) 信息.
+Raw —— 将整个请求显示为纯文本。
+JSON - 显示JSON格式文件。
+XML —— 如果请求的 body 是 XML 格式，就是用分级的 XML 树来显示它。
+
+
+Transformer —— 显示响应的编码信息。
+Headers —— 用分级视图显示响应的 header。
+TextView —— 使用文本显示相应的 body。
+ImageVies —— 如果请求是图片资源，显示响应的图片。
+HexView —— 用十六进制数据显示响应。
+WebView —— 响应在 Web 浏览器中的预览效果。
+Auth —— 显示响应 header 中的 Proxy-Authorization(代理身份验证) 和 Authorization(授权) 信息。
+Caching —— 显示此请求的缓存信息。
+Privacy —— 显示此请求的私密 (P3P) 信息。
+Raw —— 将整个响应显示为纯文本。
+JSON - 显示JSON格式文件。
+XML —— 如果响应的 body 是 XML 格式，就是用分级的 XML 树来显示它 。
+</code></pre>
+<p>9、Python2 与Python3的对比<br>
+urllib2  Python2.7 自带的模块(不需要下载，导入即可使用)<br>
+urllib.request python3中用</p>
+<p>10、urlopen 的使用<br>
+# urllib2_urlopen.py</p>
+<pre><code># 导入urllib2 库
+import urllib2
+
+# 向指定的url发送请求，并返回服务器响应的类文件对象
+response = urllib2.urlopen(&quot;http://www.baidu.com&quot;)
+
+# 类文件对象支持 文件对象的操作方法，如read()方法读取文件全部内容，返回字符串
+html = response.read()
+
+# 打印字符串
+print html
+</code></pre>
+<p>11、隐藏身份，增加HTTP报头，创造请求实例</p>
+<pre><code>11、1 参数的学习
+
+
+data（默认空）：提交的Form表单数据，同时 HTTP 请求方法将从默认的 &quot;GET&quot;方式 改为 &quot;POST&quot;方式。
+
+headers（默认空）：参数为字典类型，包含了需要发送的HTTP报头的键值对。
+
+
+11、2 实例
+    import urllib2
+
+    # url 作为Request()方法的参数，构造并返回一个Request对象
+    request = urllib2.Request(&quot;http://www.baidu.com&quot;)
+
+    # Request对象作为urlopen()方法的参数，发送给服务器并接收响应
+    response = urllib2.urlopen(request)
+
+    html = response.read()
+
+    print html
+
+11、3 模拟浏览器访问 
+
+    import urllib2
+
+    url = &quot;http://www'baidu.cn&quot;
+
+    # IE 9.0 的 User-Agent，包含在 user_agent里
+    user_agent = {&quot;User-Agent&quot; : &quot;Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)&quot;} 
+
+    #  url 连同 headers，一起构造Request请求，这个请求将附带 IE9.0 浏览器的User-Agent
+    request = urllib2.Request(url, headers = user_agent)
+
+    # 向服务器发送这个请求
+    response = urllib2.urlopen(request)
+
+    html = response.read()
+    print html
+
+11、4 增加更多的请求头信息
+    user_agent = {&quot;User-Agent&quot; : &quot;Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)&quot;} 
+    request = urllib2.Request(url, headers = user_agent)
+
+    #也可以通过调用Request.add_header() 添加/修改一个特定的header
+    request.add_header(&quot;Connection&quot;, &quot;keep-alive&quot;)
+
+    # 也可以通过调用Request.get_header()来查看header信息
+    # request.get_header(header_name=&quot;Connection&quot;)
+
+
+    查看响应状态码
+
+    print response.code     #可以查看响应状态码
+
+
+11.5 实例
+    import urllib2
+    import random
+
+    url = &quot;http://www.baidu.com&quot;
+
+    ua_list = [
+        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1&quot;,
+        &quot;Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11&quot;,
+        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6&quot;,
+        &quot;Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6&quot;
+    ]
+
+    user_agent = random.choice(ua_list)
+
+    request = urllib2.Request(url)
+
+    #也可以通过调用Request.add_header() 添加/修改一个特定的header
+    request.add_header(&quot;User-Agent&quot;, user_agent)
+
+    # get_header()的字符串参数，第一个字母大写，后面的全部小写
+    request.get_header(&quot;User-agent&quot;)
+
+    response = urllib2.urlopen(request)
+
+    html = response.read()
+    print html
+</code></pre>
+<p>12、URL编码的问题<br>
+urllib与urllib2 的对比<br>
+urllib 模块仅可以接受URL，不能创建 设置了headers 的Request 类实例<br>
+urlencode 方法用来产生GET查询字符串，而 urllib2 则没有，所以搭配使用<br>
+查询紫川解码  unquote()</p>
+<pre><code>实例：
+
+    import urllib
+
+    word = {&quot;kw&quot; : &quot;百度&quot;}
+
+    # 通过urllib.urlencode()方法，将字典键值对按URL编码转换，从而能被web服务器接受。
+    urllib.urlencode(word)  
+   
+
+    # 通过urllib.unquote()方法，把 URL编码字符串，转换回原先字符串。
+    In [4]: print urllib.unquote(&quot;wd=zfds&quot;)
+
+
+总结：一般HTTP请求提交数据，需要编码成 URL编码格式，然后做为url的一部分，或者作为参数传到Request对象中
+</code></pre>
+<p>13、urllib urllib2结合使用</p>
+<pre><code>13、1 直接获取网页
+        def tiebaSpider(url, beginPage, endPage):
+      
+
+            for page in range(beginPage, endPage + 1):
+                pn = (page - 1) * 50
+
+                filename = &quot;第&quot; + str(page) + &quot;页.html&quot;
+                fullurl = url + &quot;&amp;pn=&quot; + str(pn)
+
+                # 调用loadPage()发送请求获取HTML页面
+                html = loadPage(fullurl, filename)
+                # 将获取到的HTML页面写入本地磁盘文件
+                writeFile(html, filename)
+
+        def loadPage(url, filename):
+        
+            print &quot;正在下载&quot; + filename
+
+            headers = {&quot;User-Agent&quot;: &quot;Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0;&quot;}
+
+            request = urllib2.Request(url, headers = headers)
+            response = urllib2.urlopen(request)
+            return response.read()
+
+
+        def writeFile(html, filename):
+         
+            print &quot;正在存储&quot; + filename
+            with open(filename, 'w') as f:
+                f.write(html)
+            print &quot;-&quot; * 20
+
+
+
+        if __name__ == &quot;__main__&quot;:
+
+            kw = raw_input(&quot;请输入需要爬取的贴吧:&quot;)
+            # 输入起始页和终止页，str转成int类型
+            beginPage = int(raw_input(&quot;请输入起始页：&quot;))
+            endPage = int(raw_input(&quot;请输入终止页：&quot;))
+
+            url = &quot;http://tieba.baidu.com/f?&quot;
+            key = urllib.urlencode({&quot;kw&quot; : kw})
+
+            # 组合后的url示例：http://tieba.baidu.com/f?kw=lol
+            url = url + key
+            tiebaSpider(url, beginPage, endPage)
+            
+13、2 ajax 抓取
+    AJAX请求一般返回给网页的是JSON文件，只要对AJAX请求地址进行POST或GET，就能返回JSON数据
+    不能直接对网页url获取
+
+
+    13、2、1 第一个例子
+            url = &quot;https://movie.douban.com/j/chart/top_list?type=11&amp;interval_id=100%3A90&amp;action=&amp;&quot;
+
+            headers={&quot;User-Agent&quot;: &quot;Mozilla....&quot;}
+
+            # 变动的是这两个参数，从start开始往后显示limit个
+            formdata = {
+                'start':'0',
+                'limit':'10'
+            }
+            data = urllib.urlencode(formdata)
+
+            request = urllib2.Request(url + data, headers = headers)
+            response = urllib2.urlopen(request)
+
+            print response.read()
+
+
+            # demo2
+
+            url = &quot;https://movie.douban.com/j/chart/top_list?&quot;
+            headers={&quot;User-Agent&quot;: &quot;Mozilla....&quot;}
+
+            # 处理所有参数
+            formdata = {
+                'type':'11',
+                'interval_id':'100:90',
+                'action':'',
+                'start':'0',
+                'limit':'10'
+            }
+            data = urllib.urlencode(formdata)
+
+            request = urllib2.Request(url + data, headers = headers)
+            response = urllib2.urlopen(request)
+
+            print response.read()
+
+    13、2、2 发送post 请求
+
+            import urllib
+            import urllib2
+
+            # POST请求的目标URL
+            url = &quot;http://fanyi.youdao.com/translate?smartresult=dict&amp;smartresult=rule&amp;smartresult=ugc&amp;sessionFrom=null&quot;
+
+            headers={&quot;User-Agent&quot;: &quot;Mozilla....&quot;}
+
+            formdata = {
+                &quot;type&quot;:&quot;AUTO&quot;,
+                &quot;i&quot;:&quot;i love python&quot;,
+                &quot;doctype&quot;:&quot;json&quot;,
+                &quot;xmlVersion&quot;:&quot;1.8&quot;,
+                &quot;keyfrom&quot;:&quot;fanyi.web&quot;,
+                &quot;ue&quot;:&quot;UTF-8&quot;,
+                &quot;action&quot;:&quot;FY_BY_ENTER&quot;,
+                &quot;typoResult&quot;:&quot;true&quot;
+            }
+
+            data = urllib.urlencode(formdata)
+
+            request = urllib2.Request(url, data = data, headers = headers)
+            response = urllib2.urlopen(request)
+            print response.read()
+</code></pre>
+<p>14、HTTP 和HTTPS 的区别</p>
+<pre><code>urllib2可以为 HTTPS 请求验证SSL证书，模仿浏览器
+如果SSL证书验证不通过，或者操作系统不信任服务器的安全证书，比如浏览器在访问12306网站如：https://www.12306.cn/mormhweb/的时候，会警告用户证书不受信任。
+
+import ssl
+
+# 表示忽略未经核实的SSL证书认证
+context = ssl._create_unverified_context()
+
+
+#  在urlopen()方法里 指明添加 context 参数
+response = urllib2.urlopen(request, context = context)
+</code></pre>
+<p>15、添加新的功能<br>
+基本的urlopen()方法不支持代理、Cookie等其他的 HTTP/HTTPS高级功能<br>
+使用相关的 Handler处理器 来创建特定功能的处理器对象；</p>
+<pre><code>然后通过 urllib2.build_opener()方法使用这些处理器对象，创建自定义opener对象；
+
+使用自定义的opener对象，调用open()方法发送请求。
+
+注意：如果程序里所有的请求都使用自定义的opener，可以使用urllib2.install_opener() 将自定义的 opener 对象 定义为 全局opener，表示如果之后凡是调用urlopen，都将使用这个opener（根据自己的需求来选择）。
+
+
+15、1 自定义简单的opener
+
+    import urllib2
+
+    # 构建一个HTTPHandler 处理器对象，支持处理HTTP请求
+    http_handler = urllib2.HTTPHandler()
+
+
+    # 调用urllib2.build_opener()方法，创建支持处理HTTP请求的opener对象
+    opener = urllib2.build_opener(http_handler)
+
+    # 构建 Request请求
+    request = urllib2.Request(&quot;http://www.baidu.com/&quot;)
+
+    # 调用自定义opener对象的open()方法，发送request请求
+    # （注意区别：不再通过urllib2.urlopen()发送请求）
+    response = opener.open(request)
+
+    # 获取服务器响应内容
+    print response.read()
+
+
+15、2 设置代理器 加代理
+
+    import urllib2
+
+    # 构建了两个代理Handler，一个有代理IP，一个没有代理IP
+    httpproxy_handler = urllib2.ProxyHandler({&quot;http&quot; : &quot;168.0.0.1:8100&quot;})
+    nullproxy_handler = urllib2.ProxyHandler({})
+
+    proxySwitch = True #定义一个代理开关
+
+    # 通过 urllib2.build_opener()方法使用这些代理Handler对象，创建自定义opener对象
+    # 根据代理开关是否打开，使用不同的代理模式
+    if proxySwitch:  
+        opener = urllib2.build_opener(httpproxy_handler)
+    else:
+        opener = urllib2.build_opener(nullproxy_handler)
+
+    request = urllib2.Request(&quot;http://www.baidu.com/&quot;)
+
+    # 1. 如果这么写，只有使用opener.open()方法发送请求才使用自定义的代理，而urlopen()则不使用自定义代理。
+    response = opener.open(request)
+
+    # 2. 如果这么写，就是将opener应用到全局，之后所有的，不管是opener.open()还是urlopen() 发送请求，都将使用自定义代理。
+    # urllib2.install_opener(opener)
+    # response = urlopen(request)
+
+    print response.read()
+</code></pre>
+<p>16、密码管理对象<br>
+验证代理授权的用户名和密码 (ProxyBasicAuthHandler())<br>
+验证Web客户端的的用户名和密码 (HTTPBasicAuthHandler()) 例如ftp</p>
+<p>17、cookie的使用</p>
+<pre><code>Cookie：通过在 客户端 记录的信息确定用户的身份。
+
+Session：通过在 服务器端 记录的信息确定用户的身份   
+
+
+Cookie名字（Name）
+Cookie的值（Value）
+Cookie的过期时间（Expires/Max-Age）
+Cookie作用路径（Path）
+Cookie所在域名（Domain），
+使用Cookie进行安全连接（Secure）
+
+Set－Cookie: NAME=VALUE；Expires=DATE；Path=PATH；Domain=DOMAIN_NAME；SECURE
+</code></pre>
+<p>18、cookie在爬虫中的使用</p>
+<pre><code>判定注册用户是否已经登录网站，在下一次进入此网站时保留用户信息，可以简化登录或其他验证过程
+
+
+实例：
+
+    # 获取一个有登录信息的Cookie模拟登陆
+
+    import urllib2
+
+    # 1. 构建一个已经登录过的用户的headers信息
+    headers = {
+        &quot;Host&quot;:&quot;www.renren.com&quot;,
+        &quot;Connection&quot;:&quot;keep-alive&quot;,
+        &quot;Upgrade-Insecure-Requests&quot;:&quot;1&quot;,
+        &quot;User-Agent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36&quot;,
+        &quot;Accept&quot;:&quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&quot;,
+        &quot;Accept-Language&quot;:&quot;zh-CN,zh;q=0.8,en;q=0.6&quot;,
+
+        # 便于终端阅读，表示不支持文件压缩
+        # Accept-Encoding: gzip, deflate, sdch,
+
+        # 重点：这个Cookie是一个保存了用户登录状态的Cookie
+        &quot;Cookie&quot;:'iehfiowhjqo'}
+
+    # 2. 通过headers里的报头信息（主要是Cookie信息），构建Request对象
+    urllib2.Request(&quot;http://www.renren.com/&quot;, headers = headers)
+
+    # 3. 直接访问renren主页，服务器会根据headers报头信息（主要是Cookie信息），判断这是一个已经登录的用户，并返回相应的页面
+    response = urllib2.urlopen(request)
+
+    # 4. 打印响应内容
+    print response.read()
+</code></pre>
+<p>19、cookielib  HTTPCookieProcessor</p>
+<pre><code>cookielib模块：主要作用是提供用于存储cookie的对象
+HTTPCookieProcessor处理器：主要作用是处理这些cookie对象，并构建handler对象 
+
+
+19、1 获取cookie，保存到cookiejar中
+
+
+        import urllib2
+        import cookielib
+
+        # 构建一个CookieJar对象实例来保存cookie
+        cookiejar = cookielib.CookieJar()
+
+        # 使用HTTPCookieProcessor()来创建cookie处理器对象，参数为CookieJar()对象
+        handler=urllib2.HTTPCookieProcessor(cookiejar)
+
+        # 通过 build_opener() 来构建opener
+        opener = urllib2.build_opener(handler)
+
+        # 4. 以get方法访问页面，访问之后会自动保存cookie到cookiejar中
+        opener.open(&quot;http://www.baidu.com&quot;)
+
+        ## 可以按标准格式将保存的Cookie打印出来
+        cookieStr = &quot;&quot;
+        for item in cookiejar:
+            cookieStr = cookieStr + item.name + &quot;=&quot; + item.value + &quot;;&quot;
+
+        ## 舍去最后一位的分号
+        print cookieStr[:-1]
+
+19、2 获取cookie，保存到文件中
+
+
+    import cookielib
+    import urllib2
+
+    # 保存cookie的本地磁盘文件名
+    filename = 'cookie.txt'
+
+    # 声明一个MozillaCookieJar(有save实现)对象实例来保存cookie，之后写入文件
+    cookiejar = cookielib.MozillaCookieJar(filename)
+
+    # 使用HTTPCookieProcessor()来创建cookie处理器对象，参数为CookieJar()对象
+    handler = urllib2.HTTPCookieProcessor(cookiejar)
+
+    # 通过 build_opener() 来构建opener
+    opener = urllib2.build_opener(handler)
+
+    # 创建一个请求，原理同urllib2的urlopen
+    response = opener.open(&quot;http://www.baidu.com&quot;)
+
+    # 保存cookie到本地文件
+    cookiejar.save()
+
+19、3 从文件中读取
+
+    import cookielib
+    import urllib2
+
+    # 创建MozillaCookieJar(有load实现)实例对象
+    cookiejar = cookielib.MozillaCookieJar()
+
+    # 从文件中读取cookie内容到变量
+    cookie.load('cookie.txt')
+
+    # 使用HTTPCookieProcessor()来创建cookie处理器对象，参数为CookieJar()对象
+    handler = urllib2.HTTPCookieProcessor(cookiejar)
+
+    # 通过 build_opener() 来构建opener
+    opener = urllib2.build_opener(handler)
+
+    response = opener.open(&quot;http://www.baidu.com&quot;)
+</code></pre>
+<p>20、错误<br>
+URLError 产生的原因主要有：</p>
+<pre><code>没有网络连接
+服务器连接失败
+找不到指定的服务器
+
+
+HTTPError
+HTTPError是URLError的子类，我们发出一个请求时，服务器上都会对应一个response应答对象，其中它包含一个数字&quot;响应状态码&quot;。
+
+如果urlopen或opener.open不能处理的，会产生一个HTTPError，对应相应的状态码，HTTP状态码表示HTTP协议所返回的响应的状态。
+</code></pre>
+<p>21、requests包</p>
+<pre><code>    http://docs.python-requests.org/zh_CN/latest/index.html
+
+    21、1 最基础的get请求  （headers参数 和 parmas参数）
+        response = requests.get(&quot;http://www.baidu.com/&quot;)
+        # response = requests.request(&quot;get&quot;, &quot;http://www.baidu.com/&quot;)
+
+        例子：
+
+            import requests
+
+            kw = {'wd':'美食'}
+
+            headers = {&quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36&quot;}
+
+            # params 接收一个字典或者字符串的查询参数，字典类型自动转换为url编码，不需要urlencode()
+            response = requests.get(&quot;http://www.baidu.com/s?&quot;, params = kw, headers = headers)
+
+            # 查看响应内容，response.text 返回的是Unicode格式的数据
+            print response.text
+
+            # 查看响应内容，response.content返回的字节流数据
+            print respones.content
+
+            # 查看完整url地址
+            print response.url
+
+            # 查看响应头部字符编码
+            print response.encoding
+
+            # 查看响应码
+            print response.status_code
+
+
+
+    21.2 post请求
+
+        response = requests.post(&quot;http://www.baidu.com/&quot;, data = data)
+        print response.text
+
+        # 如果是json文件可以直接显示
+        print response.json()
+</code></pre>
+<p>22、request 代理服务器</p>
+<pre><code># 根据协议类型，选择不同的代理
+proxies = {&quot;http&quot;: &quot;http://148.399.56.79:9527&quot;}
+
+response = requests.get(&quot;http://www.baidu.com&quot;, proxies = proxies)
+# 私密代理，代表用户名与密码
+
+proxy = { &quot;http&quot;: &quot;xx:123456@148.399.56.79:9527&quot; }
+
+response = requests.get(&quot;http://www.baidu.com&quot;, proxies = proxy)
+</code></pre>
+<p>23、web客户端验证</p>
+<pre><code>auth=('test', '123456')
+
+response = requests.get('http://192.168.34.7', auth = auth)
+</code></pre>
+<p>24、获取cookie</p>
+<pre><code>response = requests.get(&quot;http://www.baidu.com/&quot;)
+
+#  返回CookieJar对象:
+cookiejar = response.cookies
+
+#  将CookieJar转为字典：
+cookiedict = requests.utils.dict_from_cookiejar(cookiejar)
+</code></pre>
+<p>25、session<br>
+在 requests 里，session对象是一个非常常用的对象，这个对象代表一次用户会话：从客户端浏览器连接服务器开始，到客户端浏览器与服务器断开。</p>
+<pre><code>会话能让我们在跨请求时候保持某些参数，比如在同一个 Session 实例发出的所有请求之间保持 cookie 。
+
+data = {&quot;email&quot;:&quot;xx&quot;, &quot;password&quot;:&quot;xx&quot;}  
+
+#  发送附带用户名和密码的请求，并获取登录后的Cookie值，保存在ssion里
+ssion.post(&quot;http://www.renren.com/PLogin.do&quot;, data = data)
+
+# ssion包含用户登录后的Cookie值，可以直接访问那些登录后才可以访问的页面
+response = ssion.get(&quot;http://www.renren.com/123/profile&quot;)
+</code></pre>
+<p>26、数字验证证书的问题<br>
+跳过 12306 的证书验证，把 verify 设置为 False</p>
+<pre><code>r = requests.get(&quot;https://www.12306.cn/mormhweb/&quot;, verify = False)
+</code></pre>
+<p>27、页面提取指定的内容<br>
+非结构化数据：先有数据，再有结构，<br>
+结构化数据：先有结构、再有数据</p>
+<pre><code>非结构化的数据处理
+    文本、电话号码、邮箱地址
+    正则表达式
+    HTML 文件
+    正则表达式
+    XPath
+    CSS选择器
+
+
+结构化的数据处理
+    JSON 文件
+    JSON Path
+    转化成Python类型进行操作（json类）
+    XML 文件
+    转化成Python类型（xmltodict）
+    XPath
+    CSS选择器
+    正则表达式
+</code></pre>
+<p>28、正则<br>
+使用 compile() 函数将正则表达式的字符串形式编译为一个 Pattern 对象</p>
+<pre><code>通过 Pattern 对象提供的一系列方法对文本进行匹配查找，获得匹配结果，一个 Match 对象。
+
+最后使用 Match 对象提供的属性和方法获得信息，根据需要进行其他的操作
+    
+Pattern 对象的一些常用方法主要有：
+
+match 方法：从起始位置开始查找，一次匹配
+
+    match 方法
+    match 方法用于查找字符串的头部（也可以指定起始位置），它是一次匹配，只要找到了一个匹配的结果就返回，而不是查找所有匹配的结果。它的一般使用形式如下：
+
+    match(string[, pos[, endpos]])
+search 方法：从任何位置开始查找，一次匹配
+
+    search 方法
+    search 方法用于查找字符串的任何位置，它也是一次匹配，只要找到了一个匹配的结果就返回，而不是查找所有匹配的结果，它的一般使用形式如下：
+
+    search(string[, pos[, endpos]])
+findall 方法：全部匹配，返回列表
+
+    indall 方法的使用形式如下：
+
+    findall(string[, pos[, endpos]])
+
+    其中，string 是待匹配的字符串，pos 和 endpos 是可选参数，指定字符串的起始和终点位置，默认值分别是 0 和 len (字符串长度)。
+
+    findall 以列表形式返回全部能匹配的子串，如果没有匹配，则返回一个空列表。
+finditer 方法：全部匹配，返回迭代器
+
+    finditer 方法
+    finditer 方法的行为跟 findall 的行为类似，也是搜索整个字符串，获得所有匹配的结果。但它返回一个顺序访问每一个匹配结果（Match 对象）的迭代器
+split 方法：分割字符串，返回列表
+
+
+    split 方法
+    split 方法按照能够匹配的子串将字符串分割后返回列表，它的使用形式如下：
+
+    split(string[, maxsplit])
+
+    其中，maxsplit 用于指定最大分割次数，不指定将全部分割。
+sub 方法：替换
+    sub(repl, string[, count])
+
+    repl 可以是字符串也可以是一个函数：
+
+    repl 是字符串，则会使用 repl 去替换字符串每一个匹配的子串，并返回替换后的字符串，另外，repl 还可以使用 id 的形式来引用分组，但不能使用编号 0；
+
+    repl 是函数，这个方法应当只接受一个参数（Match 对象），并返回一个字符串用于替换（返回的字符串中不能再引用分组）。
+
+    count 用于指定最多替换次数，不指定时全部替换。
+</code></pre>
+<p>29、匹配中文<br>
+import re</p>
+<pre><code>title = u'你好，hello，世界'
+pattern = re.compile(ur'[\u4e00-\u9fa5]+')
+result = pattern.findall(title)
+
+print result
+</code></pre>
+<p>30、贪婪匹配的问题<br>
+注意：贪婪模式与非贪婪模式<br>
+贪婪模式：在整个表达式匹配成功的前提下，尽可能多的匹配 ( * )；<br>
+非贪婪模式：在整个表达式匹配成功的前提下，尽可能少的匹配 ( ? )；<br>
+Python里数量词默认是贪婪的。</p>
+<p>31、xml</p>
+<pre><code>XML 指可扩展标记语言（EXtensible Markup Language）
+XML 是一种标记语言，很类似 HTML
+XML 的设计宗旨是传输数据，而非显示数据
+XML 的标签需要我们自行定义。
+XML 被设计为具有自我描述性。
+XML 是 W3C 的推荐标准
+
+数据格式	  描述	                                       设计目标
+XML	        Extensible Markup Language （可扩展标记语言）	被设计为传输和存储数据，其焦点是数据的内容。
+HTML	    HyperText Markup Language （超文本标记语言）	    显示数据以及如何更好显示数据。
+HTML DOM	Document Object Model for HTML (文档对象模型)	   通过 HTML DOM，可以访问所有的 HTML 元素，连同它们所包含的文本和属性。可以对其中的内容进行修改和删除，同时也可以创建新的元素。
+
+
+XML的节点关系
+1. 父（Parent）
+每个元素以及属性都有一个父。
+2. 子（Children）
+元素节点可有零个、一个或多个子。
+3. 同胞（Sibling）
+拥有相同的父的节点
+
+4. 先辈（Ancestor）
+某节点的父、父的父，等等。
+
+5. 后代（Descendant）
+某个节点的子，子的子，等等。
+</code></pre>
+<p>32、xpath</p>
+<pre><code>32、1 XPath 开发工具
+    开源的XPath表达式编辑工具:XMLQuire(XML格式文件可用)
+    Chrome插件 XPath Helper
+    Firefox插件 XPath Checker
+
+32、2 选取节点
+    表达式	      描述
+    nodename	选取此节点的所有子节点。
+    /	        从根节点选取。
+    //	        从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。
+    .	        选取当前节点。
+    ..	        选取当前节点的父节点。
+    @	        选取属性。
+
+32、3 使用
+    from lxml import etree
+
+    html = etree.HTML(text) 
+
+    # 按字符串序列化HTML文档
+    result = etree.tostring(html) 
+</code></pre>
+<p>33、css选择器（配合bs4）<br>
+lxml 只会局部遍历，而Beautiful Soup 是基于HTML DOM的，会载入整个文档，解析整个DOM树，因此时间和内存开销都会大很多，所以性能要低于lxml。<br>
+from bs4 import BeautifulSoup</p>
+<pre><code>soup = BeautifulSoup(html)
+</code></pre>
+<p>34、bs转化的四类</p>
+<pre><code>Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,所有对象可以归纳为4种:
+
+Tag
+HTML 中的一个个标签
+NavigableString
+BeautifulSoup
+Comment
+</code></pre>
+<p>35、多线程<br>
+见案例<br>
+多线程：<br>
+import requests<br>
+import time<br>
+from Queue import Queue<br>
+from lxml import etree</p>
+<pre><code>    import threading
+
+    class Douban(object):
+        def __init__(self):
+            self.headers = {&quot;User-Agent&quot; : &quot;Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko&quot;}
+            self.base_url = &quot;https://movie.douban.com/top250?start=&quot;
+            self.url_list = [self.base_url + str(page) for page in range(0, 225 + 1, 25)]
+            # 创建保存数据的队列
+            self.data_queue = Queue()
+            self.count = 0
+
+        def send_request(self, url):
+            print &quot;[INFO]: 正在抓取&quot; + url
+            html = requests.get(url, headers = self.headers).content
+            # 每次请求间隔1秒
+            time.sleep(1)
+            self.parse_page(html)
+
+
+        def parse_page(self, html):
+            html_obj = etree.HTML(html)
+
+            node_list = html_obj.xpath(&quot;//div[@class='info']&quot;)
+
+            for node in node_list:
+                # 电影标题
+                title = node.xpath(&quot;./div[@class='hd']/a/span[1]/text()&quot;)[0]
+                # 电影评分
+                score = node.xpath(&quot;.//span[@class='rating_num']/text()&quot;)[0]
+                self.count += 1
+                self.data_queue.put(score + &quot;\t&quot; + title)
+
+
+        def start_work(self):
+
+            # 单线程：
+            &quot;&quot;&quot;
+            for url in self.url_list:
+                self.send_request(url)
+            &quot;&quot;&quot;
+
+            thread_list = []
+            for url in self.url_list:
+                # 创建一个线程对象
+                thread = threading.Thread(target = self.send_request, args = [url])
+                # 启动线程，执行任务
+                thread.start()
+                # 将当前线程对象存到列表
+                thread_list.append(thread)
+
+            # 让主线程等待，所有子线程执行结束，再执行后面的代码
+            for thread in thread_list:
+                thread.join()
+
+
+            while not self.data_queue.empty():
+                print self.data_queue.get()
+
+            print self.count
+
+    if __name__ == &quot;__main__&quot;:
+        douban = Douban()
+        start = time.time()
+        douban.start_work()
+
+        print &quot;[INFO]: Useing time %f secend&quot; % (time.time() - start)
+        # [INFO]: Useing time 1.483035 secend
+</code></pre>
+<p>36、解决js和jq<br>
+Selenium + chromdriver</p>
+<pre><code>36、1 鼠标事件
+    #导入 ActionChains 类
+    from selenium.webdriver import ActionChains
+
+    # 鼠标移动到 ac 位置
+    ac = driver.find_element_by_xpath('element')
+    ActionChains(driver).move_to_element(ac).perform()
+
+
+    # 在 ac 位置单击
+    ac = driver.find_element_by_xpath(&quot;elementA&quot;)
+    ActionChains(driver).move_to_element(ac).click(ac).perform()
+
+    # 在 ac 位置双击
+    ac = driver.find_element_by_xpath(&quot;elementB&quot;)
+    ActionChains(driver).move_to_element(ac).double_click(ac).perform()
+
+    # 在 ac 位置右击
+    ac = driver.find_element_by_xpath(&quot;elementC&quot;)
+    ActionChains(driver).move_to_element(ac).context_click(ac).perform()
+
+    # 在 ac 位置左键单击hold住
+    ac = driver.find_element_by_xpath('elementF')
+    ActionChains(driver).move_to_element(ac).click_and_hold(ac).perform()
+
+    # 将 ac1 拖拽到 ac2 位置
+    ac1 = driver.find_element_by_xpath('elementD')
+    ac2 = driver.find_element_by_xpath('elementE')
+    ActionChains(driver).drag_and_drop(ac1, ac2).perform()
+
+36、2 填充表单
+
+    # 导入 Select 类
+    from selenium.webdriver.support.ui import Select
+
+    # 找到 name 的选项卡
+    select = Select(driver.find_element_by_name('status'))
+
+    # 
+    select.select_by_index(1)
+    select.select_by_value(&quot;0&quot;)
+    select.select_by_visible_text(u&quot;北京&quot;)
+    以上是三种选择下拉框的方式，它可以根据索引来选择，可以根据值来选择，可以根据文字来选择。注意：
+
+    index 索引从 0 开始
+    value是option标签的一个属性值，并不是显示在下拉框中的值
+    visible_text是在option标签文本的值，是显示在下拉框的值
+    全部取消选择怎么办呢？很简单:
+
+    select.deselect_all()
+
+36、3 弹窗处理
+    alert = driver.switch_to_alert()
+36、4 页面切换
+    一个浏览器肯定会有很多窗口，所以我们肯定要有方法来实现窗口的切换。切换窗口的方法如下：
+
+    driver.switch_to.window(&quot;this is window name&quot;)
+    也可以使用 window_handles 方法来获取每个窗口的操作对象。例如：
+
+    for handle in driver.window_handles:
+        driver.switch_to_window(handle)
+
+36、5 页面前进与后退
+    driver.forward()     #前进
+    driver.back()        # 后退
+
+36、6 获取cookie
+    获取页面每个Cookies值，用法如下
+
+    for cookie in driver.get_cookies():
+        print &quot;%s=%s;&quot; % (cookie['name'], cookie['value'])
+
+    除Cookies，用法如下
+
+    # By name
+    driver.delete_cookie(&quot;BAIDUID&quot;)
+
+    # all
+    driver.delete_all_cookies()
+
+36、7 页面等待
+    36、7、1 显示等待
+        显式等待
+        显式等待指定某个条件，然后设置最长等待时间。如果在这个时间还没有找到元素，那么便会抛出异常了。
+
+        from selenium import webdriver
+        from selenium.webdriver.common.by import By
+        # WebDriverWait 库，负责循环等待
+        from selenium.webdriver.support.ui import WebDriverWait
+        # expected_conditions 类，负责条件出发
+        from selenium.webdriver.support import expected_conditions as EC
+
+        driver = webdriver.PhantomJS()
+        driver.get(&quot;http://www.xxxxx.com/loading&quot;)
+        try:
+            # 每隔10秒查找页面元素 id=&quot;myDynamicElement&quot;，直到出现则返回
+            element = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.ID, &quot;myDynamicElement&quot;))
+            )
+        finally:
+            driver.quit()
+        如果不写参数，程序默认会 0.5s 调用一次来查看元素是否已经生成，如果本来元素就是存在的，那么会立即返回。
+
+        下面是一些内置的等待条件，你可以直接调用这些条件，而不用自己写某些等待条件了。
+
+        title_is
+        title_contains
+        presence_of_element_located
+        visibility_of_element_located
+        visibility_of
+        presence_of_all_elements_located
+        text_to_be_present_in_element
+        text_to_be_present_in_element_value
+        frame_to_be_available_and_switch_to_it
+        invisibility_of_element_located
+        element_to_be_clickable – it is Displayed and Enabled.
+        staleness_of
+        element_to_be_selected
+        element_located_to_be_selected
+        element_selection_state_to_be
+        element_located_selection_state_to_be
+        alert_is_present
+    36、7、2 隐式等待
+        from selenium import webdriver
+
+        driver = webdriver.PhantomJS()
+        driver.implicitly_wait(10) # seconds
+        driver.get(&quot;http://www.xxxxx.com/loading&quot;)
+        myDynamicElement = driver.find_element_by_id(&quot;myDynamicElement&quot;)
+</code></pre>
+<p>37、Scrapy 框架<br>
+Scrapy Engine(引擎): 负责Spider、ItemPipeline、Downloader、Scheduler中间的通讯，信号、数据传递等。</p>
+<pre><code>Scheduler(调度器): 它负责接受引擎发送过来的Request请求，并按照一定的方式进行整理排列，入队，当引擎需要时，交还给引擎。
+
+Downloader（下载器）：负责下载Scrapy Engine(引擎)发送的所有Requests请求，并将其获取到的Responses交还给Scrapy Engine(引擎)，由引擎交给Spider来处理，
+
+Spider（爬虫）：它负责处理所有Responses,从中分析提取数据，获取Item字段需要的数据，并将需要跟进的URL提交给引擎，再次进入Scheduler(调度器)，
+
+Item Pipeline(管道)：它负责处理Spider中获取到的Item，并进行进行后期处理（详细分析、过滤、存储等）的地方.
+
+Downloader Middlewares（下载中间件）：你可以当作是一个可以自定义扩展下载功能的组件。
+
+Spider Middlewares（Spider中间件）：你可以理解为是一个可以自定扩展和操作引擎和Spider中间通信的功能组件（比如进入Spider的Responses;和从Spider出去的Requests）
+</code></pre>
+<p>38、安装<br>
+sudo pip install scrapy</p>
+<p>39、使用<br>
+39、1 创建项目<br>
+scrapy startproject mySpider</p>
+<pre><code>    scrapy.cfg ：项目的配置文件
+
+    mySpider/ ：项目的Python模块，将会从这里引用代码
+
+    mySpider/items.py ：项目的目标文件
+
+    mySpider/pipelines.py ：项目的管道文件
+
+    mySpider/settings.py ：项目的设置文件
+
+    mySpider/spiders/ ：存储爬虫代码目录
+
+39、2 scrapy shell &quot;http://www.baidu.com&quot;
+
+39、3 Selectors选择器
+    Scrapy Selectors 内置 XPath 和 CSS Selector 表达式机制
+    Selector有四个基本的方法，最常用的还是xpath:
+
+    xpath(): 传入xpath表达式，返回该表达式所对应的所有节点的selector list列表
+    extract(): 序列化该节点为Unicode字符串并返回list
+    css(): 传入CSS表达式，返回该表达式所对应的所有节点的selector list列表，语法同 BeautifulSoup4
+    re(): 根据传入的正则表达式对数据进行提取，返回Unicode字符串list列表
+</code></pre>
+<p>40、Scrapy 和 scrapy-redis的区别<br>
+Scrapy 是一个通用的爬虫框架，但是不支持分布式，Scrapy-redis是为了更方便地实现Scrapy分布式爬取，而提供了一些以redis为基础的组件(仅有组件)。</p>
+<pre><code>pip install scrapy-redis
+
+Scrapy-redis提供了下面四种组件（components）：(四种组件意味着这四个模块都要做相应的修改)
+
+Scheduler
+Duplication Filter
+Item Pipeline
+Base Spider
+</code></pre>
+<p>41、最后总结一下scrapy-redis的总体思路：<br>
+这套组件通过重写scheduler和spider类，实现了调度、spider启动和redis的交互。</p>
+<pre><code>实现新的dupefilter和queue类，达到了判重和调度容器和redis的交互，因为每个主机上的爬虫进程都访问同一个redis数据库，所以调度和判重都统一进行统一管理，达到了分布式爬虫的目的。
+
+当spider被初始化时，同时会初始化一个对应的scheduler对象，这个调度器对象通过读取settings，配置好自己的调度容器queue和判重工具dupefilter。
+
+每当一个spider产出一个request的时候，scrapy引擎会把这个reuqest递交给这个spider对应的scheduler对象进行调度，scheduler对象通过访问redis对request进行判重，如果不重复就把他添加进redis中的调度器队列里。当调度条件满足时，scheduler对象就从redis的调度器队列中取出一个request发送给spider，让他爬取。
+
+当spider爬取的所有暂时可用url之后，scheduler发现这个spider对应的redis的调度器队列空了，于是触发信号spider_idle，spider收到这个信号之后，直接连接redis读取strart_url池，拿去新的一批url入口，然后再次重复上边的工作。
+</code></pre>
+<p>42、https://github.com/rolando/scrapy-redis</p>
+<p>43、connection.py<br>
+负责根据setting中配置实例化redis连接。被dupefilter和scheduler调用，总之涉及到redis存取的都要使用到这个模块。</p>
+<p>44、dupefilter.py<br>
+负责执行requst的去重，实现的很有技巧性，使用redis的set数据结构。但是注意scheduler并不使用其中用于在这个模块中实现的dupefilter键做request的调度，而是使用queue.py模块中实现的queue。</p>
+<pre><code>当request不重复时，将其存入到queue中，调度时将其弹出。
+</code></pre>
+<p>45、crapy-Redis分布式策略：<br>
+假设有四台电脑：Windows 10、Mac OS X、Ubuntu 16.04、CentOS 7.2，任意一台电脑都可以作为 Master端 或 Slaver端，比如：</p>
+<pre><code>Master端(核心服务器) ：使用 Windows 10，搭建一个Redis数据库，不负责爬取，只负责url指纹判重、Request的分配，以及数据的存储
+
+Slaver端(爬虫程序执行端) ：使用 Mac OS X 、Ubuntu 16.04、CentOS 7.2，负责执行爬虫程序，运行过程中提交新的Request给Master
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ajax   fetch    axios区别]]></title>
+        <id>https://18279493170.github.io/LPvWAvr2G/</id>
+        <link href="https://18279493170.github.io/LPvWAvr2G/">
+        </link>
+        <updated>2022-06-05T14:48:16.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="ajax">Ajax</h1>
+<p>Asynchronous Javascript And XML （异步的JavaScript和XML）<br>
+它并不是一种单一的技术，而是有机利用一系列交互式网页应用相关的技术所形成的结合体</p>
+<p>AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+<p>优点：</p>
+<pre><code>页面无刷新，用户体验好。
+异步通信，更加快的响应能力。
+减少冗余请求，减轻了服务器负担
+基于标准化的并被广泛支持的技术，不需要下载插件或者小程序
+</code></pre>
+<h2 id="javascript的ajax">JavaScript的Ajax</h2>
+<p>Ajax的全称是Asynchronous JavaScript and XML，意思就是用JavaScript执行异步网络请求，而不需要重载（刷新）整个页面。<br>
+Ajax使用XMLHttpRequest对象取得新数据，然后再通过 DOM 将新数据插入到页面中。另外，虽然名字中包含 XML 的成分，但 Ajax 通信与数据格式无关; 这种技术就是无须刷新页面即可从服务器取得数据，但不一定是 XML 数据。<br>
+对于IE7+和其他浏览器，可以直接使用XMLHttpRequest对象，对于IE6及以前的浏览器，使用ActiveXObject对象。</p>
+<pre><code class="language-js">
+// 使用
+
+var xhr;
+if (window.XMLHttpRequest) {
+    xhr = new XMLHttpRequest();
+} else {
+    xhr = new ActiveXObject('Microsoft.XMLHTTP');
+}
+// 启动
+
+xhr.open(method, url, boolean);     
+xhr.send();
+
+</code></pre>
+<p>1，xhr.open参数含义：</p>
+<p>method：请求方式，post、get等</p>
+<p>url: 请求链接，只能向同源的url发送请求</p>
+<p>boolean：是否异步请求，true：异步， false: 同步，默认为true</p>
+<p>2，调用 open()方法并不会真正发送请求， 而只是启动一个请求以备发送。</p>
+<p>3，send()方法接收一个参数，即要作为请求主体发送的数据(post方法会使用，get方法直接传null)。如果不需要通过请求主体发送数据，则必须传入 null，因为这个参数对有些浏览器来说是必需的。调用send()之后，请求就会被分派到服务器。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[简历]]></title>
+        <id>https://18279493170.github.io/jian-li/</id>
+        <link href="https://18279493170.github.io/jian-li/">
+        </link>
+        <updated>2022-04-21T18:19:24.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="个人信息">个人信息</h1>
+<ul>
+<li>姓名：徐志良</li>
+<li>工作经验：4年</li>
+<li>手机：18279493170</li>
+<li>邮箱：1178308665@qq.com</li>
+<li>专业：计算机网络技术</li>
+</ul>
+<h1 id="求职意向">求职意向</h1>
+<ul>
+<li>期望职位：中级前端开发工程师</li>
+<li>工作性质：全职</li>
+<li>目前状况： 离职状态， 立即上岗</li>
+<li>期望薪资： 面议</li>
+</ul>
+<h1 id="工作经历">工作经历</h1>
+<ul>
+<li>2018/6 -- 2022/4 ------ 雄采友迎科技有限公司 ------ 初级前端开发工程师</li>
+</ul>
+<h1 id="专业技能">专业技能</h1>
+<ul>
+<li>
+<p>熟悉<strong>html5，css3，JavaScript，ajax</strong>等技术</p>
+</li>
+<li>
+<p>熟悉<strong>vue全家桶</strong>及其项目开发技术</p>
+</li>
+<li>
+<p>熟悉<strong>微信小程序及uniapp</strong>混合式开发技术</p>
+</li>
+<li>
+<p>熟悉 <strong>flex布局</strong>，熟悉<strong>web端和移动端</strong>页面兼容</p>
+</li>
+<li>
+<p>熟悉<strong>sass，less</strong>等预编译语言提高代码开发效率及规范性</p>
+</li>
+<li>
+<p>熟悉<strong>webpack，npm</strong>等工具，熟练使用<strong>git</strong> 进行项目代码管理</p>
+</li>
+<li>
+<p>熟悉各种<strong>移动端布局</strong>和技术，对各终端的<strong>页面适配</strong>有深入的理解和项目经验</p>
+</li>
+<li>
+<p>熟悉<strong>JavaScript，ES5/ES6，HTTP协议</strong></p>
+</li>
+<li>
+<p>熟悉<strong>elementUI，colorUI，uVeiwUI</strong>等UI框架</p>
+</li>
+<li>
+<p>了解<strong>Python和爬虫</strong>开发</p>
+</li>
+<li>
+<p>了解bootstrap框架</p>
+</li>
+<li>
+<p>了解<strong>Echarts</strong>及其数据可视化开发</p>
+</li>
+</ul>
+<h1 id="项目经验">项目经验</h1>
+<h2 id="翠桠app">翠桠app</h2>
+<h3 id="项目描述">项目描述</h3>
+<h3 id="项目职责">项目职责</h3>
+<ul>
+<li>与UI设计对接app的前端页面开发</li>
+<li>与后端进行相关接口测试与对接</li>
+<li>进行混合app的后台管理系统开发</li>
+<li>与产品沟通，迭代改进及维护产品</li>
+<li></li>
+</ul>
+<h3 id="技术描述">技术描述</h3>
+<h2 id="采管app">采管app</h2>
+<h3 id="项目描述-2">项目描述</h3>
+<blockquote>
+<p>采管app是专门为大型超市开发的集上架，审核，财务，采购和供货商等多<br>
+部门角色开发的超市物流闭环app。其主要流程：1.超市上架员工统计需求货物清单并将采<br>
+购单提交给审核主管 2.审核人员经审核清单无误或进行编辑后提交给采购部 3.采购部经<br>
+与供货商协商比价确认货物后将供货清单提交给财务部 4.财务部核对数据无误后直接向供<br>
+货商账户打款 5.供货商款项到账后向采购部供货 6.采购部确认货物无误后确认供货单 7.<br>
+超市大堂员工上架货物后拍照确认</p>
+</blockquote>
+<h3 id="项目职责-2">项目职责</h3>
+<ul>
+<li>与UI设计对接app的前端页面开发</li>
+<li>与后端进行相关接口测试与对接</li>
+<li>进行混合app的后台管理系统开发</li>
+<li>与产品沟通，迭代改进及维护产品</li>
+</ul>
+<h3 id="技术描述-2">技术描述</h3>
+<ul>
+<li>使用基于Vue.js开发的Uniapp框架 + Uview UI进行APP的开发</li>
+<li>使用Vue全家桶 + element + Echarts进行后台管理系统的页面搭建</li>
+<li>对uniapp编译后进行Android与iOS端的兼容</li>
+</ul>
+<h2 id="团猿骑手端">团猿骑手端</h2>
+<h3 id="项目描述-3">项目描述</h3>
+<h3 id="项目职责-3">项目职责</h3>
+<h3 id="技术描述-3">技术描述</h3>
+<h2 id="团猿商家端">团猿商家端</h2>
+<h3 id="项目描述-4">项目描述</h3>
+<h3 id="项目职责-4">项目职责</h3>
+<h3 id="技术描述-4">技术描述</h3>
+<h2 id="团猿后台管理系统">团猿后台管理系统</h2>
+<h3 id="项目描述-5">项目描述</h3>
+<h3 id="项目职责-5">项目职责</h3>
+<h3 id="技术描述-5">技术描述</h3>
+<h2 id="团猿小程序">团猿小程序</h2>
+<h3 id="项目描述-6">项目描述</h3>
+<h3 id="项目职责-6">项目职责</h3>
+<h3 id="技术描述-6">技术描述</h3>
+<h1 id="技术博客">技术博客</h1>
+<p><a href="https://blog.csdn.net/qq_44090577">CSDN</a><br>
+<a href="https://18279493170.github.io/">个人</a></p>
+<h1 id="自我评价">自我评价</h1>
+<ul>
+<li>热爱编程，有良好的逻辑思维能力及良好的代码风格</li>
+<li>自学能力和理解能力强,新知识新软件都能通过自学掌握。</li>
+<li>具有较强的抗压能力， 良好的沟通能力和团队协作能力。</li>
+<li>熟练掌握 JavaScript 编程语言，熟悉Python，能够阅读简单英文文档。</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[android兼容]]></title>
+        <id>https://18279493170.github.io/VCtYX22yb/</id>
+        <link href="https://18279493170.github.io/VCtYX22yb/">
+        </link>
+        <updated>2020-06-17T14:53:59.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="打开页面默认弹出软键盘同时兼容ios和android">打开页面默认弹出软键盘，同时兼容iOS和Android</h2>
+<p>input不需要添加autofocus属性。</p>
+<pre><code class="language-js">// 示例1  
+open_soft_keyboard({  
+    input: &quot;#username&quot;  
+});  
+
+// 示例2  
+open_soft_keyboard({  
+    input: 'input[value=&quot;&quot;]'  
+});  
+
+/**  
+ * 默认打开软键盘  
+ * @param options{  
+ *   input: '#nickname' // 容器节点  
+ * }  
+ */  
+function open_soft_keyboard(options){  
+    if(plus.os.name == 'iOS'){  
+        setTimeout(function(){  
+            var wv_current = plus.webview.currentWebview().nativeInstanceObject();  
+            wv_current.plusCallMethod({&quot;setKeyboardDisplayRequiresUserAction&quot;:false});  
+            document.querySelector(options['input']).focus();  
+        }, 330);  
+    }else{  
+        // 因为安卓autofocus只有4.0版本以上才支持，所以这里使用native.js来强制弹出  
+        setTimeout(function(){  
+            // 在执行的时候需要让当前webview获取焦点  
+            var wv_current = plus.android.currentWebview();  
+            plus.android.importClass(wv_current);  
+            wv_current.requestFocus();  
+
+            var Context = plus.android.importClass(&quot;android.content.Context&quot;);  
+            var InputMethodManager = plus.android.importClass(&quot;android.view.inputmethod.InputMethodManager&quot;);  
+            var main = plus.android.runtimeMainActivity();  
+            var imm = main.getSystemService(Context.INPUT_METHOD_SERVICE);  
+            imm.toggleSoftInput(0,InputMethodManager.SHOW_FORCED);  
+            document.querySelector(options['input']).focus();  
+        }, 330);  
+    }  
+}
+</code></pre>
+<h2 id="nativejs-获取已配对蓝牙设备列表">Native.js 获取已配对蓝牙设备列表</h2>
+<pre><code class="language-js">
+function bluetooth_list() {  
+    var main = plus.android.runtimeMainActivity();  
+    var BluetoothAdapter = plus.android.importClass(&quot;android.bluetooth.BluetoothAdapter&quot;);  
+    var BAdapter = BluetoothAdapter.getDefaultAdapter();  
+    var Context = plus.android.importClass(&quot;android.content.Context&quot;);  
+    var lists = BAdapter.getBondedDevices();  
+    plus.android.importClass(lists);  
+    var len = lists.size();  
+    console.log(len);  
+    var iterator = lists.iterator();  
+    plus.android.importClass(iterator);  
+    while (iterator.hasNext()) {  
+        var d = iterator.next();  
+        plus.android.importClass(d);  
+        console.log(d.getName());  
+    }  
+}
+
+
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[git问题集]]></title>
+        <id>https://18279493170.github.io/R5715OeCw/</id>
+        <link href="https://18279493170.github.io/R5715OeCw/">
+        </link>
+        <updated>2019-04-16T14:58:26.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>收录项目中所有遇到的git问题，以防二次入坑😂</p>
+</blockquote>
+<h2 id="your-branch-is-ahead-of-originmaster-by-1-commit">Your branch is ahead of 'origin/master' by 1 commit</h2>
+<p>原因在于你的本地分支高于远程仓库一次提交， 解决方式：</p>
+<pre><code>-- 同步更新
+git push origin master
+</code></pre>
+<h2 id="warning-lf-will-be-replaced-by-crlf-in-mainlua-the-file-will-have-its-original-line-endings-in-your-working-directory">warning: LF will be replaced by CRLF in main.lua The file will have its original line endings in your working directory.</h2>
+<p>原因在于：CR代表回车(\r) LF代表换行(\n) ，在Dos\Windows平台下使用 CRLF 结束一行，即\r\n ； 在Max\Linux平台下是用 LF 结束一行，即\n 如果Mac和Windows平台下代码的更新以及提交，就会出现问题，其解决方式：</p>
+<pre><code>-- 检出时将LF转换为CRLF, 提交时将CRLF转换为LF（windows推荐）
+$ git config --global core.autocrlf true
+
+-- 提交时转换为LF，检出时不转换（Unix推荐）
+$ git config --global core.autocrlf input
+
+-- 提交检出均不转换(没有跨平台那一说)
+$ git config --global core.autocrlf false
+
+</code></pre>
+<h2 id="error-rpc-failed-curl-56-openssl-ssl_read-ssl_error_syscall-errno-10054-fatal-the-remote-end-hung-up-unexpectewriting-objectdlys-62">error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054 fatal: The remote end hung up unexpecteWriting objectdlys: 62</h2>
+<p>原因在于：上传文件有大小限制， 解决方式：</p>
+<pre><code>git config http.sslVerify &quot;false&quot;
+
+</code></pre>
+<h2 id="your-branch-and-originmaster-have-divergedand-have-1-and-1-different-commits-each-respectively">Your branch and 'origin/master' have diverged,and have 1 and 1 different commits each, respectively.</h2>
+<p>原因在于： 存在两种或多种提交，导致本地与远程不同步，比如远程进行了修改提交，本地在未同步更新的情况下也进行了提交</p>
+<pre><code>首先输入命令：
+git rebase origin/master
+
+再执行命令：
+git pull --rebase
+
+最后执行命令：
+git push origin master
+
+</code></pre>
+<h2 id="error-pathspec-branch_fistfight_0802-did-not-match-any-files-known-to-git">error: pathspec 'branch_fistfight_0802' did not match any file(s) known to git.</h2>
+<p>问题描述：使用其他设备从GitHub中导出远程分支项目，无法成功。其原因在于本地中根本没有其分支。解决命令如下：</p>
+<pre><code>git fetch             -- 获取所有分支的更新
+git branch -a         -- 查看本地和远程分支列表，remotes开头的均为远程分支
+-- 导出其远程分支，并通过-b设定本地分支跟踪远程分支
+git checkout remotes/branch_name -b branch_name
+</code></pre>
+<h2 id="your-branch-is-based-on-origin-but-the-upstream-is-gone">Your branch is based on 'origin/****', but the upstream is gone</h2>
+<p>问题描述：从远程分支拉下代码，在本地创建分支abranch。后又在aBranch的基础上创建分支bBranch，并删除aBranch关联的远程分支。使用git status的时候就会出现该问题，是因为即使你的远程分支删除了，但是分支的关联依然存在。因为解决命令如下：</p>
+<pre><code>-- 设置新的关联分支
+git branch --set-upstream-to=origin/bBranch
+</code></pre>
+<h2 id="errorunable-to-delete-branch_screen_0705-remote-ref-does-not-exist">error:unable to delete &quot;branch_Screen_0705&quot;: remote ref does not exist</h2>
+<p>问题描述：使用git fetch后，然后使用git branch -av 查看本地所有的分支目录，然后删除指定的远程分支(该分支在GitHub中已经不存在了)，就会出现该问题，其原因在于git fetch保存到本地的缓存信息而已，因此可以使用命令：</p>
+<pre><code>git fetch --prune origin
+或者
+git fetch --p origin
+</code></pre>
+<h2 id="git无法clone仓库到本地">GIT无法Clone仓库到本地</h2>
+<p>错误信息：error: RPC failed; HTTP 302 curl 22 The requested URL returned error: 302<br>
+fatal: the remote end hung up unexpectedly<br>
+问题的原因的： http.followRedirects 不能自动跳造成的。</p>
+<p>解决办法：</p>
+<pre><code>         打开git bash输入如下内容：
+         git config --global http.https://xxx.xxx.git.followRedirects &quot;true&quot;
+其中，需要把: https://xxx.xxx.git 改成你要 clone 的网址， 比如： https://gitee.xxx.git
+</code></pre>
+<h2 id="合并其它仓库到自己的仓库并保留其提交历史">合并其它仓库到自己的仓库并保留其提交历史</h2>
+<p>合并Git仓库A的分支master到Git仓库B的名为MergeFrmA分支,并保留A的所有提交记录<br>
+主要步骤如下：</p>
+<pre><code>1.切换到要合并到的仓库（即仓库B）的MergeFrmA
+
+2.在仓库A的所在目录中打开git bash，假设仓库A的地址为https://gitee.com/projectA.git，则在git bash中输入如下内容:
+
+git remote add master https://gitee.com/projectA.git
+git fetch --all 或者：git pull https://gitee.com/projectA.git
+   
+fetch仅是下载到本地做为一个独立分支，没有合并，需要手动合并一下再提交；pull则是直接与当前分支进行了合并；
+
+处理完后，可以使用gitgui或sourcetree或者命令行来提交该合并到仓库B的服务端；
+</code></pre>
+<h2 id="删除远端仓库的某次提交">删除远端仓库的某次提交</h2>
+<pre><code>  重置至指定版本，即本地仓库commit的ID
+
+--soft：保留当前工作区，以便重新提交。--hard：会撤销相应工作区的修改，谨慎使用。
+
+git reset --hard commitID
+ 然后可以再使用：git log，查看重置是否成功
+
+commitID可以是完整的ID，也可以是缩略的ID（中括号中的ID值为缩略值）
+
+ 强制推送，即远程仓库push的取消。参数force是必须的，否则报错：本地项目版本号低于远端仓库版本号
+
+git push --force
+这样就会把该提交之后的(也就是比日期更新的）给清除掉(注意：不可恢复式的清除），使该次提交成为仓库中最新的一次提交；
+</code></pre>
+<h2 id="fatal-refusing-to-merge-unrelated-historiesv">fatal: refusing to merge unrelated historiesv</h2>
+<pre><code>git merge master --allow-unrelated-histories
+</code></pre>
+<h2 id="gitlab修改远程分支名称">gitlab修改远程分支名称</h2>
+<pre><code>远程分支重命名 (已经推送远程-假设本地分支和远程对应分支名称相同)
+
+重命名远程分支对应的本地分支
+
+git branch -m oldName newName
+删除远程分支
+
+git push --delete origin oldName
+上传新命名的本地分支
+
+git push origin newName
+把修改后的本地分支与远程分支关联
+
+git branch --set-upstream-to origin/newName
+
+</code></pre>
+<p>或删除无端分支的时候出现如下错误，则说明当前被删除的分支为git clone时的默认分支，不允许删除，所以需要去git对应的托管平台上，把项目的默认clone分支配置为别的，比如配置为master，然后再删除就可以了。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[git 总结]]></title>
+        <id>https://18279493170.github.io/x9xkOwNC7/</id>
+        <link href="https://18279493170.github.io/x9xkOwNC7/">
+        </link>
+        <updated>2018-08-16T15:12:40.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="简介">简介</h1>
+<p>Git 是一个开源的分布式版本控制系统。</p>
+<h2 id="版本控制">版本控制</h2>
+<p>是一种记录一个或若干文件内容变化，以便将来查阅特定版本修订情况的系统。</p>
+<h2 id="分布式">分布式</h2>
+<p>客户端把代码仓库完整地镜像下来。任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。因为每一次的提取操作，实际上都是一次对代码仓库的完整备份。</p>
+<h2 id="集中式">集中式</h2>
+<p>如 CVS，Subversion 等，都有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。</p>
+<h1 id="安装">安装</h1>
+<h2 id="debianubuntu-环境">Debian/Ubuntu 环境</h2>
+<p>$ apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \</p>
+<blockquote>
+<p>libz-dev libssl-dev<br>
+$ apt-get install git-core<br>
+$ git --version<br>
+git version 1.8.1.2</p>
+</blockquote>
+<h2 id="centosredhat-环境">Centos/RedHat 环境</h2>
+<p>$ yum install curl-devel expat-devel gettext-devel \</p>
+<blockquote>
+<p>openssl-devel zlib-devel<br>
+$ yum -y install git-core<br>
+$ git --version<br>
+git version 1.7.1</p>
+</blockquote>
+<h2 id="windows-mac-环境">Windows /Mac 环境</h2>
+<p>Git 官方下载地址下载 exe 安装包。按照安装向导安装即可。建议安装 Git Bash 这个 git 的命令行工具。</p>
+<p><a href="https://git-scm.com/">git下载</a></p>
+<h1 id="配置">配置</h1>
+<p>Git 自带一个 git config 的工具来帮助设置控制 Git 外观和行为的配置变量。这些变量存储在三个不同的位置：</p>
+<p>/etc/gitconfig 文件: 包含系统上每一个用户及他们仓库的通用配置。如果使用带有 --system 选项的 git config 时，它会从此文件读写配置变量。</p>
+<p>~/.gitconfig 或 ~/.config/git/config 文件：只针对当前用户。可以传递 --global 选项让 Git 读写此文件。<br>
+当前使用仓库的 Git 目录中的 config 文件（就是 .git/config）：针对该仓库。<br>
+每一个级别覆盖上一级别的配置，所以 .git/config 的配置变量会覆盖 /etc/gitconfig 中的配置变量。<br>
+在 Windows 系统中，Git 会查找 [公式]USER）的 .gitconfig 文件。Git 同样也会寻找 /etc/gitconfig 文件，但只限于 MSys 的根目录下，即安装 Git 时所选的目标位置。</p>
+<h1 id="基本概念">基本概念</h1>
+<h2 id="版本库">版本库</h2>
+<p>当你克隆一个项目到本地或创建一个 git 项目，项目目录下会有一个隐藏的 .git 子目录。这个目录是 git 用来跟踪管理版本库的，千万不要手动修改。</p>
+<h2 id="哈希值">哈希值</h2>
+<p>Git 中所有数据在存储前都计算校验和，然后以校验和来引用。这意味着不可能在 Git 不知情时更改任何文件内容或目录内容。这个功能建构在 Git 底层，是构成 Git 哲学不可或缺的部分。若你在传送过程中丢失信息或损坏文件，Git 就能发现。<br>
+Git 用以计算校验和的机制叫做 SHA-1 散列（hash，哈希）。这是一个由 40 个十六进制字符（0-9 和 a-f）组成字符串，基于 Git 中文件的内容或目录结构计算出来。SHA-1 哈希看起来是这样：<br>
+24b9da6552252987aa493b52f8696cd6d3b00373 Git 中使用这种哈希值的情况很多，你将经常看到这种哈希值。实际上，Git 数据库中保存的信息都是以文件内容的哈希值来索引，而不是文件名。</p>
+<h2 id="文件状态">文件状态</h2>
+<p>三种状态:<br>
+已修改（modified） - 已修改表示修改了文件，但还没保存到数据库中。<br>
+已暂存（staged） - 已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。<br>
+已提交（committed） - 已提交表示数据已经安全的保存在本地数据库中。</p>
+<h2 id="工作区域">工作区域</h2>
+<p>与文件状态对应，不同状态的文件在 Git 中处于不同的工作区域<br>
+工作区（working） - 当你 git clone 一个项目到本地，相当于在本地克隆了项目的一个副本。工作区是对项目的某个版本独立提取出来的内容。这些从 Git 仓库的压缩数据库中提取出来的文件，放在磁盘上供你使用或修改。<br>
+暂存区（staging）- 暂存区是一个文件，保存了下次将提交的文件列表信息，一般在 Git 仓库目录中。有时候也被称作 `‘索引’'，不过一般说法还是叫暂存区。<br>
+本地仓库（local） - 提交更新，找到暂存区域的文件，将快照永久性存储到 Git 本地仓库。<br>
+远程仓库（remote） - 以上几个工作区都是在本地。为了让别人可以看到你的修改，你需要将你的更新推送到远程仓库。同理，如果你想同步别人的修改，你需要从远程仓库拉取更新。</p>
+<h2 id="分支branch">分支（Branch）</h2>
+<p>为了将修改记录的整个流程分开存储，让分开的分支不受其它分支的影响，所以在同一个数据库里可以同时进行多个不同的修改<br>
+主分支（Master）是 Git 为我们自动创建的第一个分支，也叫主分支，其它分支开发完成后都要合并到 master</p>
+<h2 id="标签tag">标签（Tag）</h2>
+<p>用于标记特定的点或提交的历史，通常会用来标记发布版本的名称或版本号（如：publish/0.0.1），虽然标签看起来有点像分支，但打上标签的提交是固定的，不能随意的改动</p>
+<h2 id="head">HEAD</h2>
+<p>可以理解为指针，指向当前仓库所处的分支。一般在有 Git 管理的目录下打开 Git 终端都能在当前路径的尾巴上，看到所处的分支名。</p>
+<h1 id="命令">命令</h1>
+<p><a href="https://www.runoob.com/note/56524">git命令大全</a></p>
+<h2 id="配置-2">配置</h2>
+<p>全局配置</p>
+<pre><code># 用户信息
+$ git config --global user.name &quot;your_name&quot;
+$ git config --global user.email &quot;your_email&quot;
+
+# 文本编辑器
+$ git config --global core.editor &quot;nvim&quot;
+
+# 分页器
+$ git config --global core.pager &quot;more&quot;
+
+# 别名
+$ git config --global alias.gs &quot;git status&quot;
+
+# 纠错
+$ git config --global help.autocorrect 1
+</code></pre>
+<p>个人配置</p>
+<pre><code># 不加--global参数的话，则为个人配置
+$ git config --list
+$ git config user.name
+$ git config user.name &quot;your_name&quot;
+
+# 如果在项目中设置，则保存在.git/config文件里面
+$ cat .git/config
+[user]
+    name = &quot;your_name&quot;
+......
+
+</code></pre>
+<h2 id="创建仓库">创建仓库</h2>
+<p>克隆一个已创建的仓库：</p>
+<pre><code># 通过 SSH
+$ git clone ssh://user@domain.com/repo.git
+
+#通过 HTTP
+$ git clone http://domain.com/user/repo.git
+创建一个新的本地仓库：
+
+$ git init
+</code></pre>
+<h2 id="添加修改到暂存区">添加修改到暂存区</h2>
+<p>把指定文件添加到暂存区<br>
+<code>$ git add xxx</code></p>
+<p>把当前所有修改添加到暂存区<br>
+<code>$ git add .</code></p>
+<p>把所有修改添加到暂存区<br>
+<code>$ git add -A</code></p>
+<h2 id="提交修改到本地仓库">提交修改到本地仓库</h2>
+<p>提交本地的所有修改<br>
+<code>$ git commit -a</code></p>
+<p>提交之前已标记的变化<br>
+<code>$ git commit</code></p>
+<p>附加消息提交<br>
+<code>$ git commit -m 'commit message'</code></p>
+<h2 id="储藏">储藏</h2>
+<p>有时，我们需要在同一个项目的不同分支上工作。当需要切换分支时，偏偏本地的工作还没有完成，此时，提交修改显得不严谨，但是不提交代码又无法切换分支。这时，你可以使用 git stash 将本地的修改内容作为草稿储藏起来。</p>
+<pre><code># 1. 将修改作为当前分支的草稿保存
+$ git stash
+
+# 2. 查看草稿列表
+$ git stash list
+stash@{0}: WIP on master: 6fae349 :memo: Writing docs.
+
+# 3.1 删除草稿
+$ git stash drop stash@{0}
+
+# 3.2 读取草稿
+$ git stash apply stash@{0}
+</code></pre>
+<h2 id="撤销修改">撤销修改</h2>
+<p>撤销本地修改</p>
+<pre><code># 移除缓存区的所有文件（i.e. 撤销上次git add）
+$ git reset HEAD
+
+# 将HEAD重置到上一次提交的版本，并将之后的修改标记为未添加到缓存区的修改
+$ git reset &lt;commit&gt;
+
+# 将HEAD重置到上一次提交的版本，并保留未提交的本地修改
+$ git reset --keep &lt;commit&gt;
+
+# 放弃工作目录下的所有修改
+$ git reset --hard HEAD
+
+# 将HEAD重置到指定的版本，并抛弃该版本之后的所有修改
+$ git reset --hard &lt;commit-hash&gt;
+
+# 用远端分支强制覆盖本地分支
+$ git reset --hard &lt;remote/branch&gt; e.g., upstream/master, origin/my-feature
+
+# 放弃某个文件的所有本地修改
+$ git checkout HEAD &lt;file&gt;
+</code></pre>
+<p>删除添加.gitignore文件前错误提交的文件</p>
+<pre><code>$ git rm -r --cached .
+$ git add .
+$ git commit -m &quot;remove xyz file&quot;
+</code></pre>
+<p>撤销远程修改（创建一个新的提交，并回滚到指定版本）</p>
+<p><code>$ git revert &lt;commit-hash&gt;</code></p>
+<p>彻底删除指定版本</p>
+<pre><code># 执行下面命令后，commit-hash 提交后的记录都会被彻底删除，使用需谨慎
+$ git reset --hard &lt;commit-hash&gt;
+$ git push -f
+</code></pre>
+<h2 id="更新推送">更新推送</h2>
+<p>更新</p>
+<pre><code># 下载远端版本，但不合并到HEAD中
+$ git fetch &lt;remote&gt;
+
+# 将远端版本合并到本地版本中
+$ git pull origin master
+
+# 以rebase方式将远端分支与本地合并
+$ git pull --rebase &lt;remote&gt; &lt;branch&gt;
+</code></pre>
+<p>推送</p>
+<pre><code># 将本地版本推送到远程端
+$ git push remote &lt;remote&gt; &lt;branch&gt;
+
+# 删除远程端分支
+$ git push &lt;remote&gt; :&lt;branch&gt; (since Git v1.5.0)
+$ git push &lt;remote&gt; --delete &lt;branch&gt; (since Git v1.7.0)
+
+# 发布标签
+$ git push --tags
+</code></pre>
+<h2 id="查看信息">查看信息</h2>
+<p>显示工作路径下已修改的文件</p>
+<p><code>$ git status</code><br>
+显示与上次提交版本文件的不同</p>
+<p><code>$ git diff</code></p>
+<p>显示提交历史</p>
+<pre><code># 从最新提交开始，显示所有的提交记录（显示hash， 作者信息，提交的标题和时间）
+$ git log
+
+# 显示某个用户的所有提交
+$ git log --author=&quot;username&quot;
+
+# 显示某个文件的所有修改
+$ git log -p &lt;file&gt;
+</code></pre>
+<p>显示搜索内容</p>
+<pre><code># 从当前目录的所有文件中查找文本内容
+$ git grep &quot;Hello&quot;
+
+# 在某一版本中搜索文本
+$ git grep &quot;Hello&quot; v2.5
+</code></pre>
+<h2 id="分支">分支</h2>
+<p>增删查分支</p>
+<pre><code># 列出所有的分支
+$ git branch
+
+# 列出所有的远端分支
+$ git branch -r
+
+# 基于当前分支创建新分支
+$ git branch &lt;new-branch&gt;
+
+# 基于远程分支创建新的可追溯的分支
+$ git branch --track &lt;new-branch&gt; &lt;remote-branch&gt;
+
+# 删除本地分支
+$ git branch -d &lt;branch&gt;
+
+# 强制删除本地分支，将会丢失未合并的修改
+$ git branch -D &lt;branch&gt;
+</code></pre>
+<p>切换分支</p>
+<pre><code># 切换分支
+$ git checkout &lt;branch&gt;
+
+# 创建并切换到新分支
+$ git checkout -b &lt;branch&gt;
+</code></pre>
+<h2 id="标签">标签</h2>
+<pre><code>git tag                         # 列出所有本地标签
+
+git tag &lt;tagname&gt;               # 基于最新提交创建标签
+
+git tag -a &quot;v1.0&quot; -m &quot;一些说明&quot;  # -a指定标签名称，-m指定标签说明
+
+git tag -d &lt;tagname&gt;            # 删除标签
+</code></pre>
+<h2 id="合并重置">合并重置</h2>
+<p>merge 与 rebase 虽然是 git 常用功能，但是强烈建议不要使用 git 命令来完成这项工作。<br>
+因为如果出现代码冲突，在没有代码比对工具的情况下，实在太艰难了。<br>
+你可以考虑使用各种 Git GUI 工具。</p>
+<pre><code>git merge &lt;branch&gt;              # 合并指定分支到当前分支
+
+git merge --abort               # 取消当前合并，重建合并前状态
+
+git merge dev -Xtheirs          # 以合并dev分支到当前分支，有冲突则以dev分支为准
+
+git rebase &lt;branch&gt;             # 衍合指定分支到当前分支
+</code></pre>
+<h2 id="远程操作">远程操作</h2>
+<pre><code>git remote -v                   # 查看远程版本库信息
+
+git remote show &lt;remote&gt;        # 查看指定远程版本库信息
+
+git remote add &lt;remote&gt; &lt;url&gt;   # 添加远程版本库
+
+git remote remove &lt;remote&gt;      # 删除指定的远程版本库
+
+git fetch &lt;remote&gt;              # 从远程库获取代码
+
+git pull &lt;remote&gt; &lt;branch&gt;      # 下载代码及快速合并
+
+git push &lt;remote&gt; &lt;branch&gt;      # 上传代码及快速合并
+
+git push &lt;remote&gt; :&lt;branch/tag-name&gt; # 删除远程分支或标签
+
+git push --tags                 # 上传所有标签
+</code></pre>
+<h1 id="分支开发">分支开发</h1>
+<p>Git 是目前最流行的源代码管理工具。为规范开发，保持代码提交记录以及 git 分支结构清晰，方便后续维护，现规范 git 的相关操作。</p>
+<h2 id="分支命名">分支命名</h2>
+<p>master 分支</p>
+<blockquote>
+<p>master 为主分支，也是用于部署生产环境的分支，确保master分支稳定性， master 分支一般由develop以及hotfix分支合并，任何时间都不能直接修改代码</p>
+</blockquote>
+<p>develop 分支</p>
+<blockquote>
+<p>develop 为开发分支，始终保持最新完成以及bug修复后的代码，一般开发的新功能时，feature分支都是基于develop分支下创建的。</p>
+</blockquote>
+<p>feature 分支</p>
+<blockquote>
+<p>开发新功能时，以develop为基础创建feature分支。 分支命名: feature/ 开头的为特性分支， 命名规则: feature/user_module、 feature/cart_module</p>
+</blockquote>
+<p>release分支</p>
+<blockquote>
+<p>release 为预上线分支，发布提测阶段，会release分支代码为基准提测。当有一组feature开发完成，首先会合并到develop分支，进入提测时会创建release分支。如果测试过程中若存在bug需要修复，则直接由开发者在release分支修复并提交。当测试完成之后，合并release分支到master和develop分支，此时master为最新代码，用作上线。</p>
+</blockquote>
+<p>hotfix 分支</p>
+<blockquote>
+<p>分支命名: hotfix/ 开头的为修复分支，它的命名规则与feature分支类似。线上出现紧急问题时，需要及时修复，以master分支为基线，创建hotfix分支，修复完成后，需要合并到master分支和develop分支</p>
+</blockquote>
+<h2 id="常见任务">常见任务</h2>
+<p>增加新功能</p>
+<pre><code>(dev)$: git checkout -b feature/xxx            # 从dev建立特性分支
+(feature/xxx)$: blabla                         # 开发
+(feature/xxx)$: git add xxx
+(feature/xxx)$: git commit -m 'commit comment'
+(dev)$: git merge feature/xxx --no-ff          # 把特性分支合并到dev
+</code></pre>
+<p>修复紧急bug</p>
+<pre><code>(master)$: git checkout -b hotfix/xxx         # 从master建立hotfix分支
+(hotfix/xxx)$: blabla                         # 开发
+(hotfix/xxx)$: git add xxx
+(hotfix/xxx)$: git commit -m 'commit comment'
+(master)$: git merge hotfix/xxx --no-ff       # 把hotfix分支合并到master，并上线到生产环境
+(dev)$: git merge hotfix/xxx --no-ff          # 把hotfix分支合并到dev，同步代码
+</code></pre>
+<p>测试环境代码</p>
+<pre><code>(release)$: git merge dev --no-ff             # 把dev分支合并到release，然后在测试环境拉取并测试
+</code></pre>
+<p>生产环境上线</p>
+<pre><code>(master)$: git merge release --no-ff          # 把release测试好的代码合并到master，运维人员操作
+(master)$: git tag -a v0.1 -m '部署包版本名'  #给版本命名，打Tag
+</code></pre>
+<h1 id="常用命令">常用命令</h1>
+<pre><code># 工作区 -&gt; 暂存区
+$ git add &lt;file/dir&gt;
+
+# 暂存区 -&gt; 本地仓库
+$ git commit -m &quot;some info&quot;
+
+# 本地仓库 -&gt; 远程仓库
+$ git push origin master  # 本地master分支推送到远程origin仓库 
+
+# 工作区 &lt;- 暂存区
+$ git checkout -- &lt;file&gt;  # 暂存区文件内容覆盖工作区文件内容
+
+# 暂存区 &lt;- 本地仓库
+$ git reset HEAD &lt;file&gt;   # 本地仓库文件内容覆盖暂存区文件内容
+
+# 本地仓库 &lt;- 远程仓库
+$ git clone &lt;git_url&gt;        # 克隆远程仓库
+$ git fetch upstream master  # 拉取远程代码到本地但不应用在当前分支
+$ git pull upstream master   # 拉取远程代码到本地但应用在当前分支
+$ git pull --rebase upstream master  # 如果平时使用rebase合并代码则加上
+
+# 工作区 &lt;- 本地仓库
+$ git reset &lt;commit&gt;          # 本地仓库覆盖到工作区(保存回退文件内容修改)
+$ git reset --mixed &lt;commit&gt;  # 本地仓库覆盖到工作区(保存回退文件内容修改)
+$ git reset --soft &lt;commit&gt;   # 本地仓库覆盖到工作区(保留修改并加到暂存区)
+$ git reset --hard &lt;commit&gt;   # 本地仓库覆盖到工作区(不保留修改直接删除掉)
+</code></pre>
+<h1 id="提交规范">提交规范</h1>
+<p>明确每一次提交的内容，比如增加新功能，修改bug，维护文档，调整单元测试等，规范的Git提交历史，还可以直接生成项目发版的CHANGELOG（semantic-release）</p>
+<p>格式</p>
+<pre><code>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
+&lt;BLANK LINE&gt;
+&lt;body&gt;
+&lt;BLANK LINE&gt;
+&lt;footer&gt;
+header 是必需的，body 和 footer 可以省略。
+不管是哪一个部分，任何一行都不得超过72个字符（或100个字符）。这是为了避免自动换行影响美观。
+</code></pre>
+<p>Header</p>
+<blockquote>
+<p>Header部分只有一行，包括三个字段：type（必需）、scope（可选）和subject（必需）。</p>
+</blockquote>
+<p>type</p>
+<blockquote>
+<p>用于说明 commit 的类别，只允许使用下面7个标识。</p>
+</blockquote>
+<pre><code>feat：新功能（feature）
+fix：修补bug
+docs：文档（documentation）
+style： 格式（不影响代码运行的变动）
+refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+test：增加测试
+chore：构建过程或辅助工具的变动
+
+如果type为feat和fix，则该 commit 将肯定出现在 Change log 之中。其他情况（docs、chore、style、refactor、test）由你决定，要不要放入 Change log，建议是不要。
+</code></pre>
+<p>scope</p>
+<blockquote>
+<p>scope用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。<br>
+例如在Angular，可以是$location, $browser, $compile, $rootScope, ngHref, ngClick, ngView等。<br>
+如果你的修改影响了不止一个scope，你可以使用*代替。</p>
+</blockquote>
+<p>subject</p>
+<blockquote>
+<p>是 commit 目的的简短描述，不超过50个字符。<br>
+注意<br>
+以动词开头，使用第一人称现在时，比如change，而不是changed或changes<br>
+第一个字母小写<br>
+结尾不加句号（.）</p>
+</blockquote>
+<p>Body</p>
+<p>Body 部分是对本次 commit 的详细描述，可以分成多行。</p>
+<pre><code>More detailed explanatory text, if necessary.  Wrap it to 
+about 72 characters or so. 
+
+Further paragraphs come after blank lines.
+
+- Bullet points are okay, too
+- Use a hanging indent
+</code></pre>
+<p>注意</p>
+<blockquote>
+<p>使用第一人称现在时，比如使用change而不是changed或changes。<br>
+永远别忘了第2行是空行<br>
+应该说明代码变动的动机，以及与以前行为的对比。</p>
+</blockquote>
+<p>Footer</p>
+<p>不兼容变动</p>
+<p>如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法。</p>
+<pre><code>BREAKING CHANGE: isolate scope bindings definition has changed.
+
+    To migrate the code follow the example below:
+
+    Before:
+
+    scope: {
+      myAttr: 'attribute',
+    }
+
+    After:
+
+    scope: {
+      myAttr: '@',
+    }
+
+    The removed `inject` wasn't generaly useful for directives so there should be no code using it.
+</code></pre>
+<p>关闭 Issue<br>
+如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 。<br>
+Closes #234</p>
+<p>Revert<br>
+如果当前 commit 用于撤销以前的 commit，则必须以revert:开头，后面跟着被撤销 Commit 的 Header。</p>
+<pre><code>revert: feat(pencil): add 'graphiteWidth' option
+
+This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
+</code></pre>
+<p>//Body部分的格式是固定的，必须写成This reverts commit &lt;hash&gt;.，其中的hash是被撤销 commit 的 SHA 标识符。<br>
+如果当前 commit 与被撤销的 commit，在同一个发布（release）里面，那么它们都不会出现在 Change log 里面。如果两者在不同的发布，那么当前 commit，会出现在 Change log 的Reverts小标题下面。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MarkDown语法]]></title>
+        <id>https://18279493170.github.io/NLSUGkv5o/</id>
+        <link href="https://18279493170.github.io/NLSUGkv5o/">
+        </link>
+        <updated>2018-08-16T07:27:36.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://markdown.com.cn/cheat-sheet.html#%E6%80%BB%E8%A7%88">MarkDown</a></p>
+<h1 id="基本语法">基本语法</h1>
+<h2 id="标题heading-a">标题（Heading）<code># a</code></h2>
+<pre><code># H1
+## H2
+### H3
+</code></pre>
+<h2 id="粗体bolda">粗体（Bold）<code>**a**</code></h2>
+<p><code>	**bold text**</code></p>
+<h2 id="斜体italica">斜体（Italic）	<code>*a*</code></h2>
+<p><code>*italicized text*</code></p>
+<h2 id="引用块blockquote">引用块（Blockquote）	<code>&gt;</code></h2>
+<p><code>&gt; blockquote</code></p>
+<h2 id="有序列表ordered-list1">有序列表（Ordered List）<code>1.</code></h2>
+<pre><code>1. First item
+2. Second item
+3. Third item
+</code></pre>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h2 id="无序列表unordered-list-">无序列表（Unordered List）<code>*/-/+</code></h2>
+<pre><code>* First item
+- Second item
++ Third item
+</code></pre>
+<ul>
+<li>First item</li>
+</ul>
+<ul>
+<li>Second item</li>
+</ul>
+<ul>
+<li>Third item</li>
+</ul>
+<h2 id="代码codecode">代码（Code）	<code>code</code></h2>
+<pre><code>`code`
+</code></pre>
+<h2 id="分隔线horizontal-rule-">分隔线（Horizontal Rule）	<code>---</code></h2>
+<hr>
+<h2 id="链接linktitlehttpswwwexamplecom">链接（Link）<code>[title](https://www.example.com)</code></h2>
+<p><a href="www.baidu.com">百度</a></p>
+<h2 id="图片imagealt-textimagejpg">图片（Image）<code>	![alt text](image.jpg)</code></h2>
+<figure data-type="image" tabindex="1"><img src="https://ts1.cn.mm.bing.net/th?id=OIP-C.TyA9O6jARINz_jLX5_qCYAHaKp&amp;w=120&amp;h=170&amp;c=8&amp;rs=1&amp;qlt=90&amp;o=6&amp;dpr=1.5&amp;pid=3.1&amp;rm=2" alt="美女" loading="lazy"></figure>
+<h1 id="扩展语法">扩展语法</h1>
+<h2 id="表格">表格</h2>
+<p>要添加表，请使用三个或多个连字符（---）创建每列的标题，并使用管道（|）分隔每列。您可以选择在表的任一端添加管道。</p>
+<pre><code>| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+</code></pre>
+<p>对齐:<br>
+您可以通过在标题行中的连字符的左侧，右侧或两侧添加冒号（:），将列中的文本对齐到左侧，右侧或中心。</p>
+<pre><code>| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+</code></pre>
+<h2 id="代码块">代码块</h2>
+<p>Markdown基本语法允许您通过将行缩进四个空格或一个制表符来创建代码块。如果发现不方便，请尝试使用受保护的代码块。根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（(```）或三个波浪号（~~~）。</p>
+<pre><code>```
+{
+  &quot;firstName&quot;: &quot;John&quot;,
+  &quot;lastName&quot;: &quot;Smith&quot;,
+  &quot;age&quot;: 25
+}
+```
+</code></pre>
+<p>语法高亮<br>
+许多Markdown处理器都支持受围栏代码块的语法突出显示。使用此功能，您可以为编写代码的任何语言添加颜色突出显示。要添加语法突出显示，请在受防护的代码块之前的反引号旁边指定一种语言。</p>
+<pre><code>~~~json
+{
+  &quot;firstName&quot;: &quot;John&quot;,
+  &quot;lastName&quot;: &quot;Smith&quot;,
+  &quot;age&quot;: 25
+}
+~~~
+</code></pre>
+<h2 id="脚注">脚注</h2>
+<p>在括号内使用另一个插入符号和数字添加脚注，并用冒号和文本（[^1]: My footnote.）</p>
+<pre><code>Here's a simple footnote,[^1] and here's a longer one.[^bignote]
+
+[^1]: This is the first footnote.
+
+[^bignote]: Here's one with multiple paragraphs and code.
+</code></pre>
+<h2 id="标题编号">标题编号</h2>
+<pre><code>### My Great Heading {#custom-id}
+&lt;h3 id=&quot;custom-id&quot;&gt;My Great Heading&lt;/h3&gt;
+</code></pre>
+<h2 id="列表">列表</h2>
+<p>一些Markdown处理器允许您创建术语及其对应定义的定义列表。要创建定义列表，请在第一行上键入术语。在下一行，键入一个冒号，后跟一个空格和定义。</p>
+<pre><code>First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+</code></pre>
+<h2 id="删除线">删除线</h2>
+<p>在单词前后使用两个波浪号~~</p>
+<pre><code>~~世界是平坦的。~~ 我们现在知道世界是圆的。
+</code></pre>
+<p><s>世界是平坦的。</s> 我们现在知道世界是圆的。</p>
+<h2 id="任务列表">任务列表</h2>
+<p>要创建任务列表，请在任务列表项之前添加破折号-和方括号[ ]，并在[ ]前面加上空格。要选择一个复选框，请在方括号[x]之间添加 x 。</p>
+<pre><code>- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+</code></pre>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3265298"><label class="task-list-item-label" for="task-item-3265298"> Write the press release</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8972408"><label class="task-list-item-label" for="task-item-8972408"> Update the website</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1669076"><label class="task-list-item-label" for="task-item-1669076"> Contact the media</label></li>
+</ul>
+<h2 id="使用-emoji-表情">使用 Emoji 表情</h2>
+<p>键入表情符号短代码来插入表情符号。这些以冒号开头和结尾，并包含表情符号的名称。<a href="https://blog.csdn.net/qq_39087432/article/details/115407374">表情符号简码列表</a></p>
+<pre><code>去露营了！ :tent: 很快回来。
+
+真好笑！ :joy:
+
+</code></pre>
+<p>去露营了！ ⛺ 很快回来。</p>
+<p>真好笑！ 😂</p>
+]]></content>
+    </entry>
+</feed>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://18279493170.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="搞钱！搞钱！搞钱！"><meta charset="UTF-8"><title>CSS之精灵图，计数器与定位 | 徐某人</title>
+<link href="https://18279493170.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://18279493170.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://18279493170.github.io/l5s4wiXV_/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://18279493170.github.io"><img alt="logo" style="display:inline-block;" src="https://18279493170.github.io/images/avatar.png"/></a><h1 title="徐某人" class="weaklink"><a  href="/">徐某人</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1677698765253" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>CSS之精灵图，计数器与定位</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2017-09-30</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://18279493170.github.io/kxtMGy4k1U/" class="tag">css</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">2708字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">12 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<h1 id="精灵图sprite">精灵图（Sprite）</h1>
+<p>当用户访问一个网站时，浏览器会向服务器发送一系列请求，比如说网页上的每张图像都需要经过一次请求才能最终展示给用户。然而，一个网页中往往包含大量的图像资源（例如在页面中展示的图片、网页的背景图像以及一些装饰性的图像等），这就会导致浏览器频繁的请求服务器，大大降低网页的加载速度。为了有效的减少请求服务器的次数，提高页面加载的速度，就出现了 CSS Sprites 技术，也被称为精灵技术。</p>
+<p>简单来讲，精灵技术就是一种处理网页背景图像的方式，它需要将一个页面中涉及到的所有或一部分较小的背景图像合并到一张较大的图片中，然后再将这个图片应用到网页种。通常情况下，我们只是将背景图像中那些较小的、零碎的图像集中到一个大的图像中，这个较大的图像被称为精灵图（也被称为雪碧图），如下图所示就是淘宝网上应用的一个精灵图：</p>
+<figure data-type="image" tabindex="1"><img src="https://18279493170.github.io/post-images/1653638851964.png" alt="" loading="lazy"></figure>
+<p>精灵图的使用也非常简单，只需要借助 background 或者 background-position 属性来定位背景图像的位置即可</p>
+<pre><code> &lt;style&gt;
+        ul li {
+            float: left;
+            width: 30px;
+            height: 30px;
+            list-style: none;
+            margin: 5px;
+            border: 1px solid #CCC;
+            border-radius: 6px;
+        }
+        ul li:nth-child(1){
+            background: url(./sprite.png) no-repeat 4px 1px;
+        }
+        ul li:nth-child(2){
+            background: url(./sprite.png) no-repeat -38px 1px;
+        }
+        ul li:nth-child(3){
+            background: url(./sprite.png) no-repeat -81px 3px;
+        }
+        ul li:nth-child(4){
+            background: url(./sprite.png) no-repeat -123px 2px;
+        }
+        ul li:nth-child(5){
+            background: url(./sprite.png) no-repeat -171px 0px;
+        }
+        ul li:nth-child(6){
+            background: url(./sprite.png) no-repeat -214px 2px;
+        }
+        ul li:nth-child(7){
+            background: url(./sprite.png) no-repeat -267px 1px;
+        }
+        ul li:nth-child(8){
+            background: url(./sprite.png) no-repeat 2px -36px;
+        }
+    &lt;/style&gt;
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://18279493170.github.io/post-images/1653638877815.png" alt="" loading="lazy"></figure>
+<p>简单来说，精灵图就是一个大的背景图，您只需要使用 background-position 来移动背景图，从而只显示背景图的一部分。目前为止，精灵图发展的已经非常成熟，阿里巴巴、百度、谷歌、京东、淘宝等大型网站中都可以看到精灵图的影子，使用精灵图可以减少图片的体积，也可以显著的减少对服务器的请求次数，提高网页的加载速度。当然，使用精灵图也不是没有弊端，比如：</p>
+<blockquote>
+<p>在图片合并的时候，需要把多张图片有序的、合理的合并成一张图片，每个小图之间需要预留足够的空间；<br>
+在宽屏或者高分辨率的屏幕下来自适应页面宽度时，如果图片不够宽，会出现背景断裂；<br>
+精灵图在维护的时候比较麻烦，如果页面背景有少许改动，就需要修改整个精灵图。</p>
+</blockquote>
+<h1 id="计数器">计数器</h1>
+<p>CSS 中的计数器类似于变量，可以实现简单的计数功能，并将结果显示在页面上，在早期的网站上应用比较广泛。要实现计数器需要用到以下几个属性：</p>
+<pre><code>counter-reset：创建或者重置计数器；
+counter-increment：递增变量；
+content：插入生成的内容；
+counter() 或 counters()：将计数器的值添加到元素。
+</code></pre>
+<h2 id="初始化计数器">初始化计数器</h2>
+<p>要使用计数器首先需要使用 counter-reset 属性来创建一个计数器，这一过程便叫做初始化计数器</p>
+<p><code>counter-reset：none | [&lt;identifier&gt; &lt;integer&gt;]</code></p>
+<blockquote>
+<p>none：阻止计数器复位；<br>
+<code>&lt;identifier&gt;</code>：定义计数器的名称；<br>
+<code>&lt;integer&gt;</code>：定义计数器的起始值，默认值为 0，可以为负值。</p>
+</blockquote>
+<h2 id="计数器自增">计数器自增</h2>
+<p>初始化计数器后，可以通过 counter-increment 属性来指定计数器何时自增</p>
+<p><code>counter-increment：none | [&lt;identifier&gt; &lt;integer&gt;]</code></p>
+<blockquote>
+<p>none：阻止计数器增加；<br>
+<identifier>：定义要自增的计数器名称；<br>
+<integer>：定义计数器每次增加的数值，默认值为 1，可以为负值。</p>
+</blockquote>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        body {
+            counter-reset: chapter; 
+        }
+        h5, h6 {
+            margin: 5px 0 5px;
+        }
+        h5 {
+            counter-reset: section;
+            counter-increment: chapter;
+        }
+        h6 {
+            counter-increment: section;
+        }
+        h5:before {
+            content: &quot;Chapter &quot; counter(chapter) &quot;. &quot;;
+        }
+        h6:before {
+            content: counter(chapter) &quot;.&quot; counter(section) &quot; &quot;;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h5&gt;程序设计语言&lt;/h5&gt;
+    &lt;h6&gt;HTML and CSS&lt;/h6&gt;
+    &lt;h6&gt;JavaScript&lt;/h6&gt;
+    &lt;h6&gt;PHP&lt;/h6&gt;
+    &lt;h6&gt;Java&lt;/h6&gt;
+    &lt;h5&gt;数据库管理系统&lt;/h5&gt;
+    &lt;h6&gt;MySQL&lt;/h6&gt;
+    &lt;h6&gt;MariaDB&lt;/h6&gt;
+    &lt;h6&gt;PostgreSQL&lt;/h6&gt;
+    &lt;h6&gt;Oracle&lt;/h6&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://18279493170.github.io/post-images/1653638908498.png" alt="" loading="lazy"></figure>
+<blockquote>
+<p>注意：在使用 CSS 计数器之前，必须使用 counter-reset 创建计数器。</p>
+</blockquote>
+<h2 id="计数器嵌套">计数器嵌套</h2>
+<p>另外，计数器还可以嵌套使用，而且使用 counters() 函数可以在不同级别的嵌套计数器之间插入一个字符串</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        ol {
+            /* 为每个ol元素创建新的计数器实例 */
+            counter-reset: ol-list;
+            list-style-type: none;
+        }
+        li:before {
+            /* 只增加计数器的当前实例 */
+            counter-increment: ol-list;
+            /* 为所有计数器实例增加以“.”分隔的值 */
+            content: counters(ol-list, &quot;.&quot;) &quot;、&quot;;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ol&gt;
+        &lt;li&gt;item&lt;/li&gt;
+        &lt;li&gt;item
+            &lt;ol&gt;
+                &lt;li&gt;item&lt;/li&gt;
+                &lt;li&gt;item&lt;/li&gt;
+                &lt;li&gt;item
+                    &lt;ol&gt;
+                        &lt;li&gt;item&lt;/li&gt;
+                        &lt;li&gt;item&lt;/li&gt;
+                    &lt;/ol&gt;
+                &lt;/li&gt;
+                &lt;li&gt;item
+                    &lt;ol&gt;
+                        &lt;li&gt;item&lt;/li&gt;
+                        &lt;li&gt;item&lt;/li&gt;
+                        &lt;li&gt;item&lt;/li&gt;
+                    &lt;/ol&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+        &lt;li&gt;item&lt;/li&gt;
+        &lt;li&gt;item&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<figure data-type="image" tabindex="4"><img src="https://18279493170.github.io/post-images/1653638935626.png" alt="" loading="lazy"></figure>
+<h1 id="position定位">position定位</h1>
+<p>CSS 中的 position 属性用来设置元素在页面中的位置，通过该属性您可以把任何属性放置在任何您认为合适的位置。position 属性有 5 个可选值，分别对应 5 种不同的定位方式</p>
+<pre><code>static	默认值，静态定位，表示没有定位，元素会按照正常的位置显示，此时 top、bottom、left 和 right 4 个定位属性也不会被应用。
+relative	相对定位，即相对于元素的正常位置进行定位，您可以通过 top、right、bottom、left 这 4 个属性来设置元素相对于正常位置的偏移量，在此过程中不会对其它元素造成影响。
+absolute	绝对定位，相对于第一个非 static 定位的父级元素进行定位，可以通过 top、right、bottom、left 这 4 个属性来设置元素相对于父级元素位置的偏移量。如果没有满足条件的父级元素，则会相对于浏览器窗口来进行定位。使用绝对定位的元素不会对其它元素造成影响。
+fixed	固定定位，相对于浏览器的创建进行定位，可以使用 top、right、bottom、left 这 4 个属性来定义元素相对于浏览器窗口的位置。使用固定定位的元素无论如何滚动浏览器窗口元素的位置都是固定不变的。
+sticky	粘性定位，它是 relative 和 fixed 的结合体，能够实线类似吸附的效果，当滚动页面时它的效果与 relative 相同，当要滚动到屏幕之外时则会自动变成 fixed 的效果。
+</code></pre>
+<h2 id="静态定位static">静态定位：static</h2>
+<p>static 是 position 属性的默认值，表示没有定位，使用静态定位的元素会按照元素正常的位置显示，并且不会受到 top、bottom、left、right 和 z-index 属性的影响</p>
+<p><code> position: static;</code></p>
+<h2 id="相对定位relative">相对定位：relative</h2>
+<p>相对定位就是元素相对于自己默认的位置来进行位置上的调整，您可以通过 top、bottom、left 和 right 四个属性的组合来设置元素相对于默认位置在不同方向上的偏移量。</p>
+<pre><code>position: relative;
+top: 25px;
+left: 10px;
+</code></pre>
+<blockquote>
+<p>注意：相对定位的元素可以移动并与其他元素重叠，但会保留元素默认位置处的空间。</p>
+</blockquote>
+<h2 id="绝对定位absolute">绝对定位：absolute</h2>
+<p>绝对定位就是元素相对于第一个非静态定位（static）的父级元素进行定位，如果找不到符合条件的父级元素则会相对与浏览器窗口来进行定位。您同样可以使用 top、bottom、left 和 right 四个属性来设置元素相对于父元素或浏览器窗口不同方向上的偏移量。</p>
+<p>使用绝对定位的元素会脱离原来的位置，不再占用网页上的空间。与相对定位相同，使用绝对定位的元素同样会与页面中的其它元素发声重叠，另外使用绝对定位的元素可以有外边距，并且外边距不会与其它元素的外边距发生重叠。</p>
+<pre><code> div{
+            border: 1px solid black;
+            position: relative;
+        }
+        div.static {
+            position: absolute;
+            bottom: 10px;
+            right: 5px;
+        }
+</code></pre>
+<h2 id="固定定位fixed">固定定位：fixed</h2>
+<p>固定定位就是将元素相对于浏览器窗口进行定位，使用固定定位的元素不会因为浏览器窗口的滚动而移动，就像是固定在了页面上一样，我们经常在网页上看到的返回顶部按钮就是使用固定定位实现的。</p>
+<p><code> position: fixed;             right: 20px;             bottom: 20px;</code></p>
+<h2 id="粘性定位sticky">粘性定位：sticky</h2>
+<p>粘性定位与前面介绍的四种定位方式不太一下，它像是相对定位和固定定位的结合体，当滚动页面时它的效果与相对定位相同，当元素滚动到一定程度时它又会呈现出固定定位的效果。比如一些网页上的导航菜单，当页面加载完成时它在自己默认的位置，当我们向下滚动页面时它又会固定在页面的最顶端。</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        div{
+            height: 500px;
+            position: relative;
+        }
+        p {
+            width: 100%;
+            height: 50px;
+            margin: 0;
+            text-align: center;
+            line-height: 50px;
+            background-color: #CCC;
+        }
+        p.sticky {
+            background-color: blue;
+            position: sticky;
+            top:0px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;p&gt;1&lt;/p&gt;
+        &lt;p&gt;2&lt;/p&gt;
+        &lt;p class=&quot;sticky&quot;&gt;position: sticky;&lt;/p&gt;
+        &lt;p&gt;4&lt;/p&gt;
+        &lt;p&gt;5&lt;/p&gt;
+        &lt;p&gt;6&lt;/p&gt;
+        &lt;p&gt;7&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<figure data-type="image" tabindex="5"><img src="https://18279493170.github.io/post-images/1653638960214.png" alt="" loading="lazy"></figure>
+<p>在使用粘性定位时，需要注意以下几点：</p>
+<blockquote>
+<p>在设置position:sticky;时，必须再定义 top、bottom、right、left 四个属性之一，否则只会处于相对定位；<br>
+使用固定定位元素的父元素不能定义overflow:hidden或者overflow:auto属性；<br>
+父元素的高度不能低于固定定位元素的高度；<br>
+固定定位的元素仅在其父元素内有效。</p>
+</blockquote>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#%E7%B2%BE%E7%81%B5%E5%9B%BEsprite">精灵图（Sprite）</a></li>
+<li><a href="#%E8%AE%A1%E6%95%B0%E5%99%A8">计数器</a>
+<ul>
+<li><a href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AE%A1%E6%95%B0%E5%99%A8">初始化计数器</a></li>
+<li><a href="#%E8%AE%A1%E6%95%B0%E5%99%A8%E8%87%AA%E5%A2%9E">计数器自增</a></li>
+<li><a href="#%E8%AE%A1%E6%95%B0%E5%99%A8%E5%B5%8C%E5%A5%97">计数器嵌套</a></li>
+</ul>
+</li>
+<li><a href="#position%E5%AE%9A%E4%BD%8D">position定位</a>
+<ul>
+<li><a href="#%E9%9D%99%E6%80%81%E5%AE%9A%E4%BD%8Dstatic">静态定位：static</a></li>
+<li><a href="#%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8Drelative">相对定位：relative</a></li>
+<li><a href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8Dabsolute">绝对定位：absolute</a></li>
+<li><a href="#%E5%9B%BA%E5%AE%9A%E5%AE%9A%E4%BD%8Dfixed">固定定位：fixed</a></li>
+<li><a href="#%E7%B2%98%E6%80%A7%E5%AE%9A%E4%BD%8Dsticky">粘性定位：sticky</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">打不死的平头哈Copyright © 2018-2020 <a href="https://18279493170.github.io" style="margin:0;">徐某人</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>47</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://18279493170.github.io/media/js/prism.js"></script>
+</body>
+</html>

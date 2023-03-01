@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://18279493170.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="搞钱！搞钱！搞钱！"><meta charset="UTF-8"><title>css之多列布局，弹性布局与响应式布局 | 徐某人</title>
+<link href="https://18279493170.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://18279493170.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://18279493170.github.io/I5zWDp8bI/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://18279493170.github.io"><img alt="logo" style="display:inline-block;" src="https://18279493170.github.io/images/avatar.png"/></a><h1 title="徐某人" class="weaklink"><a  href="/">徐某人</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1677698765253" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>css之多列布局，弹性布局与响应式布局</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2017-11-25</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://18279493170.github.io/kxtMGy4k1U/" class="tag">css</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">4119字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">18 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<h1 id="column多列布局">column（多列布局）</h1>
+<p>当需要在页面中展示大量文本时，如果每段的文本都很长，阅读起来就会非常麻烦，有可能读错行或读串行。为了提高阅读的舒适性，CSS3 中引入了多列布局模块，用于以简单有效的方式创建多列布局。所谓多列布局指的就是您可以将文本内容分成多块，然后让这些块并列显示，类似于报纸、杂志那样的排版形式</p>
+<figure data-type="image" tabindex="1"><img src="https://18279493170.github.io/post-images/1653668868079.png" alt="" loading="lazy"></figure>
+<p>CSS3 中提供了一系列实现多列布局的属性</p>
+<pre><code>属性	说明
+column-count	指定元素应该分为几列
+column-fill	指定如何填充每个列
+column-gap	指定列与列之间的间隙
+column-rule	所有 column-rule-* 属性的简写形式
+column-rule-color	指定列与列之间边框的颜色
+column-rule-style	指定列与列之间边框的样式
+column-rule-width	指定列与列之间边框的宽度
+column-span	指定元素应该横跨多少列
+column-width	指定列的宽度
+columns	column-width 与 column-count 属性的简写属性
+</code></pre>
+<h2 id="column-count">column-count</h2>
+<p>column-count 属性用来设置将元素分为几列</p>
+<pre><code>number	使用具体数值将元素划分为指定的列数
+auto	默认值，由其他属性决定具体的列数，比如 column-width
+</code></pre>
+<p><code> column-count: 4;</code></p>
+<h2 id="column-fill">column-fill</h2>
+<p>column-fill 属性用来设置如何填充每个列</p>
+<pre><code>balance	默认值，根据其他列属性值使列的高度尽可能平衡
+auto	按顺序对每个列进行填充，列的高度会各有不同
+</code></pre>
+<h2 id="column-gap">column-gap</h2>
+<p>column-gap 属性用来设置列与列之间的间隙</p>
+<pre><code>length	将列与列之间的间隔设置为指定的宽度
+normal	将列与列之间的间隔设置为与 font-size 属性相同的大小，即 1em
+</code></pre>
+<pre><code class="language-css"> div {
+            column-count: 3;
+            column-gap: 10px;
+        }
+</code></pre>
+<h2 id="column-rule">column-rule</h2>
+<p>column-rule 属性是一个简写属性，它与 border 属性非常相似，用来设置列与列之间边框的宽度、样式和颜色。 column-rule 属性的语法格式如下：<br>
+<code>column-rule: column-rule-width column-rule-style column-rule-color;</code></p>
+<p>其中 column-rule-width 表示边框的宽度；column-rule-style 表示边框的样式，下表中列举了一些样式的可选值；column-rule-color 表示边框的颜色。</p>
+<pre><code>
+值	描述
+none	不定义边框样式
+hidden	隐藏边框样式
+dotted	定义点状边框
+dashed	定义虚线边框
+solid	定义实线边框
+double	定义双实线边框
+groove	定义 3D grooved 边框，边框效果取决于宽度和颜色值
+ridge	定义 3D ridged 边框，边框效果取决于宽度和颜色值
+inset	定义 3D inset 边框，边框效果取决于宽度和颜色值
+outset	定义 3D outset 边框，边框效果取决于宽度和颜色值
+</code></pre>
+<pre><code class="language-css">  div {
+            column-count: 3;
+            column-gap: 10px;
+            column-rule: 5px solid #090;
+        }
+</code></pre>
+<p>也可以直接使用 column-rule-width、column-rule-style、column-rule-color 三个属性来分别设置列与列之间边框的样式</p>
+<pre><code class="language-css"> div {
+            column-count: 3;
+            column-gap: 10px;
+            column-rule-width: 5px;
+            column-rule-style: solid;
+            column-rule-color: #090;
+        }
+</code></pre>
+<h2 id="column-span">column-span</h2>
+<p>column-span 属性用来设置元素应该跨越多少列</p>
+<pre><code>none	默认值，表示元素不跨越列
+all	表示元素横跨所有列
+</code></pre>
+<p><code>olumn-span: none;</code></p>
+<h2 id="column-width">column-width</h2>
+<p>column-width 属性用来设置每个列的宽度</p>
+<pre><code>auto	由浏览器决定列的宽度
+length	为每个列指定具体的宽度
+</code></pre>
+<pre><code class="language-css">  div {
+            column-gap: 10px;
+            column-rule: 5px solid #090;
+            column-width: 200px;
+        }
+</code></pre>
+<h2 id="columns">columns</h2>
+<p>columns 属性是一个简写属性，用来同时设置列的宽度和列的数量，语法格式如下：<br>
+<code>columns: column-width column-count;</code></p>
+<p>其中 column-width 表示每个列的宽度，column-count 则表示列的数量。</p>
+<pre><code class="language-css"> div {
+            columns: 100px 4;
+            column-rule: 5px solid #090;
+        }
+</code></pre>
+<h1 id="flex布局弹性布局弹性盒子">flex布局（弹性布局/弹性盒子）</h1>
+<p>Flex 是 Flexible Box 的缩写，意为“弹性布局”或者“弹性盒子”，是 CSS3 中的一种新的布局模式，可以简便、完整、响应式地实现各种页面布局，当页面需要适应不同的屏幕大小以及设备类型时非常适用。目前，几乎所有的浏览器都支持 Flex 布局。</p>
+<h2 id="基本概念">基本概念</h2>
+<p>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称“容器”。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称“项目”。容器默认存在两根轴，分别为水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置叫做 main start，结束位置叫做 main end；交叉轴的开始位置叫做 cross start，结束位置叫做 cross end。项目默认沿主轴排列。单个项目占据的主轴空间叫做 main size，占据的交叉轴空间叫做 cross size。如下图所示：</p>
+<figure data-type="image" tabindex="2"><img src="https://18279493170.github.io/post-images/1653669423476.png" alt="" loading="lazy"></figure>
+<blockquote>
+<p>提示：您可以通过将元素的 display 属性设置为 flex（生成块级 flex 容器）或 inline-flex（生成类似 inline-block 的行内块级 flex 容器）。当一个元素设置了 Flex 布局以后，其子元素的 float、clear 和 vertical-align 等属性将失效。</p>
+</blockquote>
+<p>CSS 中提供了以下属性来实现 Flex 布局：</p>
+<pre><code>属性	描述
+display	指定 HTML 元素的盒子类型
+flex-direction	指定弹性盒子中子元素的排列方式
+flex-wrap	设置当弹性盒子的子元素超出父容器时是否换行
+flex-flow	flex-direction 和 flex-wrap 两个属性的简写
+justify-content	设置弹性盒子中元素在主轴（横轴）方向上的对齐方式
+align-items	设置弹性盒子中元素在侧轴（纵轴）方向上的对齐方式
+align-content	修改 flex-wrap 属性的行为，类似 align-items，但不是设置子元素对齐，而是设置行对齐
+order	设置弹性盒子中子元素的排列顺序
+align-self	在弹性盒子的子元素上使用，用来覆盖容器的 align-items 属性
+flex	设置弹性盒子中子元素如何分配空间
+flex-grow	设置弹性盒子的扩展比率
+flex-shrink	设置弹性盒子的收缩比率
+flex-basis	设置弹性盒子伸缩基准值
+</code></pre>
+<p>按照作用范围的不同，这些属性可以分为两类，分别为容器属性（flex-direction、flex-wrap、flex-flow、justify-content、align-items、align-content）和项目属性（order、align-self、flex、flex-grow、flex-shrink、flex-basis）</p>
+<h2 id="容器属性">容器属性</h2>
+<h3 id="flex-direction">flex-direction</h3>
+<p>flex-direction 属性用来决定主轴的方向（即项目的排列方向）</p>
+<pre><code>值	描述
+row	默认值，主轴沿水平方向从左到右
+row-reverse	主轴沿水平方向从右到左
+column	主轴沿垂直方向从上到下
+column-reverse	主轴沿垂直方向从下到上
+initial	将此属性设置为属性的默认值
+inherit	从父元素继承此属性的值
+</code></pre>
+<pre><code class="language-css">display: flex;
+
+flex-direction: row;
+</code></pre>
+<h3 id="flex-wrap">flex-wrap</h3>
+<p>flex-wrap 属性用来设置当弹性盒子的子元素（项目）超出父容器时是否换行，属性的可选值如下：</p>
+<pre><code>值	描述
+nowrap	默认值，表示项目不会换行
+wrap	表示项目会在需要时换行
+wrap-reverse	表示项目会在需要时换行，但会以相反的顺序
+initial	将此属性设置为属性的默认值
+inherit	从父元素继承属性的值
+</code></pre>
+<pre><code class="language-css">display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+</code></pre>
+<h3 id="flex-flow">flex-flow</h3>
+<p>flex-flow 属性是 flex-direction 和 flex-wrap 两个属性的简写，语法格式如下：<br>
+<code>flex-flow: flex-direction flex-wrap;</code></p>
+<pre><code class="language-css"> .flex_flow {
+            display: flex;
+            flex-flow: row-reverse wrap;
+        }
+</code></pre>
+<h3 id="justify-content">justify-content</h3>
+<p>justify-content 属性用于设置弹性盒子中元素在主轴（横轴）方向上的对齐方式，属性的可选值如下：</p>
+<pre><code>值	描述
+flex-start	默认值，左对齐
+flex-end	右对齐
+center	居中
+space-between	两端对齐，项目之间的间隔是相等的
+space-around	每个项目两侧的间隔相等
+initial	将此属性设置为属性的默认值
+inherit	从父元素继承属性的值
+</code></pre>
+<pre><code class="language-css">  .flex {
+            display: flex;
+            flex-flow: row wrap;
+            margin-top: 10px;
+        }
+        .flex div {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 5px;
+            border: 1px solid black;
+        }
+        .flex-start {
+            justify-content: flex-start;
+        }
+        .flex-end {
+            justify-content: flex-end;
+        }
+        .center {
+            justify-content: center;
+        }
+        .space-between {
+            justify-content: space-between;
+        }
+        .space-around  {
+            justify-content: space-around;
+        }
+</code></pre>
+<h3 id="align-items">align-items</h3>
+<p>align-items 属性用来设置弹性盒子中元素在侧轴（纵轴）方向上的对齐方式，属性的可选值如下：</p>
+<pre><code>值	描述
+stretch	默认值，项目将被拉伸以适合容器
+center	项目位于容器的中央
+flex-start	项目位于容器的顶部
+flex-end	项目位于容器的底部
+baseline	项目与容器的基线对齐
+initial	将此属性设置为属性的默认值
+inherit	从父元素继承属性的值
+
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://18279493170.github.io/post-images/1653670021684.png" alt="" loading="lazy"></figure>
+<h3 id="align-content">align-content</h3>
+<p>align-content 属性与 justify-content 属性类似，可以在弹性盒子的侧轴还有多余空间时调整容器内项目的对齐方式，属性的可选值如下：</p>
+<pre><code>值	描述
+stretch	默认值，将项目拉伸以占据剩余空间
+center	项目在容器内居中排布
+flex-start	项目在容器的顶部排列
+flex-end	项目在容器的底部排列
+space-between	多行项目均匀分布在容器中，其中第一行分布在容器的顶部，最后一行分布在容器的底部
+space-around	多行项目均匀分布在容器中，并且每行的间距（包括离容器边缘的间距）都相等
+initial	将此属性设置为属性的默认值
+inherit	从父元素继承该属性的值
+</code></pre>
+<figure data-type="image" tabindex="4"><img src="https://18279493170.github.io/post-images/1653670108696.png" alt="" loading="lazy"></figure>
+<h2 id="项目属性">项目属性</h2>
+<h3 id="order">order</h3>
+<p>order 属性用来设置项目在容器中出现的顺序，您可以通过具体的数值来定义项目在容器中的位置，属性的语法格式如下：<br>
+<code>order: number;</code></p>
+<p>其中 number 就是项目在容器中的位置，默认值为 0。</p>
+<pre><code class="language-css"> .flex {
+            display: flex;
+            flex-flow: row wrap;
+            margin-top: 10px;
+        }
+        .flex div {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 5px;
+            border: 1px solid black;
+        }
+        .flex div:nth-child(1) {
+            order: 5;
+        }
+        .flex div:nth-child(2) {
+            order: 3;
+        }
+        .flex div:nth-child(3) {
+            order: 1;
+        }
+        .flex div:nth-child(4) {
+            order: 2;
+        }
+        .flex div:nth-child(5) {
+            order: 4;
+        }
+</code></pre>
+<figure data-type="image" tabindex="5"><img src="https://18279493170.github.io/post-images/1653670197845.png" alt="" loading="lazy"></figure>
+<h3 id="align-self">align-self</h3>
+<p>align-self 属性允许您为某个项目设置不同于其它项目的对齐方式，该属性可以覆盖 align-items 属性的值。align-self 属性的可选值如下：</p>
+<pre><code>值	描述
+auto	默认值，表示元素将继承其父容器的 align-items 属性值，如果没有父容器，则为“stretch”
+stretch	项目将被拉伸以适合容器
+center	项目位于容器的中央
+flex-start	项目位于容器的顶部
+flex-end	项目位于容器的底部
+baseline	项目与容器的基线对齐
+initial	将此属性设置为属性的默认值
+inherit	从父元素继承属性的值
+</code></pre>
+<pre><code class="language-css"> .flex {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-end;
+            border: 1px solid #CCC;
+            height: 150px;
+        }
+        .flex div {
+            width: 60px;
+            height: 60px;
+            border: 1px solid black;
+        }
+        .flex div:nth-child(4) {
+            align-self: flex-start;
+        }
+</code></pre>
+<figure data-type="image" tabindex="6"><img src="https://18279493170.github.io/post-images/1653670288755.png" alt="" loading="lazy"></figure>
+<h3 id="flex">flex</h3>
+<p>flex 属性是 flex-grow、flex-shrink 和 flex-basis 三个属性的简写，语法格式如下：<br>
+<code>flex: flex-grow flex-shrink flex-basis;</code></p>
+<p>参数说明如下：</p>
+<pre><code>flex-grow：（必填参数）一个数字，用来设置项目相对于其他项目的增长量，默认值为 0；
+flex-shrink：（选填参数）一个数字，用来设置项目相对于其他项目的收缩量，默认值为 1；
+flex-basis：（选填参数）项目的长度，合法值为 auto（默认值，表示自动）、inherit（表示从父元素继承该属性的值） 或者以具体的值加 &quot;%&quot;、&quot;px&quot;、&quot;em&quot; 等单位的形式。
+</code></pre>
+<p>另外，flex 属性还有两个快捷值，分别为 auto（1 1 auto）和 none（0 0 auto）。</p>
+<pre><code class="language-css">  .flex {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-end;
+            border: 1px solid #CCC;
+        }
+        .flex div {
+            width: 60px;
+            height: 60px;
+            border: 1px solid black;
+        }
+        .flex div:nth-child(2) {
+            flex:0;
+        }
+        .flex div:nth-child(4) {
+            flex:1 1 auto;
+        }
+</code></pre>
+<figure data-type="image" tabindex="7"><img src="https://18279493170.github.io/post-images/1653670520098.png" alt="" loading="lazy"></figure>
+<p>也可以使用 flex-grow、flex-shrink、flex-basis 几个属性来分别设置项目的增长量、收缩量以及项目长度</p>
+<pre><code class="language-css">.flex div:nth-child(4) {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    /* 等同于 flex:1 1 auto; */
+}
+</code></pre>
+<h1 id="响应式布局自适应布局">响应式布局（自适应布局）</h1>
+<p>CSS 响应式布局也称自适应布局，是 Ethan Marcotte 在 2010 年 5 月份提出的一个概念，简单来讲就是一个网站能够兼容多个不同的终端（设备），而不是为每个终端做一个特定的版本。这个概念是为解决移动端浏览网页而诞生的。响应式布局能够为使用不同终端的用户提供很好的用户体验，而且随着大屏智能手机的普及，用“大势所趋”来形容也不为过。</p>
+<p>要实现响应式布局，常用的方式有以下几种：</p>
+<pre><code>使用 CSS 中的媒体查询（最简单）；
+使用 JavaScript（使用成本比较高）；
+使用第三方开源框架（例如 bootstrap，可以很好的支持各种浏览器）。
+</code></pre>
+<h2 id="设置-meta-标签">设置 meta 标签</h2>
+<p>首先，我们需要设置 meta 标签来告诉浏览器，让视口（网页的可视区域）的宽度等于设备的宽度，并禁止用户对页面的缩放，如下所示：<br>
+<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;</code></p>
+<p>在设置视口时需要注意，视口就是网页可见区域的尺寸，设置视口时只设置宽度就行，不用在乎高度，具体高度由网页内容自动撑开。上面 meta 标签中内容的含义如下：</p>
+<blockquote>
+<p>viewport：即视口，表示网页的可视区域；<br>
+width：控制 viewport 的大小，可以指定一个具体的值，例如 600，也可以是由关键字组成的特殊值，例如 device-width 就表示设备的宽度；<br>
+initial-scale：表示初始缩放比例，也就是页面第一次加载时的缩放比例；<br>
+maximum-scale：表示允许用户缩放的最大比例，范围从 0 到 10.0；<br>
+minimum-scale：表示允许用户缩放到最小比例，范围从 0 到 10.0；<br>
+user-scalable：表示用户是否可以手动缩放，“yes”表示允许缩放，“no”表示禁止缩放。</p>
+</blockquote>
+<h2 id="媒体查询">媒体查询</h2>
+<p>CSS 媒体查询可以根据指定的条件，针对不同的媒体类型（screen print）定义不同的 CSS 样式，让使用不同设备的用户都能得到最佳的体验。</p>
+<p>关于媒体查询有以下三种实现方式：</p>
+<ul>
+<li>直接在 CSS 文件中使用</li>
+</ul>
+<pre><code class="language-css">  @media (max-width: 320px) {
+    /*0~320*/
+    body {
+        background: pink;
+    }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+    /*321~768*/
+    body {
+        background: red;
+    }
+}
+@media (min-width: 376px) and (max-width: 425px) {
+    /*376~425*/
+    body {
+        background: yellow;
+    }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    /*426~768*/
+    body {
+        background: blue;
+    }
+}
+@media (min-width: 769px) {
+    /*769~+∞*/
+    body {
+        background: green;
+    }
+}
+
+</code></pre>
+<ul>
+<li>使用 @import 导入</li>
+</ul>
+<pre><code class="language-css">@import 'index01.css' screen and (max-width:1024px) and (min-width:720px)
+@import 'index02.css' screen and (max-width:720px)
+</code></pre>
+<ul>
+<li>在 link 标签中使用</li>
+</ul>
+<pre><code class="language-css">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;index01.css&quot; media=&quot;screen and (max-width:1024px) and (min-width:720px)&quot;/&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;index02.css&quot; media=&quot;screen and (max-width:720px)&quot;/&gt;
+</code></pre>
+<p>示例</p>
+<pre><code class="language-css">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;响应式布局&lt;/title&gt;
+        &lt;meta name=&quot;viewport&quot;content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no&quot; /&gt;
+        &lt;style&gt;
+            *{
+                margin: 0px;
+                padding: 0px;
+                font-family: &quot;微软雅黑&quot;;
+            }
+            #head, #foot, #main
+            {
+                height: 100px;
+                width: 1200px;
+                /*width: 85%;*/
+                background-color: goldenrod;
+                text-align: center;
+                font-size: 48px;
+                line-height: 100px;
+                margin: 0 auto;
+            }
+            #head div{
+                display: none;
+                font-size: 20px;
+                height: 30px;
+                width: 100px;
+                background-color: green;
+                float: right;
+                line-height: 30px;
+                margin-top: 35px;
+            }
+            #head ul{
+                width: 80%;
+            }
+            #head ul li{
+                width: 20%;
+                float: left;
+                text-align: center;
+                list-style: none;font-size: 20px;
+            }
+            #main{
+                height: auto;
+                margin: 10px auto;
+                overflow: hidden;
+            }
+            .left, .center, .right{
+                height: 600px;
+                line-height: 600px;
+                float: left;
+                width: 20%;
+                background-color: red
+            }
+            .center{
+                width: 60%;
+                border-left: 10px solid #FFF;
+                border-right: 10px solid #FFF;
+                box-sizing: border-box;
+            }
+            @media only screen and (max-width: 1200px) {
+                #head, #foot, #main{
+                width: 100%;
+                }
+            }
+            @media only screen and (max-width: 980px) {
+                .right{
+                    display: none;
+                }
+                .left{
+                    width: 30%;
+                }
+                .center{
+                    width: 70%;
+                    border-right: hidden;
+                }
+            }
+            @media only screen and (max-width: 640px) {
+                .left, .center, .right{
+                    width: 100%;
+                    display: block;
+                    height: 200px;
+                    line-height: 200px;
+                }
+                .center{
+                    border: hidden;
+                    border-top: 10px  solid #FFFFFF;
+                    border-bottom: 10px solid #FFFFFF;
+                    height: 600px;
+                    line-height: 600px;
+                }
+                #head ul{
+                    display: none;
+                }
+                #head div{
+                    display: block;
+                }
+            }
+        &lt;/style&gt;   
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;
+            &lt;header id=&quot;head&quot;&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;header1&lt;/li&gt;
+                    &lt;li&gt;header2&lt;/li&gt;
+                    &lt;li&gt;header2&lt;/li&gt;
+                    &lt;li&gt;header2&lt;/li&gt;
+                    &lt;li&gt;header2&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;div&gt;icon&lt;/div&gt;
+            &lt;/header&gt;
+            &lt;section id=&quot;main&quot;&gt;
+                &lt;div class=&quot;left&quot;&gt;
+                    left
+                &lt;/div&gt;
+                &lt;div class=&quot;center&quot;&gt;
+                    center
+                &lt;/div&gt;
+                &lt;div class=&quot;right&quot;&gt;
+                    right
+                &lt;/div&gt;
+            &lt;/section&gt;
+            &lt;footer id=&quot;foot&quot;&gt;
+                footer
+            &lt;/footer&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>当浏览器窗口小于 1200 像素大于 980 像素时</p>
+<figure data-type="image" tabindex="8"><img src="https://18279493170.github.io/post-images/1653713338539.png" alt="" loading="lazy"></figure>
+<p>当浏览器窗口大于 640 像素小于 980 像素时</p>
+<figure data-type="image" tabindex="9"><img src="https://18279493170.github.io/post-images/1653713369781.png" alt="" loading="lazy"></figure>
+<p>当浏览器窗口小于 640 像素时</p>
+<figure data-type="image" tabindex="10"><img src="https://18279493170.github.io/post-images/1653713402781.png" alt="" loading="lazy"></figure>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#column%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80">column（多列布局）</a>
+<ul>
+<li><a href="#column-count">column-count</a></li>
+<li><a href="#column-fill">column-fill</a></li>
+<li><a href="#column-gap">column-gap</a></li>
+<li><a href="#column-rule">column-rule</a></li>
+<li><a href="#column-span">column-span</a></li>
+<li><a href="#column-width">column-width</a></li>
+<li><a href="#columns">columns</a></li>
+</ul>
+</li>
+<li><a href="#flex%E5%B8%83%E5%B1%80%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90">flex布局（弹性布局/弹性盒子）</a>
+<ul>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">基本概念</a></li>
+<li><a href="#%E5%AE%B9%E5%99%A8%E5%B1%9E%E6%80%A7">容器属性</a>
+<ul>
+<li><a href="#flex-direction">flex-direction</a></li>
+<li><a href="#flex-wrap">flex-wrap</a></li>
+<li><a href="#flex-flow">flex-flow</a></li>
+<li><a href="#justify-content">justify-content</a></li>
+<li><a href="#align-items">align-items</a></li>
+<li><a href="#align-content">align-content</a></li>
+</ul>
+</li>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E5%B1%9E%E6%80%A7">项目属性</a>
+<ul>
+<li><a href="#order">order</a></li>
+<li><a href="#align-self">align-self</a></li>
+<li><a href="#flex">flex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E8%87%AA%E9%80%82%E5%BA%94%E5%B8%83%E5%B1%80">响应式布局（自适应布局）</a>
+<ul>
+<li><a href="#%E8%AE%BE%E7%BD%AE-meta-%E6%A0%87%E7%AD%BE">设置 meta 标签</a></li>
+<li><a href="#%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2">媒体查询</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">打不死的平头哈Copyright © 2018-2020 <a href="https://18279493170.github.io" style="margin:0;">徐某人</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>47</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://18279493170.github.io/media/js/prism.js"></script>
+</body>
+</html>

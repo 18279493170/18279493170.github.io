@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://18279493170.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="搞钱！搞钱！搞钱！"><meta charset="UTF-8"><title>css之透明度，@规则与媒体查询 | 徐某人</title>
+<link href="https://18279493170.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://18279493170.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://18279493170.github.io/UpeMM9bjh/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://18279493170.github.io"><img alt="logo" style="display:inline-block;" src="https://18279493170.github.io/images/avatar.png"/></a><h1 title="徐某人" class="weaklink"><a  href="/">徐某人</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1677698765253" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>css之透明度，@规则与媒体查询</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2017-11-06</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://18279493170.github.io/kxtMGy4k1U/" class="tag">css</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">4524字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">18 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<h1 id="透明度opacity">透明度（opacity）</h1>
+<p>rgba()、hsla() 可以设置颜色的透明度，但是它们只能在定义颜色的同时设置透明度，无法对图像或者其它元素设置透明度。</p>
+<p>CSS 中提供了一个 opacity 属性用来设置元素的透明度，它不仅对颜色有效，对图像或者页面中其它的元素也有效</p>
+<p><code>opacity: number;</code></p>
+<p>其中 number 为一个 0~1 之间的浮点数（小数），用来表示元素的透明度，值越小则越透明（0 表示完全透明，1 表示完全不透明）。</p>
+<p>另外，在使用 opacity 属性时，还需要注意以下几点：</p>
+<blockquote>
+<p>当一个元素定义了 opacity 属性，并且其值小于 1 时，那么它的子元素也会拥有同样的透明度；<br>
+当一个元素定义了 opacity 属性，并且其值小于 1 时，将会重新定义该元素默认的 z-index 属性，如果其它的元素为非定位元素，那么该元素的堆叠级别将会高于其它元素；<br>
+如果定义的 opacity 属性值超过了指定的范围，那么则截取与之最相近的值，例如 1.5 将截取为 1。</p>
+</blockquote>
+<p><code> opacity: 0.4;</code></p>
+<p>IE8 或者更早版本的 IE 浏览器不支持 opacity 属性，若想要在这些浏览器中实现透明效果可以使用 filter 属性</p>
+<p><code>filter: alpha(opacity = number);</code></p>
+<p>其中 number 的取值范围为 0~100，值越小则越透明。</p>
+<p><code>filter: alpha(opacity=50);</code></p>
+<p>为了让所有浏览器都可以实现透明效果，您可以同时定义 opacity 和 filter 两个属性</p>
+<pre><code class="language-css">p {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+</code></pre>
+<h1 id="规则">@规则</h1>
+<p>在 CSS 中包含两种语法规则：</p>
+<blockquote>
+<p>普通规则：由选择器、属性和值构成；<br>
+@规则：以@开头后面跟随一个关键字的形式构成，也被称为“AT规则”，根据使用方法的不同又可以分为“常规规则”与“嵌套规则”两种。</p>
+</blockquote>
+<h2 id="常规规则">常规规则</h2>
+<p><code>@[KEYWORD] (RULE);</code></p>
+<h3 id="charset">@charset</h3>
+<p>@charset 用来设置 CSS 文件使用的字符编码</p>
+<p><code>@charset &quot;&lt;charset&gt;&quot;;</code></p>
+<p>其中 <code>&lt;charset&gt;</code> 为具体的字符编码，默认值为“utf-8”。</p>
+<p>注意：</p>
+<blockquote>
+<p>如果设置 @charset 的话，那么它必须出现在 CSS 文件的最前面，@charset 之前不能出现任何字符；<br>
+字符编码需要使用双引号&quot;&quot;包裹起来；<br>
+@规则名称（@charset）与具体的字符编码之间需要使用一个空格分隔；<br>
+规则后面的分号不能省略；<br>
+如果设置多个 @charset，那么只有第一个声明有效；<br>
+不能在 HTML 元素或者 <code>&lt;style&gt;</code> 标签中使用 @charset；<br>
+如果以不同的方式定义了多种字符编码规则，它们的优先级顺序如下：<br>
+HTML 文件开头的字符编码声明；<br>
+HTTP 请求头中的字符编码声明；<br>
+CSS 文件中使用 @charset 定义的字符编码声明；<br>
+<code>&lt;link&gt;</code> 标签中 charset 属性设置的字符编码声明（HTML5 中已废弃）。</p>
+</blockquote>
+<pre><code class="language-css">/* 设置 CSS 的编码格式为 Unicode UTF-8 */
+@charset &quot;UTF-8&quot;;      
+@charset &quot;utf-8&quot;;       /*大小写不敏感*/
+/*错误演示*/
+@charset 'iso-8859-15'; /* 无效的, 使用了错误的引号 */
+@charset 'UTF-8';       /* 无效的, 使用了错误的引号 */
+@charset  &quot;UTF-8&quot;;      /* 无效的, @charset 与字符编码之间多用了一个空格 */
+@charset &quot;UTF-8&quot;;       /* 无效的, @规则之前多了一个空格 */
+@charset UTF-8;         /* 无效的, 字符编码需要使用双引号包裹 */
+</code></pre>
+<h3 id="import">@import</h3>
+<p>@import 用来向当前 CSS 样式文件中导入其它样式文件。通过 @import 可以引入其他样式表文件中除 @charset 以外的所有内容，另外 @import 也必须放在样式文件的最前面</p>
+<p><code>@import &lt;url&gt; &lt;media_query_list&gt;</code></p>
+<p>其中，<code>&lt;url&gt; </code>为使用绝对或相对路径指定的要导入的外部样式表文件路径，也可以使用 url() 函数来指定文件路径；<code>&lt;media_query_list&gt;</code> 为可选参数，用来指定媒体查询的条件，多个条件之间使用逗号,分隔。</p>
+<blockquote>
+<p>在实际项目中不建议过多的使用 @import，因为它会造成很多额外的请求，阻塞其它文件的加载。</p>
+</blockquote>
+<p>注意:</p>
+<blockquote>
+<p>@import 必须在样式表文件的开头最先声明，并且声明的末尾必须使用分号结尾，如果省略了结尾的分号，可能会导致外部样式表无法正确导入；<br>
+在 IE 浏览器使用 @import 最多只能引入 35 条样式表。</p>
+</blockquote>
+<pre><code class="language-css">@import url(&quot;global.css&quot;);
+@import url(global.css);
+@import &quot;global.css&quot;;
+@import url(&quot;fineprint.css&quot;) print;
+@import url(&quot;bluish.css&quot;) projection, tv;
+@import 'custom.css';
+@import url(&quot;chrome://communicator/skin/&quot;);
+@import &quot;common.css&quot; screen, projection;
+@import url('landscape.css') screen and (orientation:landscape);
+</code></pre>
+<p>以上几种定义方式都是有效的，当使用 url() 来设置样式表文件的路径时，包裹路径的引号可有可无；当直接使用具体路径来设置样式表文件的路径时，包裹路径的引号则必须保留。</p>
+<h3 id="namespace">@namespace</h3>
+<p>@namespace 用来定义 CSS 样式表中 XML 命名空间的 @规则，可以为当前样式文件内的所有选择器都设置指定的命名空间。@namespace 通常用来处理包含多个命名空间的文档，比如 HTML5 里内联的 SVG、MathML 或者混合多个词汇表的 XML。</p>
+<p>@namespace 必须定义在所有 @charset 和 @import 的之后，并且在样式表中要位于其他任何样式声明之前。@namespace 可以用来定义默认命名空间，当指定默认命名空间后，所有的通用选择器和类选择器（但不包括属性选择器）都只会应用在这个命名空间的元素中。@namespace 也可以用于定义命名空间前缀，当一个通用、类、属性选择器前面有命名空间前缀修饰时，这个选择器将只匹配那些命名空间与元素名或属性匹配的元素。</p>
+<pre><code class="language-css">/* 默认命名空间 */
+@namespace url(XML-namespace-URL);
+@namespace &quot;XML-namespace-URL&quot;;
+/* 命名空间前缀 */
+@namespace prefix url(XML-namespace-URL);
+@namespace prefix &quot;XML-namespace-URL&quot;;
+</code></pre>
+<h2 id="嵌套规则">嵌套规则</h2>
+<p>所谓“嵌套规则”指的就是在 @规则后面需要跟随一个花括号{ }，其中包含了一些其它的规则声明</p>
+<pre><code class="language-css">@[KEYWORD] {
+    /* 嵌套语句 */
+}
+</code></pre>
+<h3 id="media">@media</h3>
+<p>@media 用来根据一个或多个媒体查询的结果来应用样式表的某一部分（花括号中的样式信息），使用 @media 您可以指定一组媒体查询和一个 CSS 样式块，当且仅当媒体查询与正在使用的设备匹配时，指定的 CSS 样式才会应用于文档。</p>
+<blockquote>
+<p>媒体查询是用于判断设备信息的一组条件，如设备的宽高值，宽高比，颜色，分辨率等，当条件匹配时，才会执行其内嵌套的样式信息。</p>
+</blockquote>
+<p>@media 可以放置在样式表中的任意位置，也可以放置于其它 @规则中</p>
+<pre><code class="language-css">@media all and (min-width: 1280px) {
+    /* 宽度大于1280 */
+}
+@media
+(-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 2dppx) {
+    /* Retina屏幕 */
+}
+@media print {
+    /* 打印 */
+}
+@media \0screen\,screen\9 {
+    /* IE7,IE8 */
+}
+@media screen\9 {
+    /* IE7*/
+}
+</code></pre>
+<h3 id="page">@page</h3>
+<p>@page 用于在打印文档时修改某些 CSS 属性，需要注意的是，使用 @page 您只能修改部分 CSS 属性，例如外间距属性 margin，打印相关的 orphans、widows 属性，以及 page-break-* 等属性，其他的 CSS 属性会被忽略。</p>
+<pre><code class="language-css">/* 表示打印时 第一页的上、左外边距均为 50% */
+@page :first {
+  margin-left: 50%;
+  margin-top: 50%;
+}
+</code></pre>
+<h3 id="supports">@supports</h3>
+<p>@supports 用于检查浏览器是否支持某个 CSS 特性，也被称为“特性查询”</p>
+<p><code>@supports (rule)[operator (rule)]* { sRules };</code></p>
+<p>rule 为某个具体的 CSS 样式，必须使用括号包裹；operator 的可选值为 or、and、not，通过 operator 参数可以指定多条 CSS 样式。</p>
+<p>@supports 既可以在样式文件的顶部定义，也可以在其它嵌套规则内部定义。但是 @supports 目前还在实验阶段，在使用时要先确定浏览器是否支持。</p>
+<pre><code class="language-css">/* 当浏览器支持 display: grid 属性时要使用的 CSS 样式 */
+@supports (display: grid) {
+  div {
+    display: grid;
+  }
+}
+/* 当浏览器不支持 display: grid 属性时要使用的 CSS 样式 */
+@supports not (display: grid) {
+  div {
+    float: right;
+  }
+}
+/* 同时检查多个条件 */
+@supports (display: flex) and (-webkit-appearance: checkbox) {
+  .module { display: flex; }
+}
+</code></pre>
+<h3 id="font-face">@font-face</h3>
+<p>@font-face 用于从远程服务器或者用户本地加载指定的字体</p>
+<pre><code class="language-css">@font-face {
+    font-family: &lt;identifier&gt;;
+    src: &lt;url&gt; [format(&lt;string&gt;)] [, &lt;url&gt; [format(&lt;string&gt;)]]*;
+    &lt;font&gt;;
+}
+</code></pre>
+<p>参数说明如下：</p>
+<blockquote>
+<p><code>&lt;identifier&gt;</code>：字体名称；<br>
+<code>&lt;url&gt;</code>：使用 url()（远程字体）或者 local()（本地字体）来指定字体的存放路径，可以是相对路径也可以是绝对路径；<br>
+<code>&lt;string&gt;</code>：用来指定自定义字体的格式，例如以下几种类型 truetype、opentype、embedded-opentype、svg 等；<br>
+<code>&lt;font&gt;</code>：定义字体相关样式。</p>
+</blockquote>
+<blockquote>
+<p>提示：@font-face 可以放在 css 样式表的顶部，也可以放在其它嵌套规则中。如果同时使用 local() 函数和 url() 函数加载字体，则会优先加载 local() 函数中定义的本地字体，如果没有找到则会加载 url() 函数中定义的远程字体。</p>
+</blockquote>
+<pre><code class="language-css">/* 定义 @font-face 规则 */
+@font-face {
+    /* 指定字体名称 */
+    font-family: &quot;Open Sans&quot;;
+    /* 指定字体文件的路径 */
+    src: url(&quot;/fonts/OpenSans-Regular-webfont.woff2&quot;) format(&quot;woff2&quot;),
+         url(&quot;/fonts/OpenSans-Regular-webfont.woff&quot;) format(&quot;woff&quot;);
+}
+/* 字体的应用 */
+p {
+    font-family: &quot;Open Sans&quot;;
+}
+</code></pre>
+<h3 id="keyframes">@keyframes</h3>
+<p>@keyframes 用来定义 CSS3 中 animation 动画关键帧（或 waypoints）的样式，以此来控制动画序列中的中间步骤。定义该规则后，需要通过 animation-name 属性来使用。关键帧序列是由百分比来标识命名的，起始状态和结束状态分别为 from 和 to 代表 0% 和 100% 。</p>
+<pre><code class="language-css">@keyframes &lt;identifier&gt; {
+    &lt;keyframes-blocks&gt;
+}
+</code></pre>
+<p>其中 <code>&lt;identifier&gt; </code>用来定义动画名称；<code>&lt;keyframes-blocks&gt;</code> 用来定义动画在每个阶段的样式，即帧动画。</p>
+<pre><code class="language-css">/* 声明 */
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+@keyframes slideout {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 60px;
+  }
+}
+/* 应用 */
+p {
+  animation-name: slidein;
+  animation-duration: 4s;
+}
+div {
+  animation-name: slideout;
+  animation-duration: 4s;
+}
+</code></pre>
+<h3 id="document">@document</h3>
+<p>@document 用来根据文档的 URL 限制文档中样式的作用范围，通过该属性可以为指定用户定义专属的样式。目前 @document 还在实验阶段，具体标准会在 CSS4 中确定。</p>
+<p>@document 中的可用函数如下所示：</p>
+<blockquote>
+<p>url()：匹配整个 URL；<br>
+url-prefix()：匹配文档的 URL 是否以参数指定的值开头；<br>
+domain()：匹配文档的域名是否为参数中指定的域名或者为它的子域名；<br>
+regexp()：匹配文档的 URL 是否和参数中指定的正则表达式匹配，该表达式必须匹配整个 URL。</p>
+</blockquote>
+<blockquote>
+<p>提示：提供给 url()、url-prefix() 和 domain() 函数的参数可以不使用引号包裹，但提供给 regexp() 函数的参数必须使用引号包裹起来。</p>
+</blockquote>
+<pre><code class="language-css">@document url(http://www.weixueyuan.net/),
+            url-prefix(http://www.weixueyuan.net/Style/),
+            domain(weixueyuan.net),
+            regexp(&quot;https:.*&quot;)
+{
+  /* 该条 CSS 规则会应用在下面的网页:
+    + URL 为&quot;http://www.weixueyuan.net/&quot;的页面.
+    + 任何 URL 以&quot;http://www.weixueyuan.net/Style/&quot;开头的网页
+    + 域名&quot;weixueyuan.net&quot;下的所有网页
+    + 任何 URL 以&quot;https:&quot;开头的网页 */
+  /* 定义样式 */
+    body {
+        color: purple;
+        background: yellow;
+    }
+}
+</code></pre>
+<h1 id="媒体查询media">媒体查询（@media）</h1>
+<p>媒体查询是 CSS 样式表最重要的功能之一，所谓媒体查询指的就是根据不同的媒体类型（设备类型）和条件来区分各种设备（例如：电脑、手机、平板电脑、盲文设备等），并为它们分别定义不同的 CSS 样式。媒体查询能让 CSS 可以更精确的作用于不同的设备或同一设备的不同条件，让所有用户都能得到很好的用户体验。</p>
+<h2 id="媒体类型">媒体类型</h2>
+<p>媒体类型用来表示设备的类别，CSS 中提供了一些关键字来表示不同的媒体类型</p>
+<pre><code>all	表示所有的媒体设备
+aural	表示语音和音频合成器（听觉设备）
+braille	表示盲人用点字法触觉回馈设备
+embossed	表示盲人用点字法打印机
+handheld	表示小型手持设备，如手机、平板电脑
+print	表示打印机
+projection	表示投影设备
+screen	表示电脑显示器
+tty	表示使用固定密度字母栅格的媒体，比如打字机或终端设备
+tv	表示电视机类型的设备
+</code></pre>
+<h2 id="媒体特性">媒体特性</h2>
+<p>除了具体的类型外，还可以通过一些属性来描述设备的具体特征，例如宽度、高度、分辨率等</p>
+<pre><code>aspect-ratio	输出设备页面可见区域的宽高比
+color	        输出设备每个像素的比特值，常见的有 8、16、32 位。如果设备不支持输出彩色，则该值为 0
+color-index	输出设备的颜色查询表中的条目数量。如果没有使用颜色查询表，则该值等于 0
+device-aspect-ratio	输出设备的宽高比
+device-height	输出设备屏幕的可见高度
+device-width	输出设备屏幕的可见宽度
+grid	        查询输出设备使用的是网格屏幕还是点阵屏幕
+height	        页面可见区域的高度
+max-aspect-ratio	输出设备屏幕可见区域宽度与高度的最大比率
+max-color	输出设备每个像素比特值的最大值
+max-color-index	输出设备的颜色查询表中的最大条目数
+max-device-aspect-ratio	输出设备屏幕可见区域宽度与高度的最大比率
+max-device-height	输出设备屏幕可见区域的最大高度
+max-device-width	输出设备屏幕的最大可见宽度
+max-height	页面可见区域的最大高度
+max-monochrome	输出设备单色帧缓冲区中每个像素的最大位深度。如果设备并非黑白屏幕，则该值为 0
+max-resolution	设备的最大分辨率
+max-width	页面可见区域的最大宽度
+min-aspect-ratio	输出设备屏幕可见区域宽度与高度的最小比率
+min-color	输出设备每个像素比特值的最小值
+min-color-index	输出设备的颜色查询表中的最小条目数
+min-device-aspect-ratio	输出设备的屏幕可见区域宽度与高度的最小比率
+min-device-width	输出设备的屏幕的最小可见宽度
+min-device-height	输出设备的屏幕的最小可见高度
+min-height	页面可见区域的最小高度
+min-monochrome	输出设备单色帧缓冲区中每个像素的最小位深度。如果设备并非黑白屏幕，则该值为 0
+min-resolution	设备的最小分辨率
+min-width	页面可见区域的最小宽度
+monochrome	输出设备单色帧缓冲区中每个像素的位深度。如果设备并非黑白屏幕，则该值为 0
+orientation	页面可见区域的旋转方向
+resolution	设备的分辨率。如：96dpi、300dpi、118dpcm
+scan        	电视类设备的扫描工序
+width	        页面可见区域的宽度
+</code></pre>
+<h2 id="逻辑操作符">逻辑操作符</h2>
+<p>逻辑操作符包含 not、and 和 only 三个，通过逻辑操作符可以构建复杂的媒体查询，您还可以通过逗号来分隔多个媒体查询，将它们组合为一个规则。</p>
+<blockquote>
+<p>and：用于将多个媒体查询组合成一条媒体查询，当每个查询规则都为真时则该条媒体查询为真，另外通过 and 操作符还可以将媒体特性与媒体类型结合在一起；<br>
+not：用于否定媒体查询，当查询规则不为真时则返回 true，否则返回 false。如果使用 not 操作符，则还必须指定媒体类型；<br>
+only：仅在整个查询匹配时才会生效，当不使用 only 时，旧版的浏览器会将 screen and (max-width: 500px) 简单地解释为 screen，忽略查询的其余部分，并将样式应用于所有屏幕。 如果使用 only 运算符，则还必须指定媒体类型。</p>
+</blockquote>
+<h2 id="定义媒体查询">定义媒体查询</h2>
+<p>目前您可以通过以下两种方式来定义媒体查询：</p>
+<blockquote>
+<p>使用 @media 或 @import 规则在样式表中指定对应的设备类型；<br>
+用 media 属性在 <code>&lt;style&gt;</code>、<code>&lt;link&gt;</code>、<code>&lt;source&gt;</code> 或其他 HTML 元素中指定特定的设备类型。</p>
+</blockquote>
+<h3 id="media-2">@media</h3>
+<p>使用 @media 您可以指定一组媒体查询和一个 CSS 样式块，当且仅当媒体查询与正在使用的设备匹配时，指定的 CSS 样式才会应用于文档</p>
+<pre><code class="language-css">/* 在小于或等于 992 像素的屏幕上，将背景色设置为蓝色 */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+/* 在 600 像素或更小的屏幕上，将背景色设置为橄榄色 */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
+}
+</code></pre>
+<h3 id="import-2">@import</h3>
+<p>@import 用来导入指定的外部样式文件并指定目标的媒体类型</p>
+<pre><code class="language-css">@import url(&quot;css/screen.css&quot;) screen;   /* 引入外部样式，该样式仅会应用于电脑显示器 */
+@import url(&quot;css/print.css&quot;) print;     /* 引入外部样式，该样式仅会应用于打印设备 */
+body {
+    background: #f5f5f5;
+    line-height: 1.2;
+}
+</code></pre>
+<blockquote>
+<p>注意：所有 @import 语句都必须出现在样式表的开头，而且在样式表中定义的样式会覆盖导入的外部样式表中冲突的样式。</p>
+</blockquote>
+<h3 id="media-属性">media 属性</h3>
+<p>在 <code>&lt;style&gt;</code>、<code>&lt;link&gt;</code>、<code>&lt;source&gt;</code> 等标签的 media 属性中来定义媒体查询</p>
+<pre><code class="language-html">/* 当页面宽度大于等于 900 像素时应用该样式 */
+&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (min-width: 900px)&quot; href=&quot;widescreen.css&quot;&gt;
+/* 当页面宽度小于等于 600 像素时应用该样式 */
+&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (max-width: 600px)&quot; href=&quot;smallscreen.css&quot;&gt;
+</code></pre>
+<blockquote>
+<p>提示：在 media 属性中您还可以指定多种媒体类型，每种媒体类型之间使用逗号进行分隔，例如 media=&quot;screen, print&quot;。</p>
+</blockquote>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#%E9%80%8F%E6%98%8E%E5%BA%A6opacity">透明度（opacity）</a></li>
+<li><a href="#%E8%A7%84%E5%88%99">@规则</a>
+<ul>
+<li><a href="#%E5%B8%B8%E8%A7%84%E8%A7%84%E5%88%99">常规规则</a>
+<ul>
+<li><a href="#charset">@charset</a></li>
+<li><a href="#import">@import</a></li>
+<li><a href="#namespace">@namespace</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B5%8C%E5%A5%97%E8%A7%84%E5%88%99">嵌套规则</a>
+<ul>
+<li><a href="#media">@media</a></li>
+<li><a href="#page">@page</a></li>
+<li><a href="#supports">@supports</a></li>
+<li><a href="#font-face">@font-face</a></li>
+<li><a href="#keyframes">@keyframes</a></li>
+<li><a href="#document">@document</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2media">媒体查询（@media）</a>
+<ul>
+<li><a href="#%E5%AA%92%E4%BD%93%E7%B1%BB%E5%9E%8B">媒体类型</a></li>
+<li><a href="#%E5%AA%92%E4%BD%93%E7%89%B9%E6%80%A7">媒体特性</a></li>
+<li><a href="#%E9%80%BB%E8%BE%91%E6%93%8D%E4%BD%9C%E7%AC%A6">逻辑操作符</a></li>
+<li><a href="#%E5%AE%9A%E4%B9%89%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2">定义媒体查询</a>
+<ul>
+<li><a href="#media-2">@media</a></li>
+<li><a href="#import-2">@import</a></li>
+<li><a href="#media-%E5%B1%9E%E6%80%A7">media 属性</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">打不死的平头哈Copyright © 2018-2020 <a href="https://18279493170.github.io" style="margin:0;">徐某人</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>47</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://18279493170.github.io/media/js/prism.js"></script>
+</body>
+</html>

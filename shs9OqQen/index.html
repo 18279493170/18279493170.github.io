@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://18279493170.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="搞钱！搞钱！搞钱！"><meta charset="UTF-8"><title>css之盒子模型，内边距与外边距 | 徐某人</title>
+<link href="https://18279493170.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://18279493170.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://18279493170.github.io/shs9OqQen/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://18279493170.github.io"><img alt="logo" style="display:inline-block;" src="https://18279493170.github.io/images/avatar.png"/></a><h1 title="徐某人" class="weaklink"><a  href="/">徐某人</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1677698765253" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>css之盒子模型，内边距与外边距</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2017-08-28</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://18279493170.github.io/kxtMGy4k1U/" class="tag">css</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">2505字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">10 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<h1 id="盒子模型">盒子模型</h1>
+<p>盒子模型是网页设计中经常用到的一种思维模型，由四个部分构成，从内到外分别为内容区（content）、内边距（padding）、边框（border）和外边距（margin），CSS 为这四个部分提供了一系列相关属性，通过对这些属性的设置可以丰富盒子的表现效果。</p>
+<p>网页中的每个元素都可以看作是如下图所示一个盒子模型：</p>
+<figure data-type="image" tabindex="1"><img src="https://18279493170.github.io/post-images/1653639032739.png" alt="" loading="lazy"></figure>
+<h2 id="内容区content">内容区（content）</h2>
+<p>内容区是整个盒子模型的中心，其中存放了盒子的主要内容，这些内容可以是文本、图像等资源。内容区有 width、height、overflow 三个属性，其中 width 和 height 属性用来指定盒子内容区域的宽度和高度，当内容信息过多，超出内容区所设置的范围时，则可以使用 overflow 属性设置溢出内容的处理方式，overflow 属性有四个可选值：</p>
+<blockquote>
+<p>hidden：表示隐藏溢出的部分；<br>
+visible：表示显示溢出的部分（溢出的部分将显示在盒子外部）；<br>
+scroll：表示为内容区添加一个滚动条，您可以通过滑动这个滚动条来查看内容区的全部内容；<br>
+auto：表示由浏览器决定如何处理溢出部分。</p>
+</blockquote>
+<pre><code>width: 100px;
+height: 100px;
+overflow: hidden;
+</code></pre>
+<h2 id="内边距padding">内边距（padding）</h2>
+<p>内边距是内容区和边框之间的空间，您可以通过 padding-top、padding-right、padding-bottom、padding-left 以及它们的简写属性 padding 来设置内容区各个方向上与边框之间的距离。在为盒子模型设置背景属性时，背景属性可以覆盖到内边距区域。</p>
+<p><code>padding: 20px;</code></p>
+<h2 id="边框border">边框（border）</h2>
+<p>边框是环绕内容区和内边距的边界，您可以使用 border-style、border-width 和 border-color 以及它们的简写属性 border 来设置边框的样式。其中 border-style 属性为边框中最主要的属性，如果没有设置该属性的话，其它的边框属性也会被忽略。</p>
+<blockquote>
+<p>注意：在 IE 浏览器中背景属性不会覆盖到边框区域，但是在其它主流浏览器中，背景属性则可以覆盖到边框区域，当将边框设置为虚线时就可以透过虚线看到后面的背景。</p>
+</blockquote>
+<pre><code>width: 100px;
+height: 100px;
+border: 10px dashed red;
+padding: 20px;
+</code></pre>
+<h2 id="外边距margin">外边距（margin）</h2>
+<p>外边距位于盒子模型的最外围，是边框之外的空间，通过外边距可以使盒子与盒子之间不会紧凑的连接在一起，是 CSS 布局中的一种重要手段。您可以使用 margin-top、margin-bottom、margin-left、margin-right 以及它们的简写属性 margin 来设置各个方向上外边距的宽度。</p>
+<p>对于两个相邻的（水平或垂直方向 ）且都设置有外边距的盒子，它们之间的距离并不是两者外边距相加的和，而是它们之中较大的那个值。另外，您也可以将外边距的值设置为负值，当外边距的值为负时整个盒子将向反方向移动，当到达一定程度时盒子之间会产生重叠效果。</p>
+<pre><code>div.box-one {
+        width: 100px;
+        height: 100px;
+        border: 10px dashed red;
+        padding: 20px;
+        margin: 15px;
+        background: #CCC;
+    }
+    div.box-two {
+        width: 50px;
+        height: 50px;
+        border: 10px dotted black;
+        padding: 20px;
+        margin: 20px;
+        background: yellow;
+    }
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://18279493170.github.io/post-images/1653639065919.png" alt="" loading="lazy"></figure>
+<h2 id="元素的宽度和高度">元素的宽度和高度</h2>
+<p>当您使用 CSS 中的 width 和 height 属性设置元素的宽度和高度时，实际上设置的只是元素内容区域的宽度和高度，元素的实际宽度和高度还取决于一些其它因素：</p>
+<blockquote>
+<p>总宽度：width + padding-left + padding-right + border-left + border-right + margin-left + margin-right<br>
+总高度：height + padding-top + padding-bottom + border-top + border-bottom + margin-top + margin-bottom</p>
+</blockquote>
+<h1 id="padding内边距">padding（内边距）</h1>
+<p>内边距（padding）是指元素内容区与边框之间的区域，与外边距不同，内边距会受到背景属性的影响。您可以通过下面的属性来设置元素内边距的尺寸：</p>
+<blockquote>
+<p>padding-top：设置元素内容区上方的内边距；<br>
+padding-right：设置元素内容区右侧的内边距；<br>
+padding-bottom：设置元素内容区下方的内边距；<br>
+padding-left：设置元素内容区左侧的内边距；<br>
+padding：内边距属性的缩写形式，可以同时设置上下左右四个方向上的内边距。</p>
+</blockquote>
+<pre><code>length	使用具体数值配合 px、cm 等单位来定义元素内边距的尺寸，不能为负值，默认值为 0px
+%	定义基于父元素的宽度百分比的内边距，不能为负值
+inherit	从父元素继承内边距属性的值
+</code></pre>
+<h2 id="定义各个方向上的内边距">定义各个方向上的内边距</h2>
+<p>使用 padding-top、padding-bottom、padding-left 和 padding-right 属性来分别设置元素上下左右四个方向上的内边距。</p>
+<pre><code>padding-top: 10px;
+padding-bottom: 2em;
+padding-left: 1cm;
+padding-right: 3ex;
+border: 1px solid red;
+</code></pre>
+<h2 id="内边距简写形式">内边距简写形式</h2>
+<p>padding 属性是其余四个属性的简写形式，在实际开发中我们使用最多的也是这个简写属性。与 margin 属性相似，paddiing 属性同样可以接受 1~4 个参数（参数之间使用空格分隔）：</p>
+<blockquote>
+<p>如果提供四个参数，那么将按照上、右、下、左的顺序依次设置元素四个方向上的内边距；<br>
+如果提供三个参数，那么第一个参数将用来设置元素上方的内边距，第二个参数将用来设置元素左、右两个方向上的内边距，第三个参数将用来设置元素下方的内边距；<br>
+如果提供两个参数，那么第一个参数将用来设置元素上、下两个方向上的内边距，第二个参数用来设置元素左、右两个方向上的内边距；<br>
+如果只提供一个参数，那么这个参数将同时作用于元素四个方向上的外边距。</p>
+</blockquote>
+<p><code> padding: 10px 3ex 2em 1cm;</code></p>
+<h1 id="margin外边距">margin（外边距）</h1>
+<p>元素的外边距（margin）是围绕在元素边框以外（不包括边框）的空白区域，这片区域不受 background 属性的影响，始终是透明的。</p>
+<h2 id="为元素设置外边距">为元素设置外边距</h2>
+<p>默认情况下如果不设置外边距属性，HTML 元素就是不会有外边距，但也有例外的情况，因为浏览器会为一些 HTML 元素设置默认的外边距，例如<code>&lt;p&gt;</code>元素。您可以使用下面的属性来为 HTML 元素设置外边距：</p>
+<blockquote>
+<p>margin-top：设置元素上方的外边距；<br>
+margin-bottom：设置元素下方的外边距；<br>
+margin-right：设置元素右侧的外边距；<br>
+margin-left：设置元素左侧的外边距；<br>
+margin：外边距的简写属性，可以同时设置元素四个方向（上下左右）的外边距。</p>
+</blockquote>
+<pre><code>auto	由浏览器计算外边距的尺寸
+length	使用具体数值配合 px、cm 等单位来定义元素外边距的尺寸，可以为负值，默认值为 0px
+%	定义基于父元素的宽度百分比的外边距，可以为负值
+inherit	从父元素继承外边距属性的值
+</code></pre>
+<pre><code>margin-top: 10px;
+margin-bottom: 1em;
+margin-right: 10px;
+margin-left: 1cm;
+</code></pre>
+<p>这里需要特别说明一下 margin 属性，与其它几个属性不同，margin 属性可以接受 1~4 个参数（参数之间使用空格分隔）：</p>
+<blockquote>
+<p>如果提供四个参数，那么将按照上、右、下、左的顺序分别作用于元素四个方向的外边距；<br>
+如果提供三个参数，那么第一个参数会作用在元素上方的外边距，第二个参数会作用在元素左右两侧的外边距，第三个参数则作用在元素下方的外边距；<br>
+如果提供两个参数，那么第一个参数会作用在元素上方和下方的外边距，第二个参数会作用在元素的左右两侧的外边距；<br>
+如果只提供一个参数，那么这个值将同时作用于元素上下左右四个方向的外边距。</p>
+</blockquote>
+<p><code> margin: 10px 0px 1ex 1em;</code></p>
+<h2 id="外边距折叠">外边距折叠</h2>
+<p>外边距折叠指的是相邻的两个或多个外边距会在垂直方向上发生合并，合并为一个外边距。关于外边距折叠有以下几点需要注意：</p>
+<blockquote>
+<p>margin 折叠只发生在块级元素上；<br>
+浮动元素的外边距不会与任何外边距发生折叠；<br>
+设置了 overflow 属性且值不为 visible 的块级元素，将不会与它的子元素发生外边距折叠；<br>
+绝对定位元素的外边距不与任何外边距发生折叠；<br>
+根元素（例如<code>&lt;body&gt;</code>）的外边距不与其它任何外边距发生折叠。</p>
+</blockquote>
+<p>在相邻的两个兄弟元素之间：</p>
+<blockquote>
+<p>如果相邻两个元素外边距的值都为正数，那么两个元素的实际间距为两个外边距中较大的那个；<br>
+如果相邻两个元素外边距的值都为负数，那么两个元素的实际间距为两个外边距中较小的那个；<br>
+如果相邻两个元素外边距的值一个为正数、一个为负数，那么两个元素之间的实际间距为两个外边距相加的和。</p>
+</blockquote>
+<figure data-type="image" tabindex="3"><img src="https://18279493170.github.io/post-images/1653639092299.png" alt="" loading="lazy"></figure>
+<p>在父元素与其子元素之间：（注意：父元素不能定义边框和内边距，且父元素与子元素之间不能有其它元素）</p>
+<blockquote>
+<p>如果父元素与子元素外边距的值都为正数，那么折叠后的外边距为两个外边距中较大的那个；<br>
+如果父元素与子元素外边距的值都为负数，那么折叠后的外边距为两个外边距中较小的那个；<br>
+如果父元素与子元素外边距的值一个为正数、一个负数，那么折叠后的外边距为两个外边距相加的和。</p>
+</blockquote>
+<figure data-type="image" tabindex="4"><img src="https://18279493170.github.io/post-images/1653639112614.png" alt="" loading="lazy"></figure>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B">盒子模型</a>
+<ul>
+<li><a href="#%E5%86%85%E5%AE%B9%E5%8C%BAcontent">内容区（content）</a></li>
+<li><a href="#%E5%86%85%E8%BE%B9%E8%B7%9Dpadding">内边距（padding）</a></li>
+<li><a href="#%E8%BE%B9%E6%A1%86border">边框（border）</a></li>
+<li><a href="#%E5%A4%96%E8%BE%B9%E8%B7%9Dmargin">外边距（margin）</a></li>
+<li><a href="#%E5%85%83%E7%B4%A0%E7%9A%84%E5%AE%BD%E5%BA%A6%E5%92%8C%E9%AB%98%E5%BA%A6">元素的宽度和高度</a></li>
+</ul>
+</li>
+<li><a href="#padding%E5%86%85%E8%BE%B9%E8%B7%9D">padding（内边距）</a>
+<ul>
+<li><a href="#%E5%AE%9A%E4%B9%89%E5%90%84%E4%B8%AA%E6%96%B9%E5%90%91%E4%B8%8A%E7%9A%84%E5%86%85%E8%BE%B9%E8%B7%9D">定义各个方向上的内边距</a></li>
+<li><a href="#%E5%86%85%E8%BE%B9%E8%B7%9D%E7%AE%80%E5%86%99%E5%BD%A2%E5%BC%8F">内边距简写形式</a></li>
+</ul>
+</li>
+<li><a href="#margin%E5%A4%96%E8%BE%B9%E8%B7%9D">margin（外边距）</a>
+<ul>
+<li><a href="#%E4%B8%BA%E5%85%83%E7%B4%A0%E8%AE%BE%E7%BD%AE%E5%A4%96%E8%BE%B9%E8%B7%9D">为元素设置外边距</a></li>
+<li><a href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%E6%8A%98%E5%8F%A0">外边距折叠</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">打不死的平头哈Copyright © 2018-2020 <a href="https://18279493170.github.io" style="margin:0;">徐某人</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>47</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://18279493170.github.io/media/js/prism.js"></script>
+</body>
+</html>

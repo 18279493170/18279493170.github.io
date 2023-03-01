@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://18279493170.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="搞钱！搞钱！搞钱！"><meta charset="UTF-8"><title>js入门之基本语法 | 徐某人</title>
+<link href="https://18279493170.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://18279493170.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+<link rel="canonical" href="https://18279493170.github.io/LsJCy29So/" />
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://18279493170.github.io"><img alt="logo" style="display:inline-block;" src="https://18279493170.github.io/images/avatar.png"/></a><h1 title="徐某人" class="weaklink"><a  href="/">徐某人</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://18279493170.github.io/ju-ji" class="selected active current nav__item" >句集</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1677698765253" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>js入门之基本语法</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2018-04-18</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://18279493170.github.io/SJywulFGV/" class="tag">javaScript</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">4745字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">19 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<h1 id="javascript-的基本语法">JavaScript 的基本语法</h1>
+<h2 id="语句">语句</h2>
+<p>JavaScript 程序的执行单位为行（line），也就是一行一行地执行。一般情况下，每一行就是一个语句。</p>
+<p>语句（statement）是为了完成某种任务而进行的操作，比如下面就是一行赋值语句。</p>
+<pre><code class="language-javascript">var a = 1 + 3;
+</code></pre>
+<p>这条语句先用<code>var</code>命令，声明了变量<code>a</code>，然后将<code>1 + 3</code>的运算结果赋值给变量<code>a</code>。</p>
+<p><code>1 + 3</code>叫做表达式（expression），指一个为了得到返回值的计算式。语句和表达式的区别在于，前者主要为了进行某种操作，一般情况下不需要返回值；后者则是为了得到返回值，一定会返回一个值。凡是 JavaScript 语言中预期为值的地方，都可以使用表达式。比如，赋值语句的等号右边，预期是一个值，因此可以放置各种表达式。</p>
+<p>语句以分号结尾，一个分号就表示一个语句结束。多个语句可以写在一行内。</p>
+<pre><code class="language-javascript">var a = 1 + 3 ; var b = 'abc';
+</code></pre>
+<p>分号前面可以没有任何内容，JavaScript 引擎将其视为空语句。</p>
+<pre><code class="language-javascript">;;;
+</code></pre>
+<p>上面的代码就表示3个空语句。</p>
+<p>表达式不需要分号结尾。一旦在表达式后面添加分号，则 JavaScript 引擎就将表达式视为语句，这样会产生一些没有任何意义的语句。</p>
+<pre><code class="language-javascript">1 + 3;
+'abc';
+</code></pre>
+<p>上面两行语句只是单纯地产生一个值，并没有任何实际的意义。</p>
+<h2 id="变量">变量</h2>
+<h3 id="概念">概念</h3>
+<p>变量是对“值”的具名引用。变量就是为“值”起名，然后引用这个名字，就等同于引用这个值。变量的名字就是变量名。</p>
+<pre><code class="language-javascript">var a = 1;
+</code></pre>
+<p>上面的代码先声明变量<code>a</code>，然后在变量<code>a</code>与数值1之间建立引用关系，称为将数值1“赋值”给变量<code>a</code>。以后，引用变量名<code>a</code>就会得到数值1。最前面的<code>var</code>，是变量声明命令。它表示通知解释引擎，要创建一个变量<code>a</code>。</p>
+<p>注意，JavaScript 的变量名区分大小写，<code>A</code>和<code>a</code>是两个不同的变量。</p>
+<p>变量的声明和赋值，是分开的两个步骤，上面的代码将它们合在了一起，实际的步骤是下面这样。</p>
+<pre><code class="language-javascript">var a;
+a = 1;
+</code></pre>
+<p>如果只是声明变量而没有赋值，则该变量的值是<code>undefined</code>。<code>undefined</code>是一个特殊的值，表示“无定义”。</p>
+<pre><code class="language-javascript">var a;
+a // undefined
+</code></pre>
+<p>如果变量赋值的时候，忘了写<code>var</code>命令，这条语句也是有效的。</p>
+<pre><code class="language-javascript">var a = 1;
+// 基本等同
+a = 1;
+</code></pre>
+<p>但是，不写<code>var</code>的做法，不利于表达意图，而且容易不知不觉地创建全局变量，所以建议总是使用<code>var</code>命令声明变量。</p>
+<p>如果一个变量没有声明就直接使用，JavaScript 会报错，告诉你变量未定义。</p>
+<pre><code class="language-javascript">x
+// ReferenceError: x is not defined
+</code></pre>
+<p>上面代码直接使用变量<code>x</code>，系统就报错，告诉你变量<code>x</code>没有声明。</p>
+<p>可以在同一条<code>var</code>命令中声明多个变量。</p>
+<pre><code class="language-javascript">var a, b;
+</code></pre>
+<p>JavaScript 是一种动态类型语言，也就是说，变量的类型没有限制，变量可以随时更改类型。</p>
+<pre><code class="language-javascript">var a = 1;
+a = 'hello';
+</code></pre>
+<p>上面代码中，变量<code>a</code>起先被赋值为一个数值，后来又被重新赋值为一个字符串。第二次赋值的时候，因为变量<code>a</code>已经存在，所以不需要使用<code>var</code>命令。</p>
+<p>如果使用<code>var</code>重新声明一个已经存在的变量，是无效的。</p>
+<pre><code class="language-javascript">var x = 1;
+var x;
+x // 1
+</code></pre>
+<p>上面代码中，变量<code>x</code>声明了两次，第二次声明是无效的。</p>
+<p>但是，如果第二次声明的时候还进行了赋值，则会覆盖掉前面的值。</p>
+<pre><code class="language-javascript">var x = 1;
+var x = 2;
+
+// 等同于
+
+var x = 1;
+var x;
+x = 2;
+</code></pre>
+<h3 id="变量提升">变量提升</h3>
+<p>JavaScript 引擎的工作方式是，先解析代码，获取所有被声明的变量，然后再一行一行地运行。这造成的结果，就是所有的变量的声明语句，都会被提升到代码的头部，这就叫做变量提升（hoisting）。</p>
+<pre><code class="language-javascript">console.log(a);
+var a = 1;
+</code></pre>
+<p>上面代码首先使用<code>console.log</code>方法，在控制台（console）显示变量<code>a</code>的值。这时变量<code>a</code>还没有声明和赋值，所以这是一种错误的做法，但是实际上不会报错。因为存在变量提升，真正运行的是下面的代码。</p>
+<pre><code class="language-javascript">var a;
+console.log(a);
+a = 1;
+</code></pre>
+<p>最后的结果是显示<code>undefined</code>，表示变量<code>a</code>已声明，但还未赋值。</p>
+<h2 id="标识符">标识符</h2>
+<p>标识符（identifier）指的是用来识别各种值的合法名称。最常见的标识符就是变量名，以及后面要提到的函数名。JavaScript 语言的标识符对大小写敏感，所以<code>a</code>和<code>A</code>是两个不同的标识符。</p>
+<p>标识符有一套命名规则，不符合规则的就是非法标识符。JavaScript 引擎遇到非法标识符，就会报错。</p>
+<p>简单说，标识符命名规则如下。</p>
+<ul>
+<li>第一个字符，可以是任意 Unicode 字母（包括英文字母和其他语言的字母），以及美元符号（<code>$</code>）和下划线（<code>_</code>）。</li>
+<li>第二个字符及后面的字符，除了 Unicode 字母、美元符号和下划线，还可以用数字<code>0-9</code>。</li>
+</ul>
+<p>下面这些都是合法的标识符。</p>
+<pre><code class="language-javascript">arg0
+_tmp
+$elem
+π
+</code></pre>
+<p>下面这些则是不合法的标识符。</p>
+<pre><code class="language-javascript">1a  // 第一个字符不能是数字
+23  // 同上
+***  // 标识符不能包含星号
+a+b  // 标识符不能包含加号
+-d  // 标识符不能包含减号或连词线
+</code></pre>
+<p>中文是合法的标识符，可以用作变量名。</p>
+<pre><code class="language-javascript">var 临时变量 = 1;
+</code></pre>
+<blockquote>
+<p>JavaScript 有一些保留字，不能用作标识符：arguments、break、case、catch、class、const、continue、debugger、default、delete、do、else、enum、eval、export、extends、false、finally、for、function、if、implements、import、in、instanceof、interface、let、new、null、package、private、protected、public、return、static、super、switch、this、throw、true、try、typeof、var、void、while、with、yield。</p>
+</blockquote>
+<h2 id="注释">注释</h2>
+<p>源码中被 JavaScript 引擎忽略的部分就叫做注释，它的作用是对代码进行解释。JavaScript 提供两种注释的写法：一种是单行注释，用<code>//</code>起头；另一种是多行注释，放在<code>/*</code>和<code>*/</code>之间。</p>
+<pre><code class="language-javascript">// 这是单行注释
+
+/*
+ 这是
+ 多行
+ 注释
+*/
+</code></pre>
+<p>此外，由于历史上 JavaScript 可以兼容 HTML 代码的注释，所以<code>&lt;!--</code>和<code>--&gt;</code>也被视为合法的单行注释。</p>
+<pre><code class="language-javascript">x = 1; &lt;!-- x = 2;
+--&gt; x = 3;
+</code></pre>
+<p>上面代码中，只有<code>x = 1</code>会执行，其他的部分都被注释掉了。</p>
+<p>需要注意的是，<code>--&gt;</code>只有在行首，才会被当成单行注释，否则会当作正常的运算。</p>
+<pre><code class="language-javascript">function countdown(n) {
+  while (n --&gt; 0) console.log(n);
+}
+countdown(3)
+// 2
+// 1
+// 0
+</code></pre>
+<p>上面代码中，<code>n --&gt; 0</code>实际上会当作<code>n-- &gt; 0</code>，因此输出2、1、0。</p>
+<h2 id="区块">区块</h2>
+<p>JavaScript 使用大括号，将多个相关的语句组合在一起，称为“区块”（block）。</p>
+<p>对于<code>var</code>命令来说，JavaScript 的区块不构成单独的作用域（scope）。</p>
+<pre><code class="language-javascript">{
+  var a = 1;
+}
+
+a // 1
+</code></pre>
+<p>上面代码在区块内部，使用<code>var</code>命令声明并赋值了变量<code>a</code>，然后在区块外部，变量<code>a</code>依然有效，区块对于<code>var</code>命令不构成单独的作用域，与不使用区块的情况没有任何区别。在 JavaScript 语言中，单独使用区块并不常见，区块往往用来构成其他更复杂的语法结构，比如<code>for</code>、<code>if</code>、<code>while</code>、<code>function</code>等。</p>
+<h2 id="条件语句">条件语句</h2>
+<p>JavaScript 提供<code>if</code>结构和<code>switch</code>结构，完成条件判断，即只有满足预设的条件，才会执行相应的语句。</p>
+<h3 id="if-结构">if 结构</h3>
+<p><code>if</code>结构先判断一个表达式的布尔值，然后根据布尔值的真伪，执行不同的语句。所谓布尔值，指的是 JavaScript 的两个特殊值，<code>true</code>表示“真”，<code>false</code>表示“伪”。</p>
+<pre><code class="language-javascript">if (布尔值)
+  语句;
+
+// 或者
+if (布尔值) 语句;
+</code></pre>
+<p>上面是<code>if</code>结构的基本形式。需要注意的是，“布尔值”往往由一个条件表达式产生的，必须放在圆括号中，表示对表达式求值。如果表达式的求值结果为<code>true</code>，就执行紧跟在后面的语句；如果结果为<code>false</code>，则跳过紧跟在后面的语句。</p>
+<pre><code class="language-javascript">if (m === 3)
+  m = m + 1;
+</code></pre>
+<p>上面代码表示，只有在<code>m</code>等于3时，才会将其值加上1。</p>
+<p>这种写法要求条件表达式后面只能有一个语句。如果想执行多个语句，必须在<code>if</code>的条件判断之后，加上大括号，表示代码块（多个语句合并成一个语句）。</p>
+<pre><code class="language-javascript">if (m === 3) {
+  m += 1;
+}
+</code></pre>
+<p>建议总是在<code>if</code>语句中使用大括号，因为这样方便插入语句。</p>
+<p>注意，<code>if</code>后面的表达式之中，不要混淆赋值表达式（<code>=</code>）、严格相等运算符（<code>===</code>）和相等运算符（<code>==</code>）。尤其是赋值表达式不具有比较作用。</p>
+<pre><code class="language-javascript">var x = 1;
+var y = 2;
+if (x = y) {
+  console.log(x);
+}
+// &quot;2&quot;
+</code></pre>
+<p>上面代码的原意是，当<code>x</code>等于<code>y</code>的时候，才执行相关语句。但是，不小心将严格相等运算符写成赋值表达式，结果变成了将<code>y</code>赋值给变量<code>x</code>，再判断变量<code>x</code>的值（等于2）的布尔值（结果为<code>true</code>）。</p>
+<p>这种错误可以正常生成一个布尔值，因而不会报错。为了避免这种情况，有些开发者习惯将常量写在运算符的左边，这样的话，一旦不小心将相等运算符写成赋值运算符，就会报错，因为常量不能被赋值。</p>
+<pre><code class="language-javascript">if (x = 2) { // 不报错
+if (2 = x) { // 报错
+</code></pre>
+<p>至于为什么优先采用“严格相等运算符”（<code>===</code>），而不是“相等运算符”（<code>==</code>），请参考《运算符》章节。</p>
+<h3 id="ifelse-结构">if...else 结构</h3>
+<p><code>if</code>代码块后面，还可以跟一个<code>else</code>代码块，表示不满足条件时，所要执行的代码。</p>
+<pre><code class="language-javascript">if (m === 3) {
+  // 满足条件时，执行的语句
+} else {
+  // 不满足条件时，执行的语句
+}
+</code></pre>
+<p>上面代码判断变量<code>m</code>是否等于3，如果等于就执行<code>if</code>代码块，否则执行<code>else</code>代码块。</p>
+<p>对同一个变量进行多次判断时，多个<code>if...else</code>语句可以连写在一起。</p>
+<pre><code class="language-javascript">if (m === 0) {
+  // ...
+} else if (m === 1) {
+  // ...
+} else if (m === 2) {
+  // ...
+} else {
+  // ...
+}
+</code></pre>
+<p><code>else</code>代码块总是与离自己最近的那个<code>if</code>语句配对。</p>
+<pre><code class="language-javascript">var m = 1;
+var n = 2;
+
+if (m !== 1)
+if (n === 2) console.log('hello');
+else console.log('world');
+</code></pre>
+<p>上面代码不会有任何输出，<code>else</code>代码块不会得到执行，因为它跟着的是最近的那个<code>if</code>语句，相当于下面这样。</p>
+<pre><code class="language-javascript">if (m !== 1) {
+  if (n === 2) {
+    console.log('hello');
+  } else {
+    console.log('world');
+  }
+}
+</code></pre>
+<p>如果想让<code>else</code>代码块跟随最上面的那个<code>if</code>语句，就要改变大括号的位置。</p>
+<pre><code class="language-javascript">if (m !== 1) {
+  if (n === 2) {
+    console.log('hello');
+  }
+} else {
+  console.log('world');
+}
+// world
+</code></pre>
+<h3 id="switch-结构">switch 结构</h3>
+<p>多个<code>if...else</code>连在一起使用的时候，可以转为使用更方便的<code>switch</code>结构。</p>
+<pre><code class="language-javascript">switch (fruit) {
+  case &quot;banana&quot;:
+    // ...
+    break;
+  case &quot;apple&quot;:
+    // ...
+    break;
+  default:
+    // ...
+}
+</code></pre>
+<p>上面代码根据变量<code>fruit</code>的值，选择执行相应的<code>case</code>。如果所有<code>case</code>都不符合，则执行最后的<code>default</code>部分。需要注意的是，每个<code>case</code>代码块内部的<code>break</code>语句不能少，否则会接下去执行下一个<code>case</code>代码块，而不是跳出<code>switch</code>结构。</p>
+<pre><code class="language-javascript">var x = 1;
+
+switch (x) {
+  case 1:
+    console.log('x 等于1');
+  case 2:
+    console.log('x 等于2');
+  default:
+    console.log('x 等于其他值');
+}
+// x等于1
+// x等于2
+// x等于其他值
+</code></pre>
+<p>上面代码中，<code>case</code>代码块之中没有<code>break</code>语句，导致不会跳出<code>switch</code>结构，而会一直执行下去。正确的写法是像下面这样。</p>
+<pre><code class="language-javascript">switch (x) {
+  case 1:
+    console.log('x 等于1');
+    break;
+  case 2:
+    console.log('x 等于2');
+    break;
+  default:
+    console.log('x 等于其他值');
+}
+</code></pre>
+<p><code>switch</code>语句部分和<code>case</code>语句部分，都可以使用表达式。</p>
+<pre><code class="language-javascript">switch (1 + 3) {
+  case 2 + 2:
+    f();
+    break;
+  default:
+    neverHappens();
+}
+</code></pre>
+<p>上面代码的<code>default</code>部分，是永远不会执行到的。</p>
+<p>需要注意的是，<code>switch</code>语句后面的表达式，与<code>case</code>语句后面的表示式比较运行结果时，采用的是严格相等运算符（<code>===</code>），而不是相等运算符（<code>==</code>），这意味着比较时不会发生类型转换。</p>
+<pre><code class="language-javascript">var x = 1;
+
+switch (x) {
+  case true:
+    console.log('x 发生类型转换');
+    break;
+  default:
+    console.log('x 没有发生类型转换');
+}
+// x 没有发生类型转换
+</code></pre>
+<p>上面代码中，由于变量<code>x</code>没有发生类型转换，所以不会执行<code>case true</code>的情况。这表明，<code>switch</code>语句内部采用的是“严格相等运算符”，详细解释请参考《运算符》一节。</p>
+<h3 id="三元运算符">三元运算符 ?:</h3>
+<p>JavaScript 还有一个三元运算符（即该运算符需要三个运算子）<code>?:</code>，也可以用于逻辑判断。</p>
+<pre><code class="language-javascript">(条件) ? 表达式1 : 表达式2
+</code></pre>
+<p>上面代码中，如果“条件”为<code>true</code>，则返回“表达式1”的值，否则返回“表达式2”的值。</p>
+<pre><code class="language-javascript">var even = (n % 2 === 0) ? true : false;
+</code></pre>
+<p>上面代码中，如果<code>n</code>可以被2整除，则<code>even</code>等于<code>true</code>，否则等于<code>false</code>。它等同于下面的形式。</p>
+<pre><code class="language-javascript">var even;
+if (n % 2 === 0) {
+  even = true;
+} else {
+  even = false;
+}
+</code></pre>
+<p>这个三元运算符可以被视为<code>if...else...</code>的简写形式，因此可以用于多种场合。</p>
+<pre><code class="language-javascript">var myVar;
+console.log(
+  myVar ?
+  'myVar has a value' :
+  'myVar does not have a value'
+)
+// myVar does not have a value
+</code></pre>
+<p>上面代码利用三元运算符，输出相应的提示。</p>
+<pre><code class="language-javascript">var msg = '数字' + n + '是' + (n % 2 === 0 ? '偶数' : '奇数');
+</code></pre>
+<p>上面代码利用三元运算符，在字符串之中插入不同的值。</p>
+<h2 id="循环语句">循环语句</h2>
+<p>循环语句用于重复执行某个操作，它有多种形式。</p>
+<h3 id="while-循环">while 循环</h3>
+<p><code>While</code>语句包括一个循环条件和一段代码块，只要条件为真，就不断循环执行代码块。</p>
+<pre><code class="language-javascript">while (条件)
+  语句;
+
+// 或者
+while (条件) 语句;
+</code></pre>
+<p><code>while</code>语句的循环条件是一个表达式，必须放在圆括号中。代码块部分，如果只有一条语句，可以省略大括号，否则就必须加上大括号。</p>
+<pre><code class="language-javascript">while (条件) {
+  语句;
+}
+</code></pre>
+<p>下面是<code>while</code>语句的一个例子。</p>
+<pre><code class="language-javascript">var i = 0;
+
+while (i &lt; 100) {
+  console.log('i 当前为：' + i);
+  i = i + 1;
+}
+</code></pre>
+<p>上面的代码将循环100次，直到<code>i</code>等于100为止。</p>
+<p>下面的例子是一个无限循环，因为循环条件总是为真。</p>
+<pre><code class="language-javascript">while (true) {
+  console.log('Hello, world');
+}
+</code></pre>
+<h3 id="for-循环">for 循环</h3>
+<p><code>for</code>语句是循环命令的另一种形式，可以指定循环的起点、终点和终止条件。它的格式如下。</p>
+<pre><code class="language-javascript">for (初始化表达式; 条件; 递增表达式)
+  语句
+
+// 或者
+
+for (初始化表达式; 条件; 递增表达式) {
+  语句
+}
+</code></pre>
+<p><code>for</code>语句后面的括号里面，有三个表达式。</p>
+<ul>
+<li>初始化表达式（initialize）：确定循环变量的初始值，只在循环开始时执行一次。</li>
+<li>条件表达式（test）：每轮循环开始时，都要执行这个条件表达式，只有值为真，才继续进行循环。</li>
+<li>递增表达式（increment）：每轮循环的最后一个操作，通常用来递增循环变量。</li>
+</ul>
+<p>下面是一个例子。</p>
+<pre><code class="language-javascript">var x = 3;
+for (var i = 0; i &lt; x; i++) {
+  console.log(i);
+}
+// 0
+// 1
+// 2
+</code></pre>
+<p>上面代码中，初始化表达式是<code>var i = 0</code>，即初始化一个变量<code>i</code>；测试表达式是<code>i &lt; x</code>，即只要<code>i</code>小于<code>x</code>，就会执行循环；递增表达式是<code>i++</code>，即每次循环结束后，<code>i</code>增大1。</p>
+<p>所有<code>for</code>循环，都可以改写成<code>while</code>循环。上面的例子改为<code>while</code>循环，代码如下。</p>
+<pre><code class="language-javascript">var x = 3;
+var i = 0;
+
+while (i &lt; x) {
+  console.log(i);
+  i++;
+}
+</code></pre>
+<p><code>for</code>语句的三个部分（initialize、test、increment），可以省略任何一个，也可以全部省略。</p>
+<pre><code class="language-javascript">for ( ; ; ){
+  console.log('Hello World');
+}
+</code></pre>
+<p>上面代码省略了<code>for</code>语句表达式的三个部分，结果就导致了一个无限循环。</p>
+<h3 id="dowhile-循环">do...while 循环</h3>
+<p><code>do...while</code>循环与<code>while</code>循环类似，唯一的区别就是先运行一次循环体，然后判断循环条件。</p>
+<pre><code class="language-javascript">do
+  语句
+while (条件);
+
+// 或者
+do {
+  语句
+} while (条件);
+</code></pre>
+<p>不管条件是否为真，<code>do...while</code>循环至少运行一次，这是这种结构最大的特点。另外，<code>while</code>语句后面的分号注意不要省略。</p>
+<p>下面是一个例子。</p>
+<pre><code class="language-javascript">var x = 3;
+var i = 0;
+
+do {
+  console.log(i);
+  i++;
+} while(i &lt; x);
+</code></pre>
+<h3 id="break-语句和-continue-语句">break 语句和 continue 语句</h3>
+<p><code>break</code>语句和<code>continue</code>语句都具有跳转作用，可以让代码不按既有的顺序执行。</p>
+<p><code>break</code>语句用于跳出代码块或循环。</p>
+<pre><code class="language-javascript">var i = 0;
+
+while(i &lt; 100) {
+  console.log('i 当前为：' + i);
+  i++;
+  if (i === 10) break;
+}
+</code></pre>
+<p>上面代码只会执行10次循环，一旦<code>i</code>等于10，就会跳出循环。</p>
+<p><code>for</code>循环也可以使用<code>break</code>语句跳出循环。</p>
+<pre><code class="language-javascript">for (var i = 0; i &lt; 5; i++) {
+  console.log(i);
+  if (i === 3)
+    break;
+}
+// 0
+// 1
+// 2
+// 3
+</code></pre>
+<p>上面代码执行到<code>i</code>等于3，就会跳出循环。</p>
+<p><code>continue</code>语句用于立即终止本轮循环，返回循环结构的头部，开始下一轮循环。</p>
+<pre><code class="language-javascript">var i = 0;
+
+while (i &lt; 100){
+  i++;
+  if (i % 2 === 0) continue;
+  console.log('i 当前为：' + i);
+}
+</code></pre>
+<p>上面代码只有在<code>i</code>为奇数时，才会输出<code>i</code>的值。如果<code>i</code>为偶数，则直接进入下一轮循环。</p>
+<p>如果存在多重循环，不带参数的<code>break</code>语句和<code>continue</code>语句都只针对最内层循环。</p>
+<h3 id="标签label">标签（label）</h3>
+<p>JavaScript 语言允许，语句的前面有标签（label），相当于定位符，用于跳转到程序的任意位置，标签的格式如下。</p>
+<pre><code class="language-javascript">label:
+  语句
+</code></pre>
+<p>标签可以是任意的标识符，但不能是保留字，语句部分可以是任意语句。</p>
+<p>标签通常与<code>break</code>语句和<code>continue</code>语句配合使用，跳出特定的循环。</p>
+<pre><code class="language-javascript">top:
+  for (var i = 0; i &lt; 3; i++){
+    for (var j = 0; j &lt; 3; j++){
+      if (i === 1 &amp;&amp; j === 1) break top;
+      console.log('i=' + i + ', j=' + j);
+    }
+  }
+// i=0, j=0
+// i=0, j=1
+// i=0, j=2
+// i=1, j=0
+</code></pre>
+<p>上面代码为一个双重循环区块，<code>break</code>命令后面加上了<code>top</code>标签（注意，<code>top</code>不用加引号），满足条件时，直接跳出双层循环。如果<code>break</code>语句后面不使用标签，则只能跳出内层循环，进入下一次的外层循环。</p>
+<p>标签也可以用于跳出代码块。</p>
+<pre><code class="language-javascript">foo: {
+  console.log(1);
+  break foo;
+  console.log('本行不会输出');
+}
+console.log(2);
+// 1
+// 2
+</code></pre>
+<p>上面代码执行到<code>break foo</code>，就会跳出区块。</p>
+<p><code>continue</code>语句也可以与标签配合使用。</p>
+<pre><code class="language-javascript">top:
+  for (var i = 0; i &lt; 3; i++){
+    for (var j = 0; j &lt; 3; j++){
+      if (i === 1 &amp;&amp; j === 1) continue top;
+      console.log('i=' + i + ', j=' + j);
+    }
+  }
+// i=0, j=0
+// i=0, j=1
+// i=0, j=2
+// i=1, j=0
+// i=2, j=0
+// i=2, j=1
+// i=2, j=2
+</code></pre>
+<p>上面代码中，<code>continue</code>命令后面有一个标签名，满足条件时，会跳过当前循环，直接进入下一轮外层循环。如果<code>continue</code>语句后面不使用标签，则只能进入下一轮的内层循环。</p>
+<h2 id="参考链接">参考链接</h2>
+<ul>
+<li>Axel Rauschmayer, <a href="https://2ality.com/2013/06/basic-javascript.html">Basic JavaScript for the impatient programmer</a></li>
+</ul>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#javascript-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95">JavaScript 的基本语法</a>
+<ul>
+<li><a href="#%E8%AF%AD%E5%8F%A5">语句</a></li>
+<li><a href="#%E5%8F%98%E9%87%8F">变量</a>
+<ul>
+<li><a href="#%E6%A6%82%E5%BF%B5">概念</a></li>
+<li><a href="#%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87">变量提升</a></li>
+</ul>
+</li>
+<li><a href="#%E6%A0%87%E8%AF%86%E7%AC%A6">标识符</a></li>
+<li><a href="#%E6%B3%A8%E9%87%8A">注释</a></li>
+<li><a href="#%E5%8C%BA%E5%9D%97">区块</a></li>
+<li><a href="#%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5">条件语句</a>
+<ul>
+<li><a href="#if-%E7%BB%93%E6%9E%84">if 结构</a></li>
+<li><a href="#ifelse-%E7%BB%93%E6%9E%84">if...else 结构</a></li>
+<li><a href="#switch-%E7%BB%93%E6%9E%84">switch 结构</a></li>
+<li><a href="#%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6">三元运算符 ?:</a></li>
+</ul>
+</li>
+<li><a href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5">循环语句</a>
+<ul>
+<li><a href="#while-%E5%BE%AA%E7%8E%AF">while 循环</a></li>
+<li><a href="#for-%E5%BE%AA%E7%8E%AF">for 循环</a></li>
+<li><a href="#dowhile-%E5%BE%AA%E7%8E%AF">do...while 循环</a></li>
+<li><a href="#break-%E8%AF%AD%E5%8F%A5%E5%92%8C-continue-%E8%AF%AD%E5%8F%A5">break 语句和 continue 语句</a></li>
+<li><a href="#%E6%A0%87%E7%AD%BElabel">标签（label）</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5">参考链接</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">打不死的平头哈Copyright © 2018-2020 <a href="https://18279493170.github.io" style="margin:0;">徐某人</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>47</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script type="text/javascript" async src="https://18279493170.github.io/media/js/prism.js"></script>
+</body>
+</html>
